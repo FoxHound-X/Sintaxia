@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'aset/paketwarna.dart';
+import 'halaman/home.dart';
+
 void main() => runApp( Aplikasi());
 
 class Aplikasi extends StatelessWidget{
@@ -9,13 +11,17 @@ class Aplikasi extends StatelessWidget{
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Homepage(),
+      initialRoute: '/welcomepage',
+      routes: {
+        '/welcomepage': (context) => const welcome(),
+        '/homepage': (context) => const halaman_home(),
+      },
     );
   }
 }
 
-class Homepage extends StatelessWidget{
-  const Homepage({super.key});
+class welcome extends StatelessWidget{
+  const welcome({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -78,7 +84,7 @@ class Homepage extends StatelessWidget{
                     ),
                     onPressed: () {
                       // contoh navigasi ke halaman berikutnya
-                      Navigator.pushNamed(context, '/home');
+                      Navigator.pushNamed(context, '/homepage');
                     },
                     child: const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -90,6 +96,14 @@ class Homepage extends StatelessWidget{
                     ),
                   ),
                 ),
+                SizedBox(height: 25,),
+                Text(
+                  "© 2025 Lumora Apps. All rights reserved.",
+                  style: TextStyle(
+                    fontSize: 10,
+                    color: paketwarna.nordicTitle
+                    ),
+                  )
               ],
             ),
           ),
