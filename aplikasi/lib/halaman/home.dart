@@ -36,7 +36,7 @@ class halaman_home extends StatelessWidget {
                     color: paketwarna.nordicTitle,
                   ),
                 ),
-                onPressed: () => debugPrint("aplikasi berjalan"),
+                onPressed: () => Navigator.pushNamed(context, '/welcomepage'),
               ),
             )
           ],
@@ -49,7 +49,7 @@ class halaman_home extends StatelessWidget {
               children: [
 
                 //Title HeyThere
-                Padding(padding: EdgeInsets.only(top: 20, bottom: 10, right: 90),
+                Padding(padding: EdgeInsets.only(top: 20, bottom: 10, right: 100),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -58,7 +58,7 @@ class halaman_home extends StatelessWidget {
                         textAlign: TextAlign.left,
                         style: TextStyle(
                           color: paketwarna.nordicTitle,
-                          fontSize: 18,
+                          fontSize: 17,
                         ),
                       ),
                       Text(
@@ -66,7 +66,7 @@ class halaman_home extends StatelessWidget {
                         textAlign: TextAlign.left,
                         style: TextStyle(
                           color: paketwarna.nordicTitle,
-                          fontSize: 18,
+                          fontSize: 17,
                         ),
                       ),
                     ],
@@ -126,7 +126,7 @@ class halaman_home extends StatelessWidget {
                           Navigator.pushNamed(context, '/welcomepage');
                         },
                       ),
-                      Tombol(
+                       Tombol(
                         nama: "Aplikasi",
                         onPressed: () {
                           Navigator.pushNamed(context, '/welcomepage');
@@ -151,8 +151,58 @@ class halaman_home extends StatelessWidget {
                         },
                       ),
                       SizedBox(width: 20,)
-
                     ],
+                  ),
+                ),
+
+                Container(
+                  width: 200,
+                  height: 230,
+                  child: Card(
+                    color: paketwarna.nordicCard,
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(9)),
+                    child: Column(
+                      
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        ClipRRect(
+                          borderRadius: BorderRadiusGeometry.vertical(top: Radius.circular(9)),
+                          child: Image.asset(
+                            'lib/aset/gambar/logo.avif',
+                            fit: BoxFit.cover,
+                            width: double.infinity,
+                            height: 150,
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(8.0, 1.2        , 8.0, 8.0),
+                          child: Column(
+                            children: [
+                              const Text(
+                                'Pembelajaran Flutter Dasar',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.bold,
+                                  color: paketwarna.nordicTitle
+                                ),
+                              ),
+
+                              const SizedBox(height: 5,),
+                              const Text(
+                                'aplikasi ini sanget bermanfaat mafbjadbfgdhasfgwytwerywetfsdgfdshfdsfvdgsgdsgnkbdfbshdgfhsdhfgshdsdfsfhdshgafhgdag',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  fontSize: 8,
+                                  fontWeight: FontWeight.bold,
+                                  color: paketwarna.nordicTitle
+                                ),
+                              ),
+                            ],
+                          )
+                        )
+                      ],
+                    ),
                   ),
                 )
 
