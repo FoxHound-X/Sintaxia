@@ -19,7 +19,7 @@ class Aplikasi extends StatelessWidget{
     );
   }
 }
-
+// 
 class welcome extends StatelessWidget{
   const welcome({super.key});
 
@@ -28,12 +28,31 @@ class welcome extends StatelessWidget{
     return Scaffold(
       backgroundColor: paketwarna.nordicBacground,
       body: SafeArea(
-        child: Center(
-          child: Padding(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal:0),
+          child: Container(
             padding: const EdgeInsets.symmetric(horizontal: 24),
             child: Column(
               children: [
-                SizedBox(height: 30,),
+                Container(
+                  width: double.infinity,
+                  padding: const EdgeInsets.all(16),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Text(
+                        'Version 0.0.1 Beta',
+                        style: TextStyle(
+                          fontFamily: 'Poppins',
+                          fontSize: 8,
+                          color: paketwarna.nordicTitle.withOpacity(0.5),
+                          fontWeight: FontWeight.normal
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 30,),
                 const Text(
                   "Welcome To The",
                   style: TextStyle(
@@ -51,12 +70,14 @@ class welcome extends StatelessWidget{
                   ),
                 ),
 
-                SizedBox(height: 50,),
+                const SizedBox(height: 24,),
                 Image.asset("lib/aset/gambar/gambarku.png"),
-                SizedBox(height: 50,),
+                SizedBox(height: 24,),
                 const Text(
                   "Your journey starts here",
                   style: TextStyle(
+                    fontFamily: 'Poppins',
+                    fontWeight: FontWeight.normal,
                     fontSize: 21,
                     color: paketwarna.nordicTitle
                   ),
@@ -65,11 +86,13 @@ class welcome extends StatelessWidget{
                   "Sintaxia is a smart learning platform designed to guide you through the fundamentals of programming — from your first line of code to your first masterpiece, and beyond as you explore other programming languages.",
                   textAlign: TextAlign.center,
                   style: TextStyle(
+                    fontFamily: 'Poppins',
+                    fontWeight: FontWeight.normal,
                     fontSize: 10,
                     color: paketwarna.nordicTitle.withOpacity(0.4)
                   ),
                 ),
-                SizedBox(height: 40,),
+                const SizedBox(height: 40,),
 
                 //Tombol
                 SizedBox(
@@ -96,8 +119,8 @@ class welcome extends StatelessWidget{
                     ),
                   ),
                 ),
-                SizedBox(height: 25,),
-                Text(
+                const SizedBox(height: 95,),
+                const Text(
                   "© 2025 Lumora Apps. All rights reserved.",
                   style: TextStyle(
                     fontSize: 10,

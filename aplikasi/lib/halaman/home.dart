@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:aplikasi/main.dart';
 import 'package:aplikasi/aset/asetwidget.dart';
 
+
 class halaman_home extends StatelessWidget {
   const halaman_home({super.key});
   @override
@@ -28,7 +29,7 @@ class halaman_home extends StatelessWidget {
             Padding(
               padding: EdgeInsets.only(right: 3),
               child: TextButton(
-                child: Text(
+                child:const Text(
                   "SINTAXIA",
                   style: TextStyle(
                     fontSize: 18,
@@ -50,7 +51,7 @@ class halaman_home extends StatelessWidget {
 
                 //Title HeyThere
                 Padding(padding: EdgeInsets.only(top: 20, bottom: 10, right: 100),
-                  child: Column(
+                  child:const Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
@@ -77,10 +78,10 @@ class halaman_home extends StatelessWidget {
                 //properti seeall dan lain nya
                 Padding(
                   padding: const EdgeInsets.only(left: 17, top: 20),
-                  child: Row(
+                  child: const Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Text(
+                       Text(
                         "Categories",
                         style: TextStyle(
                           color: paketwarna.nordicTitle,
@@ -88,7 +89,7 @@ class halaman_home extends StatelessWidget {
                         ),
                       ),
                       SizedBox(width: 210,),
-                      Text(
+                       Text(
                         "Seeall",
                         style: TextStyle(
                           color: paketwarna.nordicTitle,
@@ -100,15 +101,15 @@ class halaman_home extends StatelessWidget {
                 ),
 
 
-                SizedBox(height: 3,),
+                const SizedBox(height: 3,),
 
                 //Tombol Kategori wok
                 SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      SizedBox(width: 2,),
-                      Tombol(
+                      const SizedBox(width: 2,),
+                       Tombol(
                         nama: "Aplikasi",
                         onPressed: () {
                           Navigator.pushNamed(context, '/welcomepage');
@@ -155,54 +156,68 @@ class halaman_home extends StatelessWidget {
                   ),
                 ),
 
-                Container(
-                  width: 200,
-                  height: 230,
-                  child: Card(
-                    color: paketwarna.nordicCard,
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(9)),
-                    child: Column(
-                      
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        ClipRRect(
-                          borderRadius: BorderRadiusGeometry.vertical(top: Radius.circular(9)),
-                          child: Image.asset(
-                            'lib/aset/gambar/logo.avif',
-                            fit: BoxFit.cover,
-                            width: double.infinity,
-                            height: 150,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(8.0, 1.2        , 8.0, 8.0),
-                          child: Column(
-                            children: [
-                              const Text(
-                                'Pembelajaran Flutter Dasar',
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.bold,
-                                  color: paketwarna.nordicTitle
-                                ),
-                              ),
+                const SizedBox(height: 20,),
 
-                              const SizedBox(height: 5,),
-                              const Text(
-                                'aplikasi ini sanget bermanfaat mafbjadbfgdhasfgwytwerywetfsdgfdshfdsfvdgsgdsgnkbdfbshdgfhsdhfgshdsdfsfhdshgafhgdag',
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                  fontSize: 8,
-                                  fontWeight: FontWeight.bold,
-                                  color: paketwarna.nordicTitle
-                                ),
-                              ),
-                            ],
-                          )
-                        )
-                      ],
-                    ),
+                
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      const SizedBox(width: 10,),
+                      Cardkursus(
+                        icondificulty: Icons.signal_cellular_alt_1_bar, 
+                        colorsific: paketwarna.dificultybeginer, 
+                        judulkursus: 'HTML Pemula', 
+                        pemilikkursus: 'By Lumrora Corp', 
+                        deskripsi: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ex neque, convallis a eros eu, finibus varius orci. Nam eget.', 
+                        targethalaman:() => Navigator.pushNamed(context, '/welcomepage'),
+                      ),
+                      const SizedBox(width: 10,),
+                      Cardkursus(
+                        icondificulty: Icons.signal_cellular_alt, 
+                        colorsific: paketwarna.dificultyadvance, 
+                        judulkursus: 'HTML Pemula', 
+                        pemilikkursus: 'By Lumrora Corp', 
+                        deskripsi: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ex neque, convallis a eros eu, finibus varius orci. Nam eget.', 
+                        targethalaman: () {
+                          Navigator.pushNamed(context, '/welcomepage');
+                        },
+                      ),
+                      const SizedBox(width: 10,),
+                      Cardkursus(
+                        icondificulty: Icons.signal_cellular_alt_2_bar, 
+                        colorsific: paketwarna.dificultyintermediet, 
+                        judulkursus: 'HTML Pemula', 
+                        pemilikkursus: 'By Lumrora Corp', 
+                        deskripsi: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ex neque, convallis a eros eu, finibus varius orci. Nam eget.', 
+                        targethalaman: () {
+                          Navigator.pushNamed(context, '/welcomepage');
+                        },
+                      ),
+                      const SizedBox(width: 10,),
+                      Cardkursus(
+                        icondificulty: Icons.signal_cellular_alt_1_bar, 
+                        colorsific: paketwarna.dificultybeginer, 
+                        judulkursus: 'HTML Pemula', 
+                        pemilikkursus: 'By Lumrora Corp', 
+                        deskripsi: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ex neque, convallis a eros eu, finibus varius orci. Nam eget.', 
+                        targethalaman: () {
+                          Navigator.pushNamed(context, '/welcomepage');
+                        },
+                      ),
+                      const SizedBox(width: 10,),
+                      Cardkursus(
+                        icondificulty: Icons.signal_cellular_alt_1_bar, 
+                        colorsific: paketwarna.dificultybeginer, 
+                        judulkursus: 'HTML Pemula', 
+                        pemilikkursus: 'By Lumrora Corp', 
+                        deskripsi: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ex neque, convallis a eros eu, finibus varius orci. Nam eget.', 
+                        targethalaman: () {
+                          Navigator.pushNamed(context, '/welcomepage');
+                        },
+                      ),
+                      const SizedBox(width: 10,),
+                    ],
                   ),
                 )
 

@@ -23,5 +23,12 @@ class paketwarna{
   static const nordicDescription = Color(0xffD8DEE9);
   static const nordicActiveIcon = Color(0xff8FBCBB);
   static const nordicNonactiveIcon = Color(0xff6B7280);
+  static const nordicButton1 = Color(0xff4f5d75);
+
+  //dificulty
+  static const dificultybeginer = Color(0xFF8FBCBB);
+  static const dificultyintermediet = Color(0xFFEBCB8B);
+  static const dificultyadvance = Color(0xFFD08770);
+
 
 }
