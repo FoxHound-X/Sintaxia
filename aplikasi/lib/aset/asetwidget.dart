@@ -297,17 +297,3 @@ class Tagkursus extends StatelessWidget {
     );
   }
 }
-
-//Warning dialog
-class warning_dialog extends StatelessWidget {
-
-  @override
-  Widget build(BuildContext context) {
-    return showDialog(
-      context: context, 
-      builder: (context) {
-        
-      }
-    );
-  }
-}

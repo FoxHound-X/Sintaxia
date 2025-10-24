@@ -7,6 +7,7 @@
       "name": "aplikasi",
       "version": "1.0.0+1",
       "dependencies": [
+        "cool_alert",
         "cupertino_icons",
         "flutter",
         "flutter_svg"
@@ -38,6 +39,16 @@
         "stack_trace",
         "stream_channel",
         "test_api",
+        "vector_math"
+      ]
+    },
+    {
+      "name": "cool_alert",
+      "version": "2.0.1",
+      "dependencies": [
+        "flare_flutter",
+        "flutter",
+        "lottie",
         "vector_math"
       ]
     },
@@ -159,6 +170,25 @@
       ]
     },
     {
+      "name": "lottie",
+      "version": "2.7.0",
+      "dependencies": [
+        "archive",
+        "flutter",
+        "path",
+        "vector_math"
+      ]
+    },
+    {
+      "name": "flare_flutter",
+      "version": "3.0.2",
+      "dependencies": [
+        "collection",
+        "flutter",
+        "meta"
+      ]
+    },
+    {
       "name": "vector_graphics_compiler",
       "version": "1.1.19",
       "dependencies": [
@@ -269,6 +299,14 @@
       ]
     },
     {
+      "name": "archive",
+      "version": "3.6.1",
+      "dependencies": [
+        "crypto",
+        "path"
+      ]
+    },
+    {
       "name": "xml",
       "version": "6.6.1",
       "dependencies": [
@@ -309,6 +347,13 @@
       "name": "vm_service",
       "version": "15.0.2",
       "dependencies": []
+    },
+    {
+      "name": "crypto",
+      "version": "3.0.6",
+      "dependencies": [
+        "typed_data"
+      ]
     },
     {
       "name": "petitparser",

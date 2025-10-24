@@ -37,7 +37,10 @@ class halaman_home extends StatelessWidget {
                     color: paketwarna.nordicTitle,
                   ),
                 ),
-                onPressed: () => Navigator.pushNamed(context, '/welcomepage'),
+                onPressed: () {
+                  debugPrint('Aplikasi');
+                  debugPrint('Aplikasi');
+                },
               ),
             )
           ],
