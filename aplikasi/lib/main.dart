@@ -41,10 +41,10 @@ class welcome extends StatelessWidget{
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
                       Text(
-                        'Version 0.0.1 Beta',
+                        'Beta Testing',
                         style: TextStyle(
                           fontFamily: 'Poppins',
-                          fontSize: 8,
+                          fontSize: 7,
                           color: paketwarna.nordicTitle.withOpacity(0.5),
                           fontWeight: FontWeight.normal
                         ),
@@ -52,7 +52,7 @@ class welcome extends StatelessWidget{
                     ],
                   ),
                 ),
-                const SizedBox(height: 30,),
+                const SizedBox(height: 32,),
                 const Text(
                   "Welcome To The",
                   style: TextStyle(
@@ -70,9 +70,9 @@ class welcome extends StatelessWidget{
                   ),
                 ),
 
-                const SizedBox(height: 24,),
+                const SizedBox(height: 33,),
                 Image.asset("lib/aset/gambar/gambarku.png"),
-                SizedBox(height: 24,),
+                SizedBox(height: 33,),
                 const Text(
                   "Your journey starts here",
                   style: TextStyle(
@@ -119,7 +119,7 @@ class welcome extends StatelessWidget{
                     ),
                   ),
                 ),
-                const SizedBox(height: 95,),
+                const SizedBox(height: 65,),
                 const Text(
                   "© 2025 Lumora Apps. All rights reserved.",
                   style: TextStyle(

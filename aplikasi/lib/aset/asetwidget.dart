@@ -58,7 +58,7 @@ class Cardkursus extends StatelessWidget {
 
   const Cardkursus({
     super.key,
-    this.iconcard = 'lib/aset/gambar/logodart.avif',
+    this.iconcard = 'lib/aset/gambar/brokenimage.png',
     required this.icondificulty,
     required this.colorsific,
     required this.judulkursus,
@@ -74,6 +74,9 @@ class Cardkursus extends StatelessWidget {
       width: 220,
       height: 250,
       child: Card(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(12)
+        ),
         color: paketwarna.nordicCard,
         child: Padding(
           padding: const EdgeInsets.all(12.0),
@@ -93,7 +96,6 @@ class Cardkursus extends StatelessWidget {
                       iconcard,
                       width: 45,
                       height: 45,
-                      
                     ),
                   ),
 
@@ -267,33 +269,145 @@ class Cardkursus extends StatelessWidget {
 }
 
 
-class Tagkursus extends StatelessWidget {
-  final String namatag;
+class InfoGraphicCard extends StatelessWidget {
+  final VoidCallback haltujuan;
+  final String judul;
+  final String deskripsi;
+  final String gambar;
 
-  const Tagkursus({
+  const InfoGraphicCard({
     super.key,
-    required this.namatag,
+    required this.haltujuan,
+    required this.judul,
+    required this.deskripsi,
+    this.gambar = 'lib/aset/gambar/brokenimage.png'
+
   });
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 60,
-      height: 20,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(5),
-        color: paketwarna.nordicButton1,
-      ),
-      child: Center(
-        child: Text(
-          namatag,
-          style: TextStyle(
-            fontFamily: 'Poppins',
-            color: paketwarna.nordicTitle,
-            fontWeight: FontWeight.w600
+    return GestureDetector(
+      behavior: HitTestBehavior.opaque,
+      onTap: haltujuan,
+      child: Container(
+        width: 340,
+        height: 120,
+        margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+        clipBehavior: Clip.antiAlias,
+        decoration: BoxDecoration(
+          color: paketwarna.nordicCard,
+          borderRadius: BorderRadius.circular(12)
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(9.0),
+          
+          child: Row(
+            children: [
+              //Gambar/icon kursus
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  gradient: LinearGradient(
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                    colors: [
+                      Colors.transparent,
+                      const Color.fromARGB(113, 255, 255, 255),
+                    ]
+                  )
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(12),
+                    child: Image.asset(
+                      gambar,
+                      width: 90,
+                      height: 90,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+              ),
+
+              const SizedBox(width: 20,),
+
+              Expanded(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    const SizedBox(
+                      width: 170,
+                      child: Text(
+                        'Pemrograman Berbasis Objek',
+                        style: TextStyle(
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.bold,
+                          fontSize: 14,
+                          color: paketwarna.nordicTitle
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 170,
+                      child: Divider(
+                        color: paketwarna.nordicTitle.withOpacity(0.6),
+                        thickness: 2,
+                        height: 10,
+                        indent: 0,
+                        endIndent: 0,
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 170,
+                      child: Text(
+                        'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
+                        style: TextStyle(
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.w400,
+                          fontSize: 9,
+                          color: paketwarna.nordicTitle
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
           ),
         ),
       ),
     );
   }
 }
+// class Tagkursus extends StatelessWidget {
+//   final String namatag;
+
+//   const Tagkursus({
+//     super.key,
+//     required this.namatag,
+//   });
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Container(
+//       width: 60,
+//       height: 20,
+//       decoration: BoxDecoration(
+//         borderRadius: BorderRadius.circular(5),
+//         color: paketwarna.nordicButton1,
+//       ),
+//       child: Center(
+//         child: Text(
+//           namatag,
+//           style: TextStyle(
+//             fontFamily: 'Poppins',
+//             color: paketwarna.nordicTitle,
+//             fontWeight: FontWeight.w600
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }

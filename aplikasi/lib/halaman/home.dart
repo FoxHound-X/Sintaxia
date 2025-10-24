@@ -51,7 +51,6 @@ class halaman_home extends StatelessWidget {
           child: Container(
             child: Column(
               children: [
-
                 //Title HeyThere
                 Padding(padding: EdgeInsets.only(top: 20, bottom: 10, right: 100),
                   child:const Column(
@@ -80,7 +79,7 @@ class halaman_home extends StatelessWidget {
 
                 //properti seeall dan lain nya
                 const Padding(
-                  padding: EdgeInsets.only(left: 17, top: 20),
+                  padding: EdgeInsets.only(left: 20, top: 20),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
@@ -91,7 +90,7 @@ class halaman_home extends StatelessWidget {
                           fontSize: 14
                         ),
                       ),
-                      SizedBox(width: 210,),
+                      SizedBox(width: 227,),
                        Text(
                         "Seeall",
                         style: TextStyle(
@@ -222,7 +221,19 @@ class halaman_home extends StatelessWidget {
                       const SizedBox(width: 10,),
                     ],
                   ),
-                )
+                ),
+
+                const SizedBox(height: 20,),
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: const Text(
+                    'Aplikasi'
+                  ),
+                ),
+                const SizedBox(height: 20,),
+
+                //InfoGraphic Lable Kursus [Terluar]
+                
 
               ],
             ),
