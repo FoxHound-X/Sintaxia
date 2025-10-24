@@ -76,9 +76,9 @@ class halaman_home extends StatelessWidget {
 
 
                 //properti seeall dan lain nya
-                Padding(
-                  padding: const EdgeInsets.only(left: 17, top: 20),
-                  child: const Row(
+                const Padding(
+                  padding: EdgeInsets.only(left: 17, top: 20),
+                  child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                        Text(

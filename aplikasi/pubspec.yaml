@@ -87,6 +87,8 @@ flutter:
           weight: 700
         - asset: lib/aset/fonts/poppins/Poppins-Italic.ttf
           style: italic
+
+
     - family: Sfpro
       fonts:
         - asset: lib/aset/fonts/sfpro/SFPRODISPLAYREGULAR.OTF
@@ -96,7 +98,7 @@ flutter:
         - asset: lib/aset/fonts/sfpro/SFPRODISPLAYBOLD.OTF
           weight: 700
         - asset: lib/aset/fonts/sfpro/SFPRODISPLAYTHINITALIC.OTF
-          weight: italic
+          style: italic
         
 
   # For details regarding fonts from package dependencies,

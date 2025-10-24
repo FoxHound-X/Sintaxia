@@ -1,7 +1,7 @@
 import 'package:aplikasi/aset/paketwarna.dart';
 import 'package:flutter/material.dart';
-import 'package:aplikasi/main.dart';
-import 'package:aplikasi/aset/asetwidget.dart';
+// import 'package:aplikasi/main.dart';
+// import 'package:aplikasi/aset/asetwidget.dart';
 
 class Tombol extends StatelessWidget {
   final String nama;
@@ -243,9 +243,7 @@ class Cardkursus extends StatelessWidget {
                           borderRadius: BorderRadius.circular(9)
                         )
                       ),
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/welcomepage');
-                      },
+                      onPressed: targethalaman,
                       child: Text(
                         'Learn',
                         style: TextStyle(
@@ -296,6 +294,20 @@ class Tagkursus extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+}
+
+//Warning dialog
+class warning_dialog extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return showDialog(
+      context: context, 
+      builder: (context) {
+        
+      }
     );
   }
 }
