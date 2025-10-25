@@ -47,8 +47,8 @@ class halaman_home extends StatelessWidget {
         ),
 
 
-        body: SingleChildScrollView(
-          child: Container(
+        body: RepaintBoundary(
+          child: SingleChildScrollView(
             child: Column(
               children: [
                 //Title HeyThere
@@ -75,8 +75,8 @@ class halaman_home extends StatelessWidget {
                     ],
                   ),
                 ),
-
-
+                      
+                      
                 //properti seeall dan lain nya
                 const Padding(
                   padding: EdgeInsets.only(left: 20, top: 20),
@@ -101,128 +101,132 @@ class halaman_home extends StatelessWidget {
                     ],
                   ),
                 ),
-
-
+                      
+                      
                 const SizedBox(height: 3,),
-
+                      
                 //Tombol Kategori wok
-                SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      const SizedBox(width: 2,),
-                       Tombol(
-                        nama: "Aplikasi",
-                        onPressed: () {
-                          Navigator.pushNamed(context, '/welcomepage');
-                        },
-                      ),
-                      Tombol(
-                        nama: "Aplikasi",
-                        onPressed: () {
-                          Navigator.pushNamed(context, '/welcomepage');
-                        },
-                      ),
-                      Tombol(
-                        nama: "Aplikasi",
-                        onPressed: () {
-                          Navigator.pushNamed(context, '/welcomepage');
-                        },
-                      ),
-                       Tombol(
-                        nama: "Aplikasi",
-                        onPressed: () {
-                          Navigator.pushNamed(context, '/welcomepage');
-                        },
-                      ),
-                      Tombol(
-                        nama: "Aplikasi",
-                        onPressed: () {
-                          Navigator.pushNamed(context, '/welcomepage');
-                        },
-                      ),
-                      Tombol(
-                        nama: "Aplikasi",
-                        onPressed: () {
-                          Navigator.pushNamed(context, '/welcomepage');
-                        },
-                      ),
-                      Tombol(
-                        nama: "Aplikasi",
-                        onPressed: () {
-                          Navigator.pushNamed(context, '/welcomepage');
-                        },
-                      ),
-                      SizedBox(width: 20,)
-                    ],
+                RepaintBoundary(
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        const SizedBox(width: 2,),
+                         Tombol(
+                          nama: "Aplikasi",
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/welcomepage');
+                          },
+                        ),
+                        Tombol(
+                          nama: "Aplikasi",
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/welcomepage');
+                          },
+                        ),
+                        Tombol(
+                          nama: "Aplikasi",
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/welcomepage');
+                          },
+                        ),
+                         Tombol(
+                          nama: "Aplikasi",
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/welcomepage');
+                          },
+                        ),
+                        Tombol(
+                          nama: "Aplikasi",
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/welcomepage');
+                          },
+                        ),
+                        Tombol(
+                          nama: "Aplikasi",
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/welcomepage');
+                          },
+                        ),
+                        Tombol(
+                          nama: "Aplikasi",
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/welcomepage');
+                          },
+                        ),
+                        SizedBox(width: 20,)
+                      ],
+                    ),
                   ),
                 ),
-
+                      
                 const SizedBox(height: 20,),
-
+                      
                 
-                SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      const SizedBox(width: 10,),
-                      Cardkursus(
-                        icondificulty: Icons.signal_cellular_alt_1_bar, 
-                        colorsific: paketwarna.dificultybeginer, 
-                        judulkursus: 'HTML Pemula', 
-                        pemilikkursus: 'By Lumrora Corp', 
-                        deskripsi: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ex neque, convallis a eros eu, finibus varius orci. Nam eget.', 
-                        targethalaman:() => Navigator.pushNamed(context, '/welcomepage'),
-                      ),
-                      const SizedBox(width: 10,),
-                      Cardkursus(
-                        icondificulty: Icons.signal_cellular_alt, 
-                        colorsific: paketwarna.dificultyadvance, 
-                        judulkursus: 'HTML Pemula', 
-                        pemilikkursus: 'By Lumrora Corp', 
-                        deskripsi: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ex neque, convallis a eros eu, finibus varius orci. Nam eget.', 
-                        targethalaman: () {
-                          Navigator.pushNamed(context, '/welcomepage');
-                        },
-                      ),
-                      const SizedBox(width: 10,),
-                      Cardkursus(
-                        icondificulty: Icons.signal_cellular_alt_2_bar, 
-                        colorsific: paketwarna.dificultyintermediet, 
-                        judulkursus: 'HTML Pemula', 
-                        pemilikkursus: 'By Lumrora Corp', 
-                        deskripsi: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ex neque, convallis a eros eu, finibus varius orci. Nam eget.', 
-                        targethalaman: () {
-                          Navigator.pushNamed(context, '/welcomepage');
-                        },
-                      ),
-                      const SizedBox(width: 10,),
-                      Cardkursus(
-                        icondificulty: Icons.signal_cellular_alt_1_bar, 
-                        colorsific: paketwarna.dificultybeginer, 
-                        judulkursus: 'HTML Pemula', 
-                        pemilikkursus: 'By Lumrora Corp', 
-                        deskripsi: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ex neque, convallis a eros eu, finibus varius orci. Nam eget.', 
-                        targethalaman: () {
-                          Navigator.pushNamed(context, '/welcomepage');
-                        },
-                      ),
-                      const SizedBox(width: 10,),
-                      Cardkursus(
-                        icondificulty: Icons.signal_cellular_alt_1_bar, 
-                        colorsific: paketwarna.dificultybeginer, 
-                        judulkursus: 'HTML Pemula', 
-                        pemilikkursus: 'By Lumrora Corp', 
-                        deskripsi: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ex neque, convallis a eros eu, finibus varius orci. Nam eget.', 
-                        targethalaman: () {
-                          Navigator.pushNamed(context, '/welcomepage');
-                        },
-                      ),
-                      const SizedBox(width: 10,),
-                    ],
+                RepaintBoundary(
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        const SizedBox(width: 10,),
+                        Cardkursus(
+                          icondificulty: Icons.signal_cellular_alt_1_bar, 
+                          colorsific: paketwarna.dificultybeginer, 
+                          judulkursus: 'HTML Pemula', 
+                          pemilikkursus: 'By Lumrora Corp', 
+                          deskripsi: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ex neque, convallis a eros eu, finibus varius orci. Nam eget.', 
+                          targethalaman:() => Navigator.pushNamed(context, '/welcomepage'),
+                        ),
+                        const SizedBox(width: 10,),
+                        Cardkursus(
+                          icondificulty: Icons.signal_cellular_alt, 
+                          colorsific: paketwarna.dificultyadvance, 
+                          judulkursus: 'HTML Pemula', 
+                          pemilikkursus: 'By Lumrora Corp', 
+                          deskripsi: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ex neque, convallis a eros eu, finibus varius orci. Nam eget.', 
+                          targethalaman: () {
+                            Navigator.pushNamed(context, '/welcomepage');
+                          },
+                        ),
+                        const SizedBox(width: 10,),
+                        Cardkursus(
+                          icondificulty: Icons.signal_cellular_alt_2_bar, 
+                          colorsific: paketwarna.dificultyintermediet, 
+                          judulkursus: 'HTML Pemula', 
+                          pemilikkursus: 'By Lumrora Corp', 
+                          deskripsi: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ex neque, convallis a eros eu, finibus varius orci. Nam eget.', 
+                          targethalaman: () {
+                            Navigator.pushNamed(context, '/welcomepage');
+                          },
+                        ),
+                        const SizedBox(width: 10,),
+                        Cardkursus(
+                          icondificulty: Icons.signal_cellular_alt_1_bar, 
+                          colorsific: paketwarna.dificultybeginer, 
+                          judulkursus: 'HTML Pemula', 
+                          pemilikkursus: 'By Lumrora Corp', 
+                          deskripsi: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ex neque, convallis a eros eu, finibus varius orci. Nam eget.', 
+                          targethalaman: () {
+                            Navigator.pushNamed(context, '/welcomepage');
+                          },
+                        ),
+                        const SizedBox(width: 10,),
+                        Cardkursus(
+                          icondificulty: Icons.signal_cellular_alt_1_bar, 
+                          colorsific: paketwarna.dificultybeginer, 
+                          judulkursus: 'HTML Pemula', 
+                          pemilikkursus: 'By Lumrora Corp', 
+                          deskripsi: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ex neque, convallis a eros eu, finibus varius orci. Nam eget.', 
+                          targethalaman: () {
+                            Navigator.pushNamed(context, '/welcomepage');
+                          },
+                        ),
+                        const SizedBox(width: 10,),
+                      ],
+                    ),
                   ),
                 ),
-
+                      
                 const SizedBox(height: 20,),
                 Align(
                   alignment: Alignment.centerLeft,
@@ -231,13 +235,131 @@ class halaman_home extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 20,),
-
+                      
                 //InfoGraphic Lable Kursus [Terluar]
-                
-
+                InfoGraphicCard(
+                  haltujuan: () {
+                    Navigator.pushNamed(context, '/welcomepage');
+                  }, 
+                  judul: 'Github dan Git', 
+                  deskripsi: 'Kalian akan di ajarkan bagaimana cara menggunakan Github dan Git di windows',
+                ),
+                const SizedBox(height: 17,),
+                InfoGraphicCard(
+                  haltujuan: () {
+                    Navigator.pushNamed(context, '/welcomehome');
+                  }, 
+                  judul: 'Github dan Git', 
+                  deskripsi: 'Kalian akan di ajarkan bagaimana cara menggunakan Github dan Git di windows',
+                ),
+                const SizedBox(height: 17,),
+                InfoGraphicCard(
+                  haltujuan: () {
+                    Navigator.pushNamed(context, '/welcomehome');
+                  }, 
+                  judul: 'Github dan Git', 
+                  deskripsi: 'Kalian akan di ajarkan bagaimana cara menggunakan Github dan Git di windows',
+                ),
+                const SizedBox(height: 17,),
+                InfoGraphicCard(
+                  haltujuan: () {
+                    Navigator.pushNamed(context, '/welcomehome');
+                  }, 
+                  judul: 'Github dan Git', 
+                  deskripsi: 'Kalian akan di ajarkan bagaimana cara menggunakan Github dan Git di windows',
+                ),
+                const SizedBox(height: 17,),
+                InfoGraphicCard(
+                  haltujuan: () {
+                    Navigator.pushNamed(context, '/welcomehome');
+                  }, 
+                  judul: 'Github dan Git', 
+                  deskripsi: 'Kalian akan di ajarkan bagaimana cara menggunakan Github dan Git di windows',
+                ),
+                const SizedBox(height: 17,),
+                InfoGraphicCard(
+                  haltujuan: () {
+                    Navigator.pushNamed(context, '/welcomehome');
+                  }, 
+                  judul: 'Github dan Git', 
+                  deskripsi: 'Kalian akan di ajarkan bagaimana cara menggunakan Github dan Git di windows',
+                ),
+                const SizedBox(height: 17,),
+                InfoGraphicCard(
+                  haltujuan: () {
+                    Navigator.pushNamed(context, '/welcomehome');
+                  }, 
+                  judul: 'Github dan Git', 
+                  deskripsi: 'Kalian akan di ajarkan bagaimana cara menggunakan Github dan Git di windows',
+                ),
+                const SizedBox(height: 17,),
+                InfoGraphicCard(
+                  haltujuan: () {
+                    Navigator.pushNamed(context, '/welcomehome');
+                  }, 
+                  judul: 'Github dan Git', 
+                  deskripsi: 'Kalian akan di ajarkan bagaimana cara menggunakan Github dan Git di windows',
+                ),
+                const SizedBox(height: 17,),
+                InfoGraphicCard(
+                  haltujuan: () {
+                    Navigator.pushNamed(context, '/welcomehome');
+                  }, 
+                  judul: 'Github dan Git', 
+                  deskripsi: 'Kalian akan di ajarkan bagaimana cara menggunakan Github dan Git di windows',
+                ),
+                const SizedBox(height: 17,),
+                InfoGraphicCard(
+                  haltujuan: () {
+                    Navigator.pushNamed(context, '/welcomehome');
+                  }, 
+                  judul: 'Github dan Git', 
+                  deskripsi: 'Kalian akan di ajarkan bagaimana cara menggunakan Github dan Git di windows',
+                ),
+                const SizedBox(height: 17,),
+                InfoGraphicCard(
+                  haltujuan: () {
+                    Navigator.pushNamed(context, '/welcomehome');
+                  }, 
+                  judul: 'Github dan Git', 
+                  deskripsi: 'Kalian akan di ajarkan bagaimana cara menggunakan Github dan Git di windows',
+                ),
+                const SizedBox(height: 17,),
+                InfoGraphicCard(
+                  haltujuan: () {
+                    Navigator.pushNamed(context, '/welcomehome');
+                  }, 
+                  judul: 'Github dan Git', 
+                  deskripsi: 'Kalian akan di ajarkan bagaimana cara menggunakan Github dan Git di windows',
+                ),
+                const SizedBox(height: 17,),
+                InfoGraphicCard(
+                  haltujuan: () {
+                    Navigator.pushNamed(context, '/welcomehome');
+                  }, 
+                  judul: 'Github dan Git', 
+                  deskripsi: 'Kalian akan di ajarkan bagaimana cara menggunakan Github dan Git di windows',
+                ),
+                const SizedBox(height: 17,),
+                InfoGraphicCard(
+                  haltujuan: () {
+                    Navigator.pushNamed(context, '/welcomehome');
+                  }, 
+                  judul: 'Github dan Git', 
+                  deskripsi: 'Kalian akan di ajarkan bagaimana cara menggunakan Github dan Git di windows',
+                ),
+                const SizedBox(height: 17,),
+                InfoGraphicCard(
+                  haltujuan: () {
+                    Navigator.pushNamed(context, '/welcomehome');
+                  }, 
+                  judul: 'Github dan Git', 
+                  deskripsi: 'Kalian akan di ajarkan bagaimana cara menggunakan Github dan Git di windows',
+                ),
+                const SizedBox(height: 17,),
               ],
-            ),
-          )
+            )
+          ),
         ),
       ),
     );
