@@ -271,14 +271,14 @@ class Cardkursus extends StatelessWidget {
 
 class InfoGraphicCard extends StatelessWidget {
   final VoidCallback haltujuan;
-  final String judul;
+  final String judulmateri;
   final String deskripsi;
   final String gambar;
 
   const InfoGraphicCard({
     super.key,
     required this.haltujuan,
-    required this.judul,
+    required this.judulmateri,
     required this.deskripsi,
     this.gambar = 'lib/aset/gambar/brokenimage.png'
 
@@ -338,10 +338,10 @@ class InfoGraphicCard extends StatelessWidget {
                     mainAxisSize: MainAxisSize.min,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      const SizedBox(
+                      SizedBox(
                         width: 170,
                         child: Text(
-                          'Pemrograman Berbasis Objek',
+                          judulmateri,
                           style: TextStyle(
                             fontFamily: 'Poppins',
                             fontWeight: FontWeight.bold,
@@ -360,10 +360,10 @@ class InfoGraphicCard extends StatelessWidget {
                           endIndent: 0,
                         ),
                       ),
-                      const SizedBox(
+                      SizedBox(
                         width: 170,
                         child: Text(
-                          'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
+                          deskripsi,
                           style: TextStyle(
                             fontFamily: 'Poppins',
                             fontWeight: FontWeight.w400,

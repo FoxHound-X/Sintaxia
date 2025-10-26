@@ -1,36 +1,30 @@
 import 'package:aplikasi/aset/paketwarna.dart';
 import 'package:flutter/material.dart';
-import 'package:aplikasi/main.dart';
 import 'package:aplikasi/aset/asetwidget.dart';
 
 
+class HalamanHome extends StatelessWidget {
+  const HalamanHome({super.key});
 
-class halaman_home extends StatelessWidget {
-  const halaman_home({super.key});
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      routes: {
-        '/welcomepage': (context) => welcome()
-      },
-
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
+    return RepaintBoundary(
+      child: Scaffold(
         backgroundColor: paketwarna.nordicBacground,
         appBar: AppBar(
           backgroundColor: paketwarna.nordicBacground,
           leading: IconButton(
-            icon: Icon(Icons.menu_rounded), color: paketwarna.deepea0,
-            onPressed: (){
+            icon: const Icon(Icons.menu_rounded),
+            color: paketwarna.deepea0,
+            onPressed: () {
               debugPrint("Aplikasi berhasil");
             },
           ),
-
           actions: [
             Padding(
-              padding: EdgeInsets.only(right: 3),
+              padding: const EdgeInsets.only(right: 3),
               child: TextButton(
-                child:const Text(
+                child: const Text(
                   "SINTAXIA",
                   style: TextStyle(
                     fontSize: 18,
@@ -40,21 +34,20 @@ class halaman_home extends StatelessWidget {
                 ),
                 onPressed: () {
                   debugPrint('Aplikasi');
-                  debugPrint('Aplikasi');
                 },
               ),
             )
           ],
         ),
-
-
+      
         body: RepaintBoundary(
           child: SingleChildScrollView(
             child: Column(
               children: [
-                //Title HeyThere
-                Padding(padding: EdgeInsets.only(top: 20, bottom: 10, right: 100),
-                  child:const Column(
+                // === HEY THERE ===
+                const Padding(
+                  padding: EdgeInsets.only(top: 20, bottom: 10, right: 100),
+                  child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
@@ -76,290 +69,123 @@ class halaman_home extends StatelessWidget {
                     ],
                   ),
                 ),
-                      
-                      
-                //properti seeall dan lain nya
+      
+                // === CATEGORY TITLE ===
                 const Padding(
                   padding: EdgeInsets.only(left: 20, top: 20),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                       Text(
+                      Text(
                         "Categories",
                         style: TextStyle(
                           color: paketwarna.nordicTitle,
-                          fontSize: 14
+                          fontSize: 14,
                         ),
                       ),
-                      SizedBox(width: 227,),
-                       Text(
-                        "Seeall",
+                      Spacer(),
+                      Text(
+                        "See all",
                         style: TextStyle(
                           color: paketwarna.nordicTitle,
-                          fontSize: 14
+                          fontSize: 14,
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ),
-                      
-                      
-                const SizedBox(height: 3,),
-                      
-                //Tombol Kategori wok
+      
+                const SizedBox(height: 3),
+      
+                // === CATEGORY BUTTONS ===
                 RepaintBoundary(
                   child: SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row(
                       children: [
-                        const SizedBox(width: 2,),
-                         Tombol(
-                          nama: "Aplikasi",
+                        const SizedBox(width: 10),
+                        Tombol(
+                          nama: "HTML",
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/Fundamental');
+                          },
+                        ),
+                        Tombol(
+                          nama: "CSS",
                           onPressed: () {
                             Navigator.pushNamed(context, '/welcomepage');
                           },
                         ),
                         Tombol(
-                          nama: "Aplikasi",
+                          nama: "CSS",
                           onPressed: () {
                             Navigator.pushNamed(context, '/welcomepage');
                           },
                         ),
-                        Tombol(
-                          nama: "Aplikasi",
-                          onPressed: () {
-                            Navigator.pushNamed(context, '/welcomepage');
-                          },
-                        ),
-                         Tombol(
-                          nama: "Aplikasi",
-                          onPressed: () {
-                            Navigator.pushNamed(context, '/welcomepage');
-                          },
-                        ),
-                        Tombol(
-                          nama: "Aplikasi",
-                          onPressed: () {
-                            Navigator.pushNamed(context, '/welcomepage');
-                          },
-                        ),
-                        Tombol(
-                          nama: "Aplikasi",
-                          onPressed: () {
-                            Navigator.pushNamed(context, '/welcomepage');
-                          },
-                        ),
-                        Tombol(
-                          nama: "Aplikasi",
-                          onPressed: () {
-                            Navigator.pushNamed(context, '/welcomepage');
-                          },
-                        ),
-                        SizedBox(width: 20,)
+                        const SizedBox(width: 20),
                       ],
                     ),
                   ),
                 ),
-                      
-                const SizedBox(height: 20,),
-                      
-                
+      
+                const SizedBox(height: 20),
+      
+                // === COURSE CARDS ===
                 RepaintBoundary(
                   child: SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row(
                       children: [
-                        const SizedBox(width: 10,),
+                        const SizedBox(width: 10),
                         Cardkursus(
-                          icondificulty: Icons.signal_cellular_alt_1_bar, 
-                          colorsific: paketwarna.dificultybeginer, 
-                          judulkursus: 'HTML Pemula', 
-                          pemilikkursus: 'By Lumrora Corp', 
-                          deskripsi: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ex neque, convallis a eros eu, finibus varius orci. Nam eget.', 
-                          targethalaman:() => Navigator.pushNamed(context, '/welcomepage'),
+                          icondificulty: Icons.signal_cellular_alt_1_bar,
+                          colorsific: paketwarna.dificultybeginer,
+                          judulkursus: 'Unity Dasar',
+                          pemilikkursus: 'By Lumrora Corp',
+                          deskripsi:
+                              'Pelajari dasar-dasar Unity untuk mulai membuat game pertamamu!',
+                          targethalaman: () =>
+                              Navigator.pushNamed(context, '/variabledasar'),
                         ),
-                        const SizedBox(width: 10,),
+                        const SizedBox(width: 10),
                         Cardkursus(
-                          icondificulty: Icons.signal_cellular_alt, 
-                          colorsific: paketwarna.dificultyadvance, 
-                          judulkursus: 'HTML Pemula', 
-                          pemilikkursus: 'By Lumrora Corp', 
-                          deskripsi: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ex neque, convallis a eros eu, finibus varius orci. Nam eget.', 
-                          targethalaman: () {
-                            Navigator.pushNamed(context, '/welcomepage');
-                          },
+                          icondificulty: Icons.signal_cellular_alt,
+                          colorsific: paketwarna.dificultyadvance,
+                          judulkursus: 'HTML Pemula',
+                          pemilikkursus: 'By Lumrora Corp',
+                          deskripsi:
+                              'Belajar dasar HTML untuk membuat halaman web pertama kamu.',
+                          targethalaman: () =>
+                              Navigator.pushNamed(context, '/welcomepage'),
                         ),
-                        const SizedBox(width: 10,),
-                        Cardkursus(
-                          icondificulty: Icons.signal_cellular_alt_2_bar, 
-                          colorsific: paketwarna.dificultyintermediet, 
-                          judulkursus: 'HTML Pemula', 
-                          pemilikkursus: 'By Lumrora Corp', 
-                          deskripsi: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ex neque, convallis a eros eu, finibus varius orci. Nam eget.', 
-                          targethalaman: () {
-                            Navigator.pushNamed(context, '/welcomepage');
-                          },
-                        ),
-                        const SizedBox(width: 10,),
-                        Cardkursus(
-                          icondificulty: Icons.signal_cellular_alt_1_bar, 
-                          colorsific: paketwarna.dificultybeginer, 
-                          judulkursus: 'HTML Pemula', 
-                          pemilikkursus: 'By Lumrora Corp', 
-                          deskripsi: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ex neque, convallis a eros eu, finibus varius orci. Nam eget.', 
-                          targethalaman: () {
-                            Navigator.pushNamed(context, '/welcomepage');
-                          },
-                        ),
-                        const SizedBox(width: 10,),
-                        Cardkursus(
-                          icondificulty: Icons.signal_cellular_alt_1_bar, 
-                          colorsific: paketwarna.dificultybeginer, 
-                          judulkursus: 'HTML Pemula', 
-                          pemilikkursus: 'By Lumrora Corp', 
-                          deskripsi: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ex neque, convallis a eros eu, finibus varius orci. Nam eget.', 
-                          targethalaman: () {
-                            Navigator.pushNamed(context, '/welcomepage');
-                          },
-                        ),
-                        const SizedBox(width: 10,),
+                        const SizedBox(width: 10),
                       ],
                     ),
                   ),
                 ),
-                      
-                const SizedBox(height: 20,),
-                Align(
+      
+                const SizedBox(height: 20),
+      
+                const Align(
                   alignment: Alignment.centerLeft,
-                  child: const Text(
-                    'Aplikasi'
-                  ),
+                  child: Text('Aplikasi'),
                 ),
-                const SizedBox(height: 20,),
-                      
-                //InfoGraphic Lable Kursus [Terluar]
+      
+                const SizedBox(height: 20),
+      
+                // === INFOGRAPHIC CARD ===
                 InfoGraphicCard(
                   haltujuan: () {
-                    Navigator.pushNamed(context, '/welcomepage');
-                  }, 
-                  judul: 'Github dan Git', 
-                  deskripsi: 'Kalian akan di ajarkan bagaimana cara menggunakan Github dan Git di windows',
+                    Navigator.pushNamed(context, '/variabledasar');
+                  },
+                  judulmateri: 'Github dan Git',
+                  deskripsi:
+                      'Kalian akan diajarkan bagaimana cara menggunakan Github dan Git di Windows',
                 ),
-                const SizedBox(height: 17,),
-                InfoGraphicCard(
-                  haltujuan: () {
-                    Navigator.pushNamed(context, '/welcomehome');
-                  }, 
-                  judul: 'Github dan Git', 
-                  deskripsi: 'Kalian akan di ajarkan bagaimana cara menggunakan Github dan Git di windows',
-                ),
-                const SizedBox(height: 17,),
-                InfoGraphicCard(
-                  haltujuan: () {
-                    Navigator.pushNamed(context, '/welcomehome');
-                  }, 
-                  judul: 'Github dan Git', 
-                  deskripsi: 'Kalian akan di ajarkan bagaimana cara menggunakan Github dan Git di windows',
-                ),
-                const SizedBox(height: 17,),
-                InfoGraphicCard(
-                  haltujuan: () {
-                    Navigator.pushNamed(context, '/welcomehome');
-                  }, 
-                  judul: 'Github dan Git', 
-                  deskripsi: 'Kalian akan di ajarkan bagaimana cara menggunakan Github dan Git di windows',
-                ),
-                const SizedBox(height: 17,),
-                InfoGraphicCard(
-                  haltujuan: () {
-                    Navigator.pushNamed(context, '/welcomehome');
-                  }, 
-                  judul: 'Github dan Git', 
-                  deskripsi: 'Kalian akan di ajarkan bagaimana cara menggunakan Github dan Git di windows',
-                ),
-                const SizedBox(height: 17,),
-                InfoGraphicCard(
-                  haltujuan: () {
-                    Navigator.pushNamed(context, '/welcomehome');
-                  }, 
-                  judul: 'Github dan Git', 
-                  deskripsi: 'Kalian akan di ajarkan bagaimana cara menggunakan Github dan Git di windows',
-                ),
-                const SizedBox(height: 17,),
-                InfoGraphicCard(
-                  haltujuan: () {
-                    Navigator.pushNamed(context, '/welcomehome');
-                  }, 
-                  judul: 'Github dan Git', 
-                  deskripsi: 'Kalian akan di ajarkan bagaimana cara menggunakan Github dan Git di windows',
-                ),
-                const SizedBox(height: 17,),
-                InfoGraphicCard(
-                  haltujuan: () {
-                    Navigator.pushNamed(context, '/welcomehome');
-                  }, 
-                  judul: 'Github dan Git', 
-                  deskripsi: 'Kalian akan di ajarkan bagaimana cara menggunakan Github dan Git di windows',
-                ),
-                const SizedBox(height: 17,),
-                InfoGraphicCard(
-                  haltujuan: () {
-                    Navigator.pushNamed(context, '/welcomehome');
-                  }, 
-                  judul: 'Github dan Git', 
-                  deskripsi: 'Kalian akan di ajarkan bagaimana cara menggunakan Github dan Git di windows',
-                ),
-                const SizedBox(height: 17,),
-                InfoGraphicCard(
-                  haltujuan: () {
-                    Navigator.pushNamed(context, '/welcomehome');
-                  }, 
-                  judul: 'Github dan Git', 
-                  deskripsi: 'Kalian akan di ajarkan bagaimana cara menggunakan Github dan Git di windows',
-                ),
-                const SizedBox(height: 17,),
-                InfoGraphicCard(
-                  haltujuan: () {
-                    Navigator.pushNamed(context, '/welcomehome');
-                  }, 
-                  judul: 'Github dan Git', 
-                  deskripsi: 'Kalian akan di ajarkan bagaimana cara menggunakan Github dan Git di windows',
-                ),
-                const SizedBox(height: 17,),
-                InfoGraphicCard(
-                  haltujuan: () {
-                    Navigator.pushNamed(context, '/welcomehome');
-                  }, 
-                  judul: 'Github dan Git', 
-                  deskripsi: 'Kalian akan di ajarkan bagaimana cara menggunakan Github dan Git di windows',
-                ),
-                const SizedBox(height: 17,),
-                InfoGraphicCard(
-                  haltujuan: () {
-                    Navigator.pushNamed(context, '/welcomehome');
-                  }, 
-                  judul: 'Github dan Git', 
-                  deskripsi: 'Kalian akan di ajarkan bagaimana cara menggunakan Github dan Git di windows',
-                ),
-                const SizedBox(height: 17,),
-                InfoGraphicCard(
-                  haltujuan: () {
-                    Navigator.pushNamed(context, '/welcomehome');
-                  }, 
-                  judul: 'Github dan Git', 
-                  deskripsi: 'Kalian akan di ajarkan bagaimana cara menggunakan Github dan Git di windows',
-                ),
-                const SizedBox(height: 17,),
-                InfoGraphicCard(
-                  haltujuan: () {
-                    Navigator.pushNamed(context, '/welcomehome');
-                  }, 
-                  judul: 'Github dan Git', 
-                  deskripsi: 'Kalian akan di ajarkan bagaimana cara menggunakan Github dan Git di windows',
-                ),
-                const SizedBox(height: 17,),
+      
+                const SizedBox(height: 17),
               ],
-            )
+            ),
           ),
         ),
       ),

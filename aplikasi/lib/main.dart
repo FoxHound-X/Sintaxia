@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'aset/paketwarna.dart';
 import 'halaman/home.dart';
+import 'halaman/course/fundamental.dart';
 
-void main() => runApp( Aplikasi());
+void main() {
+  runApp(Aplikasi());
+}
 
 class Aplikasi extends StatelessWidget{
   const Aplikasi({super.key});
@@ -14,7 +17,8 @@ class Aplikasi extends StatelessWidget{
       initialRoute: '/welcomepage',
       routes: {
         '/welcomepage': (context) => const welcome(),
-        '/homepage': (context) => const halaman_home(),
+        '/homepage': (context) => const HalamanHome(),
+        '/Fundamental': (context) => const Fundamental(),
       },
     );
   }
@@ -111,7 +115,7 @@ class welcome extends StatelessWidget{
                         Navigator.push(
                           context, 
                           PageRouteBuilder(
-                           pageBuilder: (context, animation, secondaryAnimation) => const halaman_home(),
+                           pageBuilder: (context, animation, secondaryAnimation) => const HalamanHome(),
                            transitionDuration:  Duration(milliseconds: 0),
                           )
                         );
