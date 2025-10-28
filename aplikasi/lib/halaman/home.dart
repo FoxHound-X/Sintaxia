@@ -103,7 +103,7 @@ class HalamanHome extends StatelessWidget {
                     scrollDirection: Axis.horizontal,
                     child: Row(
                       children: [
-                        const SizedBox(width: 10),
+                        const SizedBox(width: 5),
                         Tombol(
                           nama: "HTML",
                           onPressed: () {
@@ -122,6 +122,36 @@ class HalamanHome extends StatelessWidget {
                             Navigator.pushNamed(context, '/welcomepage');
                           },
                         ),
+                        Tombol(
+                          nama: "CSS",
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/welcomepage');
+                          },
+                        ),
+                        Tombol(
+                          nama: "CSS",
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/welcomepage');
+                          },
+                        ),
+                        Tombol(
+                          nama: "CSS",
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/welcomepage');
+                          },
+                        ),
+                        Tombol(
+                          nama: "CSS",
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/welcomepage');
+                          },
+                        ),
+                          Tombol(
+                            nama: "CSS",
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/welcomepage');
+                            },
+                          ),
                         const SizedBox(width: 20),
                       ],
                     ),
@@ -159,6 +189,72 @@ class HalamanHome extends StatelessWidget {
                               Navigator.pushNamed(context, '/welcomepage'),
                         ),
                         const SizedBox(width: 10),
+                        Cardkursus(
+                          icondificulty: Icons.signal_cellular_alt,
+                          colorsific: paketwarna.dificultyadvance,
+                          judulkursus: 'HTML Pemula',
+                          pemilikkursus: 'By Lumrora Corp',
+                          deskripsi:
+                              'Belajar dasar HTML untuk membuat halaman web pertama kamu.',
+                          targethalaman: () =>
+                              Navigator.pushNamed(context, '/welcomepage'),
+                        ),
+                        const SizedBox(width: 10),
+                        Cardkursus(
+                          icondificulty: Icons.signal_cellular_alt,
+                          colorsific: paketwarna.dificultyadvance,
+                          judulkursus: 'HTML Pemula',
+                          pemilikkursus: 'By Lumrora Corp',
+                          deskripsi:
+                              'Belajar dasar HTML untuk membuat halaman web pertama kamu.',
+                          targethalaman: () =>
+                              Navigator.pushNamed(context, '/welcomepage'),
+                        ),
+                        const SizedBox(width: 10),
+                        Cardkursus(
+                          icondificulty: Icons.signal_cellular_alt,
+                          colorsific: paketwarna.dificultyadvance,
+                          judulkursus: 'HTML Pemula',
+                          pemilikkursus: 'By Lumrora Corp',
+                          deskripsi:
+                              'Belajar dasar HTML untuk membuat halaman web pertama kamu.',
+                          targethalaman: () =>
+                              Navigator.pushNamed(context, '/welcomepage'),
+                        ),
+                        const SizedBox(width: 10),
+                        Cardkursus(
+                          icondificulty: Icons.signal_cellular_alt,
+                          colorsific: paketwarna.dificultyadvance,
+                          judulkursus: 'HTML Pemula',
+                          pemilikkursus: 'By Lumrora Corp',
+                          deskripsi:
+                              'Belajar dasar HTML untuk membuat halaman web pertama kamu.',
+                          targethalaman: () =>
+                              Navigator.pushNamed(context, '/welcomepage'),
+                        ),
+                        const SizedBox(width: 10),
+                        Cardkursus(
+                          icondificulty: Icons.signal_cellular_alt,
+                          colorsific: paketwarna.dificultyadvance,
+                          judulkursus: 'HTML Pemula',
+                          pemilikkursus: 'By Lumrora Corp',
+                          deskripsi:
+                              'Belajar dasar HTML untuk membuat halaman web pertama kamu.',
+                          targethalaman: () =>
+                              Navigator.pushNamed(context, '/welcomepage'),
+                        ),
+                        const SizedBox(width: 10),
+                        Cardkursus(
+                          icondificulty: Icons.signal_cellular_alt,
+                          colorsific: paketwarna.dificultyadvance,
+                          judulkursus: 'HTML Pemula',
+                          pemilikkursus: 'By Lumrora Corp',
+                          deskripsi:
+                              'Belajar dasar HTML untuk membuat halaman web pertama kamu.',
+                          targethalaman: () =>
+                              Navigator.pushNamed(context, '/welcomepage'),
+                        ),
+                        const SizedBox(width: 10),
                       ],
                     ),
                   ),
@@ -174,6 +270,38 @@ class HalamanHome extends StatelessWidget {
                 const SizedBox(height: 20),
       
                 // === INFOGRAPHIC CARD ===
+                InfoGraphicCard(
+                  haltujuan: () {
+                    Navigator.pushNamed(context, '/variabledasar');
+                  },
+                  judulmateri: 'Github dan Git',
+                  deskripsi:
+                      'Kalian akan diajarkan bagaimana cara menggunakan Github dan Git di Windows',
+                ),
+                InfoGraphicCard(
+                  haltujuan: () {
+                    Navigator.pushNamed(context, '/variabledasar');
+                  },
+                  judulmateri: 'Github dan Git',
+                  deskripsi:
+                      'Kalian akan diajarkan bagaimana cara menggunakan Github dan Git di Windows',
+                ),
+                InfoGraphicCard(
+                  haltujuan: () {
+                    Navigator.pushNamed(context, '/variabledasar');
+                  },
+                  judulmateri: 'Github dan Git',
+                  deskripsi:
+                      'Kalian akan diajarkan bagaimana cara menggunakan Github dan Git di Windows',
+                ),
+                InfoGraphicCard(
+                  haltujuan: () {
+                    Navigator.pushNamed(context, '/variabledasar');
+                  },
+                  judulmateri: 'Github dan Git',
+                  deskripsi:
+                      'Kalian akan diajarkan bagaimana cara menggunakan Github dan Git di Windows',
+                ),
                 InfoGraphicCard(
                   haltujuan: () {
                     Navigator.pushNamed(context, '/variabledasar');
