@@ -135,7 +135,7 @@ class welcome extends StatelessWidget{
                     "© 2025 Lumora Apps. All rights reserved.",
                     style: TextStyle(
                       fontSize: 10,
-                      color: paketwarna.nordicTitle
+                      color: paketwarna.nordicTitle,
                       ),
                     )
                 ],

@@ -41,7 +41,7 @@ class HalamanHome extends StatelessWidget {
         ),
       
         body: RepaintBoundary(
-          child: SingleChildScrollView(
+          child: SingleChildScrollView( 
             child: Column(
               children: [
                 // === HEY THERE ===

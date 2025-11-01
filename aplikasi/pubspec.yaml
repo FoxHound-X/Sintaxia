@@ -69,6 +69,7 @@ flutter:
 
   assets:
     - lib/aset/gambar/
+    - lib/aset/gambar/course/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
