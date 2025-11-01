@@ -413,3 +413,60 @@ class InfoGraphicCard extends StatelessWidget {
 //     );
 //   }
 // }
+
+
+class CourseDropdown extends StatelessWidget {
+  final String namapelajaran;
+  final String isipelajaran;
+  final String gambar;
+
+const CourseDropdown({
+  super.key,
+  required this.namapelajaran,
+  required this.isipelajaran,
+  required this.gambar
+});
+
+  @override
+  Widget build(BuildContext context) {
+    return RepaintBoundary(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        child: Container(
+          decoration: BoxDecoration(
+            border: Border.all(color: Colors.white70, width: 2),
+            borderRadius: BorderRadius.circular(20)
+          ),
+          child: Center(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: ExpansionTile(
+                collapsedIconColor: Colors.white,
+                iconColor: Colors.white,
+                title: Text(namapelajaran, style: TextStyle(color: Colors.white),),
+                children: [
+                  ClipRRect(
+                    borderRadius: BorderRadiusGeometry.circular(9),
+                    child: Image.asset(
+                      gambar, 
+                      height: 200,
+                    ),
+                  ),
+                  const SizedBox(height: 20,),
+                  Text(isipelajaran,
+                  style: TextStyle(
+                    color: paketwarna.nordicTitle,
+                    fontFamily: 'Inter',
+                    fontWeight: FontWeight.w500
+                    ),
+                    textAlign: TextAlign.center,
+                  )
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}

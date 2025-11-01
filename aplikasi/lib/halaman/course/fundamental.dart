@@ -1,5 +1,7 @@
+import 'package:aplikasi/aset/asetwidget.dart';
 import 'package:flutter/material.dart';
 import 'package:aplikasi/aset/paketwarna.dart';
+import 'package:aplikasi/aset/asetwidgetminor.dart';
 
 class Fundamental extends StatelessWidget {
   const Fundamental({super.key});
@@ -60,7 +62,7 @@ class Fundamental extends StatelessWidget {
 
               //Status bar, Rating Kursus
               Padding(
-                padding: EdgeInsets.only(top: 7, left: 21, right: 21),
+                padding: EdgeInsets.only(top: 2, left: 21, right: 21),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
@@ -90,6 +92,11 @@ class Fundamental extends StatelessWidget {
                           color: paketwarna.nordicTitle,
                           size: 20,
                         ),
+                        Icon(
+                          Icons.star_rate_sharp,
+                          color: paketwarna.nordicTitle,
+                          size: 20,
+                        ),
                       ],
                     ),
 
@@ -99,7 +106,7 @@ class Fundamental extends StatelessWidget {
 
               //Judul Kursus
               Padding(
-                padding: const EdgeInsets.only(top: 30, right: 30),
+                padding: const EdgeInsets.only(top: 39, right: 30),
                 child: Text(
                   'Belajar Fundamental Pemrograman',
                   style: TextStyle(
@@ -112,7 +119,7 @@ class Fundamental extends StatelessWidget {
 
               //Pembuat Kursus berisi Foto dan nama Guru
               Padding(
-                padding: const EdgeInsets.only(left: 19, top: 14),
+                padding: const EdgeInsets.only(left: 19, top: 10),
                 child: Row(
                   children: [
                     ClipRRect(
@@ -136,7 +143,7 @@ class Fundamental extends StatelessWidget {
                 ),
               ),
 
-              const SizedBox(height: 35,),
+              const SizedBox(height: 65,),
 
               //Deskripsi kursus
               Center(
@@ -166,56 +173,78 @@ class Fundamental extends StatelessWidget {
                 ),
               ),
 
-              const SizedBox(height: 25,),
+              const SizedBox(height: 65,),
               Padding(
-                padding: const EdgeInsets.only(left: 20, top: 5),
+                padding: const EdgeInsets.only(left: 26, top: 20),
                 child: Row(
                   children: [
-                    Row(
-                      children: [
-                        Icon(Icons.book_outlined, color: Colors.white, size: 35,),
-                        const SizedBox(width: 5,),
-                        Text(
-                          "8 Sections",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 15,
-                            fontWeight: FontWeight.w600
-                          ),
-                        )
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        Icon(Icons.book_outlined, color: Colors.white, size: 35,),
-                        const SizedBox(width: 5,),
-                        Text(
-                          "8 Sections",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 15,
-                            fontWeight: FontWeight.w600
-                          ),
-                        )
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        Icon(Icons.book_outlined, color: Colors.white, size: 35,),
-                        const SizedBox(width: 5,),
-                        Text(
-                          "8 Sections",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 15,
-                            fontWeight: FontWeight.w600
-                          ),
-                        )
-                      ],
-                    ),
+                    propertiminor1(ikon: Icons.book_outlined, nama: "8 Sections"),
+                    const SizedBox(width: 10,),
+                    propertiminor1(ikon: Icons.timelapse_outlined, nama: "18 - Hours"),
+                    const SizedBox(width: 10,),
+                    propertiminor1(ikon: Icons.download_for_offline, nama: "Offline Learn"),
                   ],
                 ),
               ),
+
+              Center(
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 68),
+                  child: Text(
+                    "Lessons",
+                    style: TextStyle(
+                      fontSize: 25,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold
+                    ),
+                  ),
+                ),
+              ),
+
+              const SizedBox(height: 20,),
+
+              const SizedBox(height: 15,),
+              CourseDropdown(
+                namapelajaran: 'Variable Dasar', 
+                isipelajaran: 'Sed porta mattis fringilla. Nam commodo vulputate dui, id interdum orci eleifend in. Pellentesque tortor lectus, interdum vitae accumsan nec, interdum nec nisi. Vestibulum vitae eros et purus sagittis semper at nec lorem. Donec vel ex tortor. Pellentesque egestas, ipsum sit amet consectetur efficitur, purus turpis mattis quam, at porttitor lectus diam eget ligula. Ut dictum sem in turpis sollicitudin accumsan. Fusce molestie urna sit amet auctor ullamcorper. Quisque pulvinar magna quis nulla posuere, id rutrum sem mollis. Nam dignissim odio tellus, quis molestie dolor tristique vel. Integer dapibus, elit lobortis auctor aliquam, turpis ligula scelerisque nisl, vitae dictum erat nulla quis enim. Aliquam quam orci, ultrices et ultrices ut, cursus non ligula. Nam aliquam posuere euismod. Integer semper egestas ex, at facilisis nisi maximus vel. Donec et fermentum felis. Curabitur nisl augue, laoreet non diam sit amet, tincidunt dapibus ante.Sed porta mattis fringilla. Nam commodo vulputate dui, id interdum orci eleifend in. Pellentesque tortor lectus, interdum vitae accumsan nec, interdum nec nisi. Vestibulum vitae eros et purus sagittis semper at nec lorem. Donec vel ex tortor. Pellentesque egestas, ipsum sit amet consectetur efficitur, purus turpis mattis quam, at porttitor lectus diam eget ligula. Ut dictum sem in turpis sollicitudin accumsan. Fusce molestie urna sit amet auctor ullamcorper. Quisque pulvinar magna quis nulla posuere, id rutrum sem mollis. Nam dignissim odio tellus, quis molestie dolor tristique vel. Integer dapibus, elit lobortis auctor aliquam, turpis ligula scelerisque nisl, vitae dictum erat nulla quis enim. Aliquam quam orci, ultrices et ultrices ut, cursus non ligula. Nam aliquam posuere euismod. Integer semper egestas ex, at facilisis nisi maximus vel. Donec et fermentum felis. Curabitur nisl augue, laoreet non diam sit amet, tincidunt dapibus ante.', 
+                gambar: 'lib/aset/gambar/gbr1.webp'),
+              const SizedBox(height: 15,),
+              CourseDropdown(
+                namapelajaran: 'Variable Dasar', 
+                isipelajaran: 'Sed porta mattis fringilla. Nam commodo vulputate dui, id interdum orci eleifend in. Pellentesque tortor lectus, interdum vitae accumsan nec, interdum nec nisi. Vestibulum vitae eros et purus sagittis semper at nec lorem. Donec vel ex tortor. Pellentesque egestas, ipsum sit amet consectetur efficitur, purus turpis mattis quam, at porttitor lectus diam eget ligula. Ut dictum sem in turpis sollicitudin accumsan. Fusce molestie urna sit amet auctor ullamcorper. Quisque pulvinar magna quis nulla posuere, id rutrum sem mollis. Nam dignissim odio tellus, quis molestie dolor tristique vel. Integer dapibus, elit lobortis auctor aliquam, turpis ligula scelerisque nisl, vitae dictum erat nulla quis enim. Aliquam quam orci, ultrices et ultrices ut, cursus non ligula. Nam aliquam posuere euismod. Integer semper egestas ex, at facilisis nisi maximus vel. Donec et fermentum felis. Curabitur nisl augue, laoreet non diam sit amet, tincidunt dapibus ante.Sed porta mattis fringilla. Nam commodo vulputate dui, id interdum orci eleifend in. Pellentesque tortor lectus, interdum vitae accumsan nec, interdum nec nisi. Vestibulum vitae eros et purus sagittis semper at nec lorem. Donec vel ex tortor. Pellentesque egestas, ipsum sit amet consectetur efficitur, purus turpis mattis quam, at porttitor lectus diam eget ligula. Ut dictum sem in turpis sollicitudin accumsan. Fusce molestie urna sit amet auctor ullamcorper. Quisque pulvinar magna quis nulla posuere, id rutrum sem mollis. Nam dignissim odio tellus, quis molestie dolor tristique vel. Integer dapibus, elit lobortis auctor aliquam, turpis ligula scelerisque nisl, vitae dictum erat nulla quis enim. Aliquam quam orci, ultrices et ultrices ut, cursus non ligula. Nam aliquam posuere euismod. Integer semper egestas ex, at facilisis nisi maximus vel. Donec et fermentum felis. Curabitur nisl augue, laoreet non diam sit amet, tincidunt dapibus ante.', 
+                gambar: 'lib/aset/gambar/gbr1.webp'),
+              const SizedBox(height: 15,),
+              CourseDropdown(
+                namapelajaran: 'Variable Dasar', 
+                isipelajaran: 'Sed porta mattis fringilla. Nam commodo vulputate dui, id interdum orci eleifend in. Pellentesque tortor lectus, interdum vitae accumsan nec, interdum nec nisi. Vestibulum vitae eros et purus sagittis semper at nec lorem. Donec vel ex tortor. Pellentesque egestas, ipsum sit amet consectetur efficitur, purus turpis mattis quam, at porttitor lectus diam eget ligula. Ut dictum sem in turpis sollicitudin accumsan. Fusce molestie urna sit amet auctor ullamcorper. Quisque pulvinar magna quis nulla posuere, id rutrum sem mollis. Nam dignissim odio tellus, quis molestie dolor tristique vel. Integer dapibus, elit lobortis auctor aliquam, turpis ligula scelerisque nisl, vitae dictum erat nulla quis enim. Aliquam quam orci, ultrices et ultrices ut, cursus non ligula. Nam aliquam posuere euismod. Integer semper egestas ex, at facilisis nisi maximus vel. Donec et fermentum felis. Curabitur nisl augue, laoreet non diam sit amet, tincidunt dapibus ante.Sed porta mattis fringilla. Nam commodo vulputate dui, id interdum orci eleifend in. Pellentesque tortor lectus, interdum vitae accumsan nec, interdum nec nisi. Vestibulum vitae eros et purus sagittis semper at nec lorem. Donec vel ex tortor. Pellentesque egestas, ipsum sit amet consectetur efficitur, purus turpis mattis quam, at porttitor lectus diam eget ligula. Ut dictum sem in turpis sollicitudin accumsan. Fusce molestie urna sit amet auctor ullamcorper. Quisque pulvinar magna quis nulla posuere, id rutrum sem mollis. Nam dignissim odio tellus, quis molestie dolor tristique vel. Integer dapibus, elit lobortis auctor aliquam, turpis ligula scelerisque nisl, vitae dictum erat nulla quis enim. Aliquam quam orci, ultrices et ultrices ut, cursus non ligula. Nam aliquam posuere euismod. Integer semper egestas ex, at facilisis nisi maximus vel. Donec et fermentum felis. Curabitur nisl augue, laoreet non diam sit amet, tincidunt dapibus ante.', 
+                gambar: 'lib/aset/gambar/gbr1.webp'),
+              const SizedBox(height: 15,),
+              CourseDropdown(
+                namapelajaran: 'Variable Dasar', 
+                isipelajaran: 'Sed porta mattis fringilla. Nam commodo vulputate dui, id interdum orci eleifend in. Pellentesque tortor lectus, interdum vitae accumsan nec, interdum nec nisi. Vestibulum vitae eros et purus sagittis semper at nec lorem. Donec vel ex tortor. Pellentesque egestas, ipsum sit amet consectetur efficitur, purus turpis mattis quam, at porttitor lectus diam eget ligula. Ut dictum sem in turpis sollicitudin accumsan. Fusce molestie urna sit amet auctor ullamcorper. Quisque pulvinar magna quis nulla posuere, id rutrum sem mollis. Nam dignissim odio tellus, quis molestie dolor tristique vel. Integer dapibus, elit lobortis auctor aliquam, turpis ligula scelerisque nisl, vitae dictum erat nulla quis enim. Aliquam quam orci, ultrices et ultrices ut, cursus non ligula. Nam aliquam posuere euismod. Integer semper egestas ex, at facilisis nisi maximus vel. Donec et fermentum felis. Curabitur nisl augue, laoreet non diam sit amet, tincidunt dapibus ante.Sed porta mattis fringilla. Nam commodo vulputate dui, id interdum orci eleifend in. Pellentesque tortor lectus, interdum vitae accumsan nec, interdum nec nisi. Vestibulum vitae eros et purus sagittis semper at nec lorem. Donec vel ex tortor. Pellentesque egestas, ipsum sit amet consectetur efficitur, purus turpis mattis quam, at porttitor lectus diam eget ligula. Ut dictum sem in turpis sollicitudin accumsan. Fusce molestie urna sit amet auctor ullamcorper. Quisque pulvinar magna quis nulla posuere, id rutrum sem mollis. Nam dignissim odio tellus, quis molestie dolor tristique vel. Integer dapibus, elit lobortis auctor aliquam, turpis ligula scelerisque nisl, vitae dictum erat nulla quis enim. Aliquam quam orci, ultrices et ultrices ut, cursus non ligula. Nam aliquam posuere euismod. Integer semper egestas ex, at facilisis nisi maximus vel. Donec et fermentum felis. Curabitur nisl augue, laoreet non diam sit amet, tincidunt dapibus ante.', 
+                gambar: 'lib/aset/gambar/gbr1.webp'),
+              const SizedBox(height: 15,),
+              CourseDropdown(
+                namapelajaran: 'Variable Dasar', 
+                isipelajaran: 'Sed porta mattis fringilla. Nam commodo vulputate dui, id interdum orci eleifend in. Pellentesque tortor lectus, interdum vitae accumsan nec, interdum nec nisi. Vestibulum vitae eros et purus sagittis semper at nec lorem. Donec vel ex tortor. Pellentesque egestas, ipsum sit amet consectetur efficitur, purus turpis mattis quam, at porttitor lectus diam eget ligula. Ut dictum sem in turpis sollicitudin accumsan. Fusce molestie urna sit amet auctor ullamcorper. Quisque pulvinar magna quis nulla posuere, id rutrum sem mollis. Nam dignissim odio tellus, quis molestie dolor tristique vel. Integer dapibus, elit lobortis auctor aliquam, turpis ligula scelerisque nisl, vitae dictum erat nulla quis enim. Aliquam quam orci, ultrices et ultrices ut, cursus non ligula. Nam aliquam posuere euismod. Integer semper egestas ex, at facilisis nisi maximus vel. Donec et fermentum felis. Curabitur nisl augue, laoreet non diam sit amet, tincidunt dapibus ante.Sed porta mattis fringilla. Nam commodo vulputate dui, id interdum orci eleifend in. Pellentesque tortor lectus, interdum vitae accumsan nec, interdum nec nisi. Vestibulum vitae eros et purus sagittis semper at nec lorem. Donec vel ex tortor. Pellentesque egestas, ipsum sit amet consectetur efficitur, purus turpis mattis quam, at porttitor lectus diam eget ligula. Ut dictum sem in turpis sollicitudin accumsan. Fusce molestie urna sit amet auctor ullamcorper. Quisque pulvinar magna quis nulla posuere, id rutrum sem mollis. Nam dignissim odio tellus, quis molestie dolor tristique vel. Integer dapibus, elit lobortis auctor aliquam, turpis ligula scelerisque nisl, vitae dictum erat nulla quis enim. Aliquam quam orci, ultrices et ultrices ut, cursus non ligula. Nam aliquam posuere euismod. Integer semper egestas ex, at facilisis nisi maximus vel. Donec et fermentum felis. Curabitur nisl augue, laoreet non diam sit amet, tincidunt dapibus ante.', 
+                gambar: 'lib/aset/gambar/gbr1.webp'),
+              const SizedBox(height: 15,),
+              CourseDropdown(
+                namapelajaran: 'Variable Dasar', 
+                isipelajaran: 'Sed porta mattis fringilla. Nam commodo vulputate dui, id interdum orci eleifend in. Pellentesque tortor lectus, interdum vitae accumsan nec, interdum nec nisi. Vestibulum vitae eros et purus sagittis semper at nec lorem. Donec vel ex tortor. Pellentesque egestas, ipsum sit amet consectetur efficitur, purus turpis mattis quam, at porttitor lectus diam eget ligula. Ut dictum sem in turpis sollicitudin accumsan. Fusce molestie urna sit amet auctor ullamcorper. Quisque pulvinar magna quis nulla posuere, id rutrum sem mollis. Nam dignissim odio tellus, quis molestie dolor tristique vel. Integer dapibus, elit lobortis auctor aliquam, turpis ligula scelerisque nisl, vitae dictum erat nulla quis enim. Aliquam quam orci, ultrices et ultrices ut, cursus non ligula. Nam aliquam posuere euismod. Integer semper egestas ex, at facilisis nisi maximus vel. Donec et fermentum felis. Curabitur nisl augue, laoreet non diam sit amet, tincidunt dapibus ante.Sed porta mattis fringilla. Nam commodo vulputate dui, id interdum orci eleifend in. Pellentesque tortor lectus, interdum vitae accumsan nec, interdum nec nisi. Vestibulum vitae eros et purus sagittis semper at nec lorem. Donec vel ex tortor. Pellentesque egestas, ipsum sit amet consectetur efficitur, purus turpis mattis quam, at porttitor lectus diam eget ligula. Ut dictum sem in turpis sollicitudin accumsan. Fusce molestie urna sit amet auctor ullamcorper. Quisque pulvinar magna quis nulla posuere, id rutrum sem mollis. Nam dignissim odio tellus, quis molestie dolor tristique vel. Integer dapibus, elit lobortis auctor aliquam, turpis ligula scelerisque nisl, vitae dictum erat nulla quis enim. Aliquam quam orci, ultrices et ultrices ut, cursus non ligula. Nam aliquam posuere euismod. Integer semper egestas ex, at facilisis nisi maximus vel. Donec et fermentum felis. Curabitur nisl augue, laoreet non diam sit amet, tincidunt dapibus ante.', 
+                gambar: 'lib/aset/gambar/gbr1.webp'),
+              const SizedBox(height: 15,),
+              CourseDropdown(
+                namapelajaran: 'Variable Dasar', 
+                isipelajaran: 'Sed porta mattis fringilla. Nam commodo vulputate dui, id interdum orci eleifend in. Pellentesque tortor lectus, interdum vitae accumsan nec, interdum nec nisi. Vestibulum vitae eros et purus sagittis semper at nec lorem. Donec vel ex tortor. Pellentesque egestas, ipsum sit amet consectetur efficitur, purus turpis mattis quam, at porttitor lectus diam eget ligula. Ut dictum sem in turpis sollicitudin accumsan. Fusce molestie urna sit amet auctor ullamcorper. Quisque pulvinar magna quis nulla posuere, id rutrum sem mollis. Nam dignissim odio tellus, quis molestie dolor tristique vel. Integer dapibus, elit lobortis auctor aliquam, turpis ligula scelerisque nisl, vitae dictum erat nulla quis enim. Aliquam quam orci, ultrices et ultrices ut, cursus non ligula. Nam aliquam posuere euismod. Integer semper egestas ex, at facilisis nisi maximus vel. Donec et fermentum felis. Curabitur nisl augue, laoreet non diam sit amet, tincidunt dapibus ante.Sed porta mattis fringilla. Nam commodo vulputate dui, id interdum orci eleifend in. Pellentesque tortor lectus, interdum vitae accumsan nec, interdum nec nisi. Vestibulum vitae eros et purus sagittis semper at nec lorem. Donec vel ex tortor. Pellentesque egestas, ipsum sit amet consectetur efficitur, purus turpis mattis quam, at porttitor lectus diam eget ligula. Ut dictum sem in turpis sollicitudin accumsan. Fusce molestie urna sit amet auctor ullamcorper. Quisque pulvinar magna quis nulla posuere, id rutrum sem mollis. Nam dignissim odio tellus, quis molestie dolor tristique vel. Integer dapibus, elit lobortis auctor aliquam, turpis ligula scelerisque nisl, vitae dictum erat nulla quis enim. Aliquam quam orci, ultrices et ultrices ut, cursus non ligula. Nam aliquam posuere euismod. Integer semper egestas ex, at facilisis nisi maximus vel. Donec et fermentum felis. Curabitur nisl augue, laoreet non diam sit amet, tincidunt dapibus ante.', 
+                gambar: 'lib/aset/gambar/gbr1.webp'),
+              const SizedBox(height: 15,),
+              CourseDropdown(
+                namapelajaran: 'Variable Dasar', 
+                isipelajaran: 'Sed porta mattis fringilla. Nam commodo vulputate dui, id interdum orci eleifend in. Pellentesque tortor lectus, interdum vitae accumsan nec, interdum nec nisi. Vestibulum vitae eros et purus sagittis semper at nec lorem. Donec vel ex tortor. Pellentesque egestas, ipsum sit amet consectetur efficitur, purus turpis mattis quam, at porttitor lectus diam eget ligula. Ut dictum sem in turpis sollicitudin accumsan. Fusce molestie urna sit amet auctor ullamcorper. Quisque pulvinar magna quis nulla posuere, id rutrum sem mollis. Nam dignissim odio tellus, quis molestie dolor tristique vel. Integer dapibus, elit lobortis auctor aliquam, turpis ligula scelerisque nisl, vitae dictum erat nulla quis enim. Aliquam quam orci, ultrices et ultrices ut, cursus non ligula. Nam aliquam posuere euismod. Integer semper egestas ex, at facilisis nisi maximus vel. Donec et fermentum felis. Curabitur nisl augue, laoreet non diam sit amet, tincidunt dapibus ante.Sed porta mattis fringilla. Nam commodo vulputate dui, id interdum orci eleifend in. Pellentesque tortor lectus, interdum vitae accumsan nec, interdum nec nisi. Vestibulum vitae eros et purus sagittis semper at nec lorem. Donec vel ex tortor. Pellentesque egestas, ipsum sit amet consectetur efficitur, purus turpis mattis quam, at porttitor lectus diam eget ligula. Ut dictum sem in turpis sollicitudin accumsan. Fusce molestie urna sit amet auctor ullamcorper. Quisque pulvinar magna quis nulla posuere, id rutrum sem mollis. Nam dignissim odio tellus, quis molestie dolor tristique vel. Integer dapibus, elit lobortis auctor aliquam, turpis ligula scelerisque nisl, vitae dictum erat nulla quis enim. Aliquam quam orci, ultrices et ultrices ut, cursus non ligula. Nam aliquam posuere euismod. Integer semper egestas ex, at facilisis nisi maximus vel. Donec et fermentum felis. Curabitur nisl augue, laoreet non diam sit amet, tincidunt dapibus ante.', 
+                gambar: 'lib/aset/gambar/gbr1.webp'),
+
+              const SizedBox(height: 40,)
             
             ],
           ),

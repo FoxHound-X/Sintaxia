@@ -108,6 +108,17 @@ flutter:
           weight: 700
         - asset: lib/aset/fonts/sfpro/SFPRODISPLAYTHINITALIC.OTF
           style: italic
+    
+    - family: Inter
+      fonts:
+        - asset: lib/aset/fonts/inter/Inter-Regular.otf
+          weight: 400
+        - asset: lib/aset/fonts/inter/Inter-Medium.otf
+          weight: 500
+        - asset: lib/aset/fonts/inter/Inter-SemiBold.otf
+          weight: 600
+        - asset: lib/aset/fonts/inter/Inter-Bold.otf
+          weight: 700
         
 
   # For details regarding fonts from package dependencies,

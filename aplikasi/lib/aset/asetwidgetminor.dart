@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
 
-Widget propertikursus(){
+Widget propertiminor1({
+  required IconData ikon,
+  required String nama,
+}){
   return Row(
     children: [
-      Icon(Icons.book_outlined, color: Colors.white, size: 50,),
+      Icon(ikon, color: Colors.white, size: 35,),
       const SizedBox(width: 5,),
       Text(
-        "8 Sections",
+        nama,
         style: TextStyle(
           color: Colors.white,
-          fontSize: 20,
+          fontSize: 12,
           fontWeight: FontWeight.w600
         ),
       )
