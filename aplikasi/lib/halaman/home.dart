@@ -262,9 +262,18 @@ class HalamanHome extends StatelessWidget {
       
                 const SizedBox(height: 20),
       
-                const Align(
-                  alignment: Alignment.centerLeft,
-                  child: Text('Aplikasi'),
+                 Padding(
+                  padding: const EdgeInsets.only(left: 18, top: 35),
+                  child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: const Text('Fundamental Programming',
+                    style: TextStyle(
+                      color: paketwarna.nordicTitle,
+                      fontSize: 20,
+                      fontWeight: FontWeight.w600,
+                      fontFamily: 'Inter'
+                    ),),
+                  ),
                 ),
       
                 const SizedBox(height: 20),
@@ -272,27 +281,29 @@ class HalamanHome extends StatelessWidget {
                 // === INFOGRAPHIC CARD ===
                 InfoGraphicCard(
                   haltujuan: () {
-                    Navigator.pushNamed(context, '/variabledasar');
+                    Navigator.pushNamed(context, '/Fundamental');
                   },
-                  judulmateri: 'Github dan Git',
+                  judulmateri: 'Fundamental Tingkat Beginer',
                   deskripsi:
-                      'Kalian akan diajarkan bagaimana cara menggunakan Github dan Git di Windows',
+                      'Kalian akan di ajarka tentang Varable, Looping dan Pengkondisian secara cepat, ringkas dan efisien',
+                  gambar: 'lib/aset/gambar/course/gbr1.webp',
                 ),
                 InfoGraphicCard(
                   haltujuan: () {
                     Navigator.pushNamed(context, '/variabledasar');
                   },
-                  judulmateri: 'Github dan Git',
+                  judulmateri: 'Fundamental Tingkat Intermediate',
                   deskripsi:
-                      'Kalian akan diajarkan bagaimana cara menggunakan Github dan Git di Windows',
+                      'Di sini kalian akan di ajarkan tentang OOP dan cara menggunakan nya',
+                  gambar: 'lib/aset/gambar/course/fund_ico.webp',
                 ),
                 InfoGraphicCard(
                   haltujuan: () {
                     Navigator.pushNamed(context, '/variabledasar');
                   },
-                  judulmateri: 'Github dan Git',
+                  judulmateri: 'Tips Memahami Bahasa Pemrograman',
                   deskripsi:
-                      'Kalian akan diajarkan bagaimana cara menggunakan Github dan Git di Windows',
+                      'Kalian akan di berikan tips agar cepat dan tepat memilih bahasa pemrograman',
                 ),
                 InfoGraphicCard(
                   haltujuan: () {
