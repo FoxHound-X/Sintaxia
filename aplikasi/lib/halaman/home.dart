@@ -170,10 +170,10 @@ class HalamanHome extends StatelessWidget {
                         Cardkursus(
                           icondificulty: Icons.signal_cellular_alt_1_bar,
                           colorsific: paketwarna.dificultybeginer,
-                          judulkursus: 'Unity Dasar',
-                          pemilikkursus: 'By Lumrora Corp',
+                          judulkursus: 'HTML Dasar',
+                          pemilikkursus: 'Lumora Dev',
                           deskripsi:
-                              'Pelajari dasar-dasar Unity untuk mulai membuat game pertamamu!',
+                              'Anda Akan mempelajari dasra dasar mengenai HTML dan praktek langsung',
                           targethalaman: () =>
                               Navigator.pushNamed(context, '/variabledasar'),
                         ),

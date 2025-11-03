@@ -445,13 +445,14 @@ const CourseDropdown({
                     ),
                   ),
                   const SizedBox(height: 20,),
-                  Text(isipelajaran,
+                  Text(
+                  isipelajaran,
                   style: TextStyle(
                     color: paketwarna.nordicTitle,
                     fontFamily: 'Inter',
                     fontWeight: FontWeight.w500
                     ),
-                    textAlign: TextAlign.center,
+                    textAlign: TextAlign.start,
                   )
                 ],
               ),

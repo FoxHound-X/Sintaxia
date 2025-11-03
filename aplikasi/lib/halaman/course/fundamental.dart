@@ -205,8 +205,24 @@ class Fundamental extends StatelessWidget {
 
               const SizedBox(height: 15,),
               CourseDropdown(
-                namapelajaran: 'Variable Dasar', 
-                isipelajaran: 'Sed porta mattis fringilla. Nam commodo vulputate dui, id interdum orci eleifend in. Pellentesque tortor lectus, interdum vitae accumsan nec, interdum nec nisi. Vestibulum vitae eros et purus sagittis semper at nec lorem. Donec vel ex tortor. Pellentesque egestas, ipsum sit amet consectetur efficitur, purus turpis mattis quam, at porttitor lectus diam eget ligula. Ut dictum sem in turpis sollicitudin accumsan. Fusce molestie urna sit amet auctor ullamcorper. Quisque pulvinar magna quis nulla posuere, id rutrum sem mollis. Nam dignissim odio tellus, quis molestie dolor tristique vel. Integer dapibus, elit lobortis auctor aliquam, turpis ligula scelerisque nisl, vitae dictum erat nulla quis enim. Aliquam quam orci, ultrices et ultrices ut, cursus non ligula. Nam aliquam posuere euismod. Integer semper egestas ex, at facilisis nisi maximus vel. Donec et fermentum felis. Curabitur nisl augue, laoreet non diam sit amet, tincidunt dapibus ante.Sed porta mattis fringilla. Nam commodo vulputate dui, id interdum orci eleifend in. Pellentesque tortor lectus, interdum vitae accumsan nec, interdum nec nisi. Vestibulum vitae eros et purus sagittis semper at nec lorem. Donec vel ex tortor. Pellentesque egestas, ipsum sit amet consectetur efficitur, purus turpis mattis quam, at porttitor lectus diam eget ligula. Ut dictum sem in turpis sollicitudin accumsan. Fusce molestie urna sit amet auctor ullamcorper. Quisque pulvinar magna quis nulla posuere, id rutrum sem mollis. Nam dignissim odio tellus, quis molestie dolor tristique vel. Integer dapibus, elit lobortis auctor aliquam, turpis ligula scelerisque nisl, vitae dictum erat nulla quis enim. Aliquam quam orci, ultrices et ultrices ut, cursus non ligula. Nam aliquam posuere euismod. Integer semper egestas ex, at facilisis nisi maximus vel. Donec et fermentum felis. Curabitur nisl augue, laoreet non diam sit amet, tincidunt dapibus ante.', 
+                namapelajaran: 'Variable dan Tipe Data', 
+                isipelajaran: 'Variable Adalah Tempat Penyimpanan suatu data da Tipe data adalah jenis data yang ingin di simpan, ada dua jenis tipe data yaitu Tipe Data Primitif dan Kompleks. perbedaannya adalah:\n'
+                '\n'
+                '• Tipe data primitif: ini adalah tipe data dasar pemrograman.. Lebih sederhana dan hanya menyimpan satu nilai saja, dan lebih cepat. Contoh penggunaan nya [ int A = 7 ] \n'
+                '• Tipe Data Kompleks: adalah tipe dasar pemrograman yang lebih cangih, bisa menyimpan lebih dari satu nilai dalam satu struktur. Contoh penggunaan nya [ int angka[5] = {1,2,3,4,5} ]\n'
+                '/n'
+
+                'Jenis Jenis Tipe data: \n'
+                'Tipe Data Primitif: \n'
+                '• Float/Double: Untuk menyimpan Angka Desimal\n' 
+                '• Integer/int: untuk menyimpan angka bulat \n' 
+                '• String: Jenis Tipe data untuk menyimpan Teks, untuk nama, alamat dan lain\n' 
+                '• Character/char\n' 
+                '• Bolean: Jenis Tipe data untuk menentukan True dan False\n'
+                '\n'
+                
+                'Jenis Tipe data Kompleks: \n'
+                '• Array/List: Menyimpan banyak nilai sekaligus', 
                 gambar: 'lib/aset/gambar/course/gbr1.webp'),
               const SizedBox(height: 15,),
               CourseDropdown(
