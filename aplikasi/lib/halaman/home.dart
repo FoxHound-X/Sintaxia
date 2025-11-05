@@ -1,11 +1,18 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:aplikasi/aset/paketwarna.dart';
 import 'package:flutter/material.dart';
 import 'package:aplikasi/aset/asetwidget.dart';
 
 
-class HalamanHome extends StatelessWidget {
+
+class HalamanHome extends StatefulWidget {
   const HalamanHome({super.key});
 
+  @override
+  State<HalamanHome> createState() => _HalamanHomeState();
+}
+
+class _HalamanHomeState extends State<HalamanHome> {
   @override
   Widget build(BuildContext context) {
     return RepaintBoundary(
@@ -45,18 +52,23 @@ class HalamanHome extends StatelessWidget {
             child: Column(
               children: [
                 // === HEY THERE ===
-                const Padding(
+                Padding(
                   padding: EdgeInsets.only(top: 20, bottom: 10, right: 100),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        "Hey there!",
-                        textAlign: TextAlign.left,
-                        style: TextStyle(
+
+                      DefaultTextStyle(
+                        style:  TextStyle(
                           color: paketwarna.nordicTitle,
                           fontSize: 17,
-                        ),
+                        ), 
+                        child: AnimatedTextKit(
+                          animatedTexts: [
+                            TyperAnimatedText('Hey There!', speed: Duration(milliseconds: 500)),
+                          ],
+                          totalRepeatCount: 1,
+                        )
                       ),
                       Text(
                         "Ready to level up your skills?",
