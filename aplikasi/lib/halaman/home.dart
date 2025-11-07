@@ -59,17 +59,24 @@ class _HalamanHomeState extends State<HalamanHome> {
                     children: [
 
                       DefaultTextStyle(
-                        style:  TextStyle(
+                        style: TextStyle(
                           color: paketwarna.nordicTitle,
                           fontSize: 17,
-                        ), 
+                        ),
                         child: AnimatedTextKit(
                           animatedTexts: [
-                            TyperAnimatedText('Hey There!', speed: Duration(milliseconds: 500)),
+                            TyperAnimatedText(
+                              'Hey Students......',
+                              speed: const Duration(milliseconds: 100),
+                            ),
                           ],
-                          totalRepeatCount: 1,
-                        )
+                          pause: const Duration(milliseconds: 1000),
+                          repeatForever: true, // atau totalRepeatCount: 1 kalau mau sekali
+                          displayFullTextOnTap: true,
+                          stopPauseOnTap: true,
+                        ),
                       ),
+
                       Text(
                         "Ready to level up your skills?",
                         textAlign: TextAlign.left,
@@ -186,8 +193,23 @@ class _HalamanHomeState extends State<HalamanHome> {
                           pemilikkursus: 'Lumora Dev',
                           deskripsi:
                               'Anda Akan mempelajari dasra dasar mengenai HTML dan praktek langsung',
-                          targethalaman: () =>
-                              Navigator.pushNamed(context, '/variabledasar'),
+                          targethalaman: () {
+                            showDialog(
+                            context: context,
+                            builder: (context) => AlertDialog(
+                              title: const Text('Error Content'),
+                              content: const Text("Kursus dalam Pengembangan, Terima kasih"),
+                              actions: [
+                                TextButton(
+                                  onPressed: () => Navigator.pop(context),
+                                  child: const Text('OK'),
+                                ),
+                              ],
+                              backgroundColor: paketwarna.nordicCard,
+                            ),
+                          );
+                              // Navigator.pushNamed(context, '/variabledasar'),
+                          },
                         ),
                         const SizedBox(width: 10),
                         Cardkursus(

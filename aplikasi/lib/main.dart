@@ -122,7 +122,7 @@ class _welcomeState extends State<welcome> {
                             RotateAnimatedText('And Trust Your Self'),
                           ],
                           repeatForever: true,
-                          pause: const Duration(milliseconds: 1700),
+                          pause: const Duration(milliseconds: 1000),
                         )
                       ),
                     ),

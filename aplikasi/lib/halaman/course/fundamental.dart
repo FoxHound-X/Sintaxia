@@ -210,7 +210,7 @@ class Fundamental extends StatelessWidget {
                 '\n'
                 '• Tipe data primitif: ini adalah tipe data dasar pemrograman.. Lebih sederhana dan hanya menyimpan satu nilai saja, dan lebih cepat. Contoh penggunaan nya [ int A = 7 ] \n'
                 '• Tipe Data Kompleks: adalah tipe dasar pemrograman yang lebih cangih, bisa menyimpan lebih dari satu nilai dalam satu struktur. Contoh penggunaan nya [ int angka[5] = {1,2,3,4,5} ]\n'
-                '/n'
+                '\n'
 
                 'Jenis Jenis Tipe data: \n'
                 'Tipe Data Primitif: \n'
@@ -222,7 +222,7 @@ class Fundamental extends StatelessWidget {
                 '\n'
                 
                 'Jenis Tipe data Kompleks: \n'
-                '• Array/List: Menyimpan banyak nilai sekaligus', 
+                '• Array/List: Menyimpan banyak nilai sekaligus \n', 
                 gambar: 'lib/aset/gambar/course/gbr1.webp'),
               const SizedBox(height: 15,),
               CourseDropdown(

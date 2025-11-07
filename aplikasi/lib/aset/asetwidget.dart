@@ -407,17 +407,18 @@ class InfoGraphicCard extends StatelessWidget {
 // }
 
 
+
 class CourseDropdown extends StatelessWidget {
   final String namapelajaran;
   final String isipelajaran;
   final String gambar;
 
-const CourseDropdown({
-  super.key,
-  required this.namapelajaran,
-  required this.isipelajaran,
-  required this.gambar
-});
+  const CourseDropdown({
+    super.key,
+    required this.namapelajaran,
+    required this.isipelajaran,
+    required this.gambar,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -427,35 +428,73 @@ const CourseDropdown({
         child: Container(
           decoration: BoxDecoration(
             border: Border.all(color: Colors.white70, width: 2),
-            borderRadius: BorderRadius.circular(20)
+            borderRadius: BorderRadius.circular(20),
           ),
-          child: Center(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: ExpansionTile(
-                collapsedIconColor: Colors.white,
-                iconColor: Colors.white,
-                title: Text(namapelajaran, style: TextStyle(color: Colors.white),),
-                children: [
-                  ClipRRect(
-                    borderRadius: BorderRadiusGeometry.circular(9),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10),
+            child: ExpansionTile(
+              collapsedIconColor: Colors.white,
+              iconColor: Colors.white,
+              title: Text(
+                namapelajaran,
+                style: const TextStyle(color: Colors.white),
+              ),
+              children: [
+                // 🟦 Bungkus gambar dengan GestureDetector biar bisa diklik
+                GestureDetector(
+                  onTap: () {
+                    // 🟩 Saat ditekan, tampilkan popup zoom
+                    showDialog(
+                      context: context,
+                      builder: (context) => Dialog(
+                        backgroundColor: Colors.black.withOpacity(0.8),
+                        insetPadding: const EdgeInsets.all(10),
+                        child: Stack(
+                          children: [
+                            // InteractiveViewer untuk zoom dan drag
+                            InteractiveViewer(
+                              clipBehavior: Clip.none,
+                              minScale: 1,
+                              maxScale: 4,
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(12),
+                                child: Image.asset(gambar),
+                              ),
+                            ),
+                            // Tombol close di pojok kanan atas
+                            Positioned(
+                              right: 8,
+                              top: 8,
+                              child: IconButton(
+                                icon: const Icon(Icons.close,
+                                    color: Colors.white, size: 28),
+                                onPressed: () => Navigator.pop(context),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    );
+                  },
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(9),
                     child: Image.asset(
-                      gambar, 
+                      gambar,
                       height: 200,
                     ),
                   ),
-                  const SizedBox(height: 20,),
-                  Text(
+                ),
+                const SizedBox(height: 20),
+                Text(
                   isipelajaran,
-                  style: TextStyle(
-                    color: paketwarna.nordicTitle,
+                  style: const TextStyle(
+                    color: Colors.white,
                     fontFamily: 'Inter',
-                    fontWeight: FontWeight.w500
-                    ),
-                    textAlign: TextAlign.start,
-                  )
-                ],
-              ),
+                    fontWeight: FontWeight.w500,
+                  ),
+                  textAlign: TextAlign.start,
+                ),
+              ],
             ),
           ),
         ),
