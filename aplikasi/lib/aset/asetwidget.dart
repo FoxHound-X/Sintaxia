@@ -443,7 +443,6 @@ class CourseDropdown extends StatelessWidget {
                 // 🟦 Bungkus gambar dengan GestureDetector biar bisa diklik
                 GestureDetector(
                   onTap: () {
-                    // 🟩 Saat ditekan, tampilkan popup zoom
                     showDialog(
                       context: context,
                       builder: (context) => Dialog(
@@ -451,7 +450,6 @@ class CourseDropdown extends StatelessWidget {
                         insetPadding: const EdgeInsets.all(10),
                         child: Stack(
                           children: [
-                            // InteractiveViewer untuk zoom dan drag
                             InteractiveViewer(
                               clipBehavior: Clip.none,
                               minScale: 1,

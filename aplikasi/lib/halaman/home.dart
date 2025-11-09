@@ -317,7 +317,7 @@ class _HalamanHomeState extends State<HalamanHome> {
                   haltujuan: () {
                     Navigator.pushNamed(context, '/Fundamental');
                   },
-                  judulmateri: 'Fundamental Tingkat Beginer',
+                  judulmateri: 'Fundamental Tingkat I',
                   deskripsi:
                       'Kalian akan di ajarka tentang Varable, Looping dan Pengkondisian secara cepat, ringkas dan efisien',
                   gambar: 'lib/aset/gambar/course/gbr1.webp',
@@ -326,7 +326,7 @@ class _HalamanHomeState extends State<HalamanHome> {
                   haltujuan: () {
                     Navigator.pushNamed(context, '/variabledasar');
                   },
-                  judulmateri: 'Fundamental Tingkat Intermediate',
+                  judulmateri: 'Fundamental Tingkat II',
                   deskripsi:
                       'Di sini kalian akan di ajarkan tentang OOP dan cara menggunakan nya',
                   gambar: 'lib/aset/gambar/course/fund_ico.webp',

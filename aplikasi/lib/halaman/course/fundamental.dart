@@ -104,14 +104,17 @@ class Fundamental extends StatelessWidget {
                 ),
               ),
 
+              const SizedBox(height: 10,),
               //Judul Kursus
               Padding(
-                padding: const EdgeInsets.only(top: 39, right: 30),
+                padding: const EdgeInsets.only(top: 39, right: 91),
                 child: Text(
                   'Fundamental Pemrograman',
                   style: TextStyle(
                     color: paketwarna.nordicTitle,
-                    fontSize: 20,fontWeight: FontWeight.bold
+                    fontSize: 20,fontWeight: FontWeight.bold,
+                    decoration: TextDecoration.underline,
+                    decorationColor: Color(0xff4c956c)
                   ),
                 ),
               ),
@@ -161,7 +164,7 @@ class Fundamental extends StatelessWidget {
                       ),
                       const SizedBox(height: 10,),
                       Text(
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nisl ipsum, iaculis consequat nibh vitae, scelerisque luctus sapien. Vivamus gravida felis ornare neque dapibus consectetur nec vel odio. ",
+                        "Kursus Ini akan mengajari kalian Konsep Pemrograman dasar seperti variable, tipe data dan lainnya. kalian di ajarkan sangat dasar hinggi memahami konsep dasar nyaa",
                         style: TextStyle(
                           fontSize: 13,
                           color: paketwarna.nordicTitle.withOpacity(0.8),
@@ -226,12 +229,19 @@ class Fundamental extends StatelessWidget {
                 gambar: 'lib/aset/gambar/course/gbr1.webp'),
               const SizedBox(height: 15,),
               CourseDropdown(
-                namapelajaran: 'Variable Dasar', 
-                isipelajaran: 'Sed porta mattis fringilla. Nam commodo vulputate dui, id interdum orci eleifend in. Pellentesque tortor lectus, interdum vitae accumsan nec, interdum nec nisi. Vestibulum vitae eros et purus sagittis semper at nec lorem. Donec vel ex tortor. Pellentesque egestas, ipsum sit amet consectetur efficitur, purus turpis mattis quam, at porttitor lectus diam eget ligula. Ut dictum sem in turpis sollicitudin accumsan. Fusce molestie urna sit amet auctor ullamcorper. Quisque pulvinar magna quis nulla posuere, id rutrum sem mollis. Nam dignissim odio tellus, quis molestie dolor tristique vel. Integer dapibus, elit lobortis auctor aliquam, turpis ligula scelerisque nisl, vitae dictum erat nulla quis enim. Aliquam quam orci, ultrices et ultrices ut, cursus non ligula. Nam aliquam posuere euismod. Integer semper egestas ex, at facilisis nisi maximus vel. Donec et fermentum felis. Curabitur nisl augue, laoreet non diam sit amet, tincidunt dapibus ante.Sed porta mattis fringilla. Nam commodo vulputate dui, id interdum orci eleifend in. Pellentesque tortor lectus, interdum vitae accumsan nec, interdum nec nisi. Vestibulum vitae eros et purus sagittis semper at nec lorem. Donec vel ex tortor. Pellentesque egestas, ipsum sit amet consectetur efficitur, purus turpis mattis quam, at porttitor lectus diam eget ligula. Ut dictum sem in turpis sollicitudin accumsan. Fusce molestie urna sit amet auctor ullamcorper. Quisque pulvinar magna quis nulla posuere, id rutrum sem mollis. Nam dignissim odio tellus, quis molestie dolor tristique vel. Integer dapibus, elit lobortis auctor aliquam, turpis ligula scelerisque nisl, vitae dictum erat nulla quis enim. Aliquam quam orci, ultrices et ultrices ut, cursus non ligula. Nam aliquam posuere euismod. Integer semper egestas ex, at facilisis nisi maximus vel. Donec et fermentum felis. Curabitur nisl augue, laoreet non diam sit amet, tincidunt dapibus ante.', 
+                namapelajaran: 'Operator', 
+                isipelajaran: 'Operator adalah simbol atau tanda khusu untuk meemberi intruksi kepada komputer agar melakukan suatu operasi, misla menjumlahkan, perkalian, pengurangan \n\n'
+                'Contoh Operator:\n'
+                'Penjumlahan: +\n' 
+                'Pengurangan: -\n' 
+                'Perkalian: *\n' 
+                'Pembaguan: /\n' 
+                'Menetapkan Nilai: =\n' 
+                'Perbandingan: > <\n', 
                 gambar: 'lib/aset/gambar/course/gbr1.webp'),
               const SizedBox(height: 15,),
               CourseDropdown(
-                namapelajaran: 'Variable Dasar', 
+                namapelajaran: 'Percabangan', 
                 isipelajaran: 'Sed porta mattis fringilla. Nam commodo vulputate dui, id interdum orci eleifend in. Pellentesque tortor lectus, interdum vitae accumsan nec, interdum nec nisi. Vestibulum vitae eros et purus sagittis semper at nec lorem. Donec vel ex tortor. Pellentesque egestas, ipsum sit amet consectetur efficitur, purus turpis mattis quam, at porttitor lectus diam eget ligula. Ut dictum sem in turpis sollicitudin accumsan. Fusce molestie urna sit amet auctor ullamcorper. Quisque pulvinar magna quis nulla posuere, id rutrum sem mollis. Nam dignissim odio tellus, quis molestie dolor tristique vel. Integer dapibus, elit lobortis auctor aliquam, turpis ligula scelerisque nisl, vitae dictum erat nulla quis enim. Aliquam quam orci, ultrices et ultrices ut, cursus non ligula. Nam aliquam posuere euismod. Integer semper egestas ex, at facilisis nisi maximus vel. Donec et fermentum felis. Curabitur nisl augue, laoreet non diam sit amet, tincidunt dapibus ante.Sed porta mattis fringilla. Nam commodo vulputate dui, id interdum orci eleifend in. Pellentesque tortor lectus, interdum vitae accumsan nec, interdum nec nisi. Vestibulum vitae eros et purus sagittis semper at nec lorem. Donec vel ex tortor. Pellentesque egestas, ipsum sit amet consectetur efficitur, purus turpis mattis quam, at porttitor lectus diam eget ligula. Ut dictum sem in turpis sollicitudin accumsan. Fusce molestie urna sit amet auctor ullamcorper. Quisque pulvinar magna quis nulla posuere, id rutrum sem mollis. Nam dignissim odio tellus, quis molestie dolor tristique vel. Integer dapibus, elit lobortis auctor aliquam, turpis ligula scelerisque nisl, vitae dictum erat nulla quis enim. Aliquam quam orci, ultrices et ultrices ut, cursus non ligula. Nam aliquam posuere euismod. Integer semper egestas ex, at facilisis nisi maximus vel. Donec et fermentum felis. Curabitur nisl augue, laoreet non diam sit amet, tincidunt dapibus ante.', 
                 gambar: 'lib/aset/gambar/course/gbr1.webp'),
               const SizedBox(height: 15,),

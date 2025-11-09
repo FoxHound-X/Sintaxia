@@ -40,14 +40,47 @@ class welcome extends StatefulWidget{
 
 class _welcomeState extends State<welcome> {
   double _opacity = 0.0;
+  bool _isHomePreloaded = false;
 
   @override
   void initState() {
     super.initState();
 
+    // Animasi fade-in
     Future.delayed(const Duration(milliseconds: 300), () {
       setState(() {
         _opacity = 1.0;
+      });
+    });
+
+    // Preload HalamanHome di background
+    _preloadHomePage();
+  }
+
+  void _preloadHomePage() async {
+    // Paksa build HalamanHome di offstage
+    await Future.microtask(() {
+      final homeWidget = Offstage(
+        child: Material(
+          child: HalamanHome(), // Pastikan const di-remove jika tidak bisa
+        ),
+      );
+
+      // Gunakan Overlay untuk render tanpa tampil
+      final overlay = Overlay.of(context);
+      final overlayEntry = OverlayEntry(builder: (_) => homeWidget);
+
+      overlay.insert(overlayEntry);
+
+      // Tunggu 1 frame agar widget dirender
+      WidgetsBinding.instance.addPostFrameCallback((_) async {
+        await Future.delayed(const Duration(milliseconds: 100));
+        overlayEntry.remove();
+        if (mounted) {
+          setState(() {
+            _isHomePreloaded = true;
+          });
+        }
       });
     });
   }
@@ -59,14 +92,15 @@ class _welcomeState extends State<welcome> {
       body: RepaintBoundary(
         child: AnimatedOpacity(
           opacity: _opacity,
-          duration: Duration(seconds: 2),
+          duration: const Duration(seconds: 2),
           child: SafeArea(
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal:0),
+              padding: const EdgeInsets.symmetric(horizontal: 0),
               child: Container(
                 padding: const EdgeInsets.symmetric(horizontal: 24),
                 child: Column(
                   children: [
+                    // ... (semua widget welcome tetap sama)
                     Container(
                       width: double.infinity,
                       padding: const EdgeInsets.all(16),
@@ -79,122 +113,96 @@ class _welcomeState extends State<welcome> {
                               fontFamily: 'Poppins',
                               fontSize: 7,
                               color: paketwarna.nordicTitle.withOpacity(0.5),
-                              fontWeight: FontWeight.normal
+                              fontWeight: FontWeight.normal,
                             ),
-                          )
+                          ),
                         ],
                       ),
                     ),
-                    const SizedBox(height: 32,),
-                    const Text(
-                      "Welcome To The",
-                      style: TextStyle(
-                        fontSize: 15,
-                        color: paketwarna.nordicTitle,
-                      ),
-                    ),
-          
-                    const Text(
-                      "SINTAXIA APPS",
-                      style: TextStyle(
-                        color: paketwarna.nordicTitle,
-                        fontSize: 25,
-                        fontWeight: FontWeight.bold
-                      ),
-                    ),
-          
-                    const SizedBox(height: 33,),
-                    Image.asset("lib/aset/gambar/gambarku.png"),
-                    const SizedBox(height: 33,),
+                    const SizedBox(height: 32),
+                    const Text("Welcome To The", style: TextStyle(fontSize: 15, color: paketwarna.nordicTitle)),
+                    const Text("SINTAXIA APPS", style: TextStyle(color: paketwarna.nordicTitle, fontSize: 25, fontWeight: FontWeight.bold)),
+                    const SizedBox(height: 33),
+                    Image.asset("lib/aset/gambar/logoappsrmv.png"),
+                    const SizedBox(height: 33),
                     SizedBox(
                       height: 40,
                       child: DefaultTextStyle(
-                        style: const TextStyle(
-                          fontFamily: 'Poppins',
-                          fontWeight: FontWeight.normal,
-                          fontSize: 21,
-                          color: paketwarna.nordicTitle
-                        ),
+                        style: const TextStyle(fontFamily: 'Poppins', fontWeight: FontWeight.normal, fontSize: 21, color: paketwarna.nordicTitle),
                         child: AnimatedTextKit(
                           animatedTexts: [
-                            RotateAnimatedText('You Jurney Start Here' ),
+                            RotateAnimatedText('You Jurney Start Here'),
                             RotateAnimatedText('Make Your Self Great'),
                             RotateAnimatedText('And Trust Your Self'),
                           ],
                           repeatForever: true,
                           pause: const Duration(milliseconds: 1000),
-                        )
+                        ),
                       ),
                     ),
                     Text(
                       "Sintaxia is a smart learning platform designed to guide you through the fundamentals of programming — from your first line of code to your first masterpiece, and beyond as you explore other programming languages.",
                       textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontFamily: 'Poppins',
-                        fontWeight: FontWeight.normal,
-                        fontSize: 10,
-                        color: paketwarna.nordicTitle.withOpacity(0.4)
-                      ),
+                      style: TextStyle(fontFamily: 'Poppins', fontWeight: FontWeight.normal, fontSize: 10, color: paketwarna.nordicTitle.withOpacity(0.4)),
                     ),
-                    const SizedBox(height: 40,),
-          
-                    //Tombol
+                    const SizedBox(height: 40),
+
+                    // Tombol: aktif hanya jika preload selesai
                     SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
                           backgroundColor: paketwarna.nordicPrimButton,
                           padding: const EdgeInsets.symmetric(vertical: 15),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(9),
-                          ),
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(9)),
                         ),
-                      onPressed: () async {
-                        await Future.delayed(const Duration(milliseconds: 100));
-                        Navigator.push(
-                          context,
-                          PageRouteBuilder(
-                            transitionDuration: const Duration(milliseconds: 600),
-                            pageBuilder: (context, animation, secondaryAnimation) => const HalamanHome(),
-                            transitionsBuilder: (context, animation, secondaryAnimation, child) {
-                              final offsetAnimation = Tween<Offset>(
-                                begin: const Offset(0, 0.2),
-                                end: Offset.zero,
-                              ).animate(animation);
-                              return FadeTransition(
-                                opacity: animation,
-                                child: SlideTransition(position: offsetAnimation, child: child),
-                              );
-                            },
-                          ),
-                        );
-                      },
-
-                        child: const Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text('Start Apps', style: TextStyle(fontSize: 16, color: paketwarna.nordicTitle)),
-                            SizedBox(width: 10),
-                            Icon(Icons.arrow_forward_ios, size: 16, color: paketwarna.nordicTitle,),
-                          ],
-                        ),
+                        onPressed: _isHomePreloaded
+                            ? () {
+                                Navigator.pushReplacement(
+                                  context,
+                                  PageRouteBuilder(
+                                    transitionDuration: const Duration(milliseconds: 600),
+                                    pageBuilder: (context, animation, secondaryAnimation) => const HalamanHome(),
+                                    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                                      final offsetAnimation = Tween<Offset>(
+                                        begin: const Offset(0, 0.2),
+                                        end: Offset.zero,
+                                      ).animate(animation);
+                                      return FadeTransition(
+                                        opacity: animation,
+                                        child: SlideTransition(position: offsetAnimation, child: child),
+                                      );
+                                    },
+                                  ),
+                                );
+                              }
+                            : null, // Tombol disable saat preload
+                        child: _isHomePreloaded
+                            ? const Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text('Start Apps', style: TextStyle(fontSize: 16, color: paketwarna.nordicTitle)),
+                                  SizedBox(width: 10),
+                                  Icon(Icons.arrow_forward_ios, size: 16, color: paketwarna.nordicTitle),
+                                ],
+                              )
+                            : const SizedBox(
+                                width: 16,
+                                height: 16,
+                                child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white),
+                              ),
                       ),
                     ),
-                    const SizedBox(height: 65,),
-                    const Text(
-                      "© 2025 Lumora Apps. All rights reserved.",
-                      style: TextStyle(
-                        fontSize: 10,
-                        color: paketwarna.nordicTitle,
-                        ),
-                      )
+
+                    const SizedBox(height: 65),
+                    const Text("© 2025 Lumora Apps. All rights reserved.", style: TextStyle(fontSize: 10, color: paketwarna.nordicTitle)),
                   ],
                 ),
               ),
             ),
           ),
         ),
-      )
+      ),
     );
   }
 }
