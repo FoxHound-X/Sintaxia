@@ -16,16 +16,12 @@ Belajar Pemrograman. Untuk Saat ini kami dari Tim FUZIAN Dev berusaha semaksimal
 - Support Android dan IOS
 - Optimal
 
-<br>
-<br>
 
 <p align="center">
   <img src="https://github.com/FoxHound-X/Sintaxia/blob/main/aplikasi/lib/aset/gambar/logoappsrmv.png" alt="Logo" width="500">
 </p>
 
 
-<br>
-<br>
 
 ## Color Reference
 
