@@ -30,16 +30,22 @@ Belajar Pemrograman. Untuk Saat ini kami dari Tim FUZIAN Dev berusaha semaksimal
 
 ## Color Reference
 
-| Name | Color |
-|------|-------|
-| Difficulty Color 1 | <img src="https://via.placeholder.com/15/D08770?text=+" width="15" height="15"> `#D08770` |
-| Difficulty Color 2 | <img src="https://via.placeholder.com/15/EBCB8B?text=+" width="15" height="15"> `#EBCB8B` |
-| Difficulty Color 3 | <img src="https://via.placeholder.com/15/00B48A?text=+" width="15" height="15"> `#00B48A` |
-| Background Color | <img src="https://via.placeholder.com/15/2E3440?text=+" width="15" height="15"> `#2E3440` |
-| Card Color | <img src="https://via.placeholder.com/15/3B4252?text=+" width="15" height="15"> `#3B4252` |
-| Title Color | <img src="https://via.placeholder.com/15/ECEFF4?text=+" width="15" height="15"> `#ECEFF4` |
-| Subtitle Color | <img src="https://via.placeholder.com/15/4F5D75?text=+" width="15" height="15"> `#4F5D75` |
-| Description Color | <img src="https://via.placeholder.com/15/D8DEE9?text=+" width="15" height="15"> `#D8DEE9` |
+<div align="center">
+
+## 🎨 Color Palette
+
+| **Name** | **Preview** | **Hex Code** |
+|:--------------------------|:-------------:|:-------------:|
+| **Difficulty Color 1** | ![#D08770](https://via.placeholder.com/25/D08770/FFFFFF?text=+) | `#D08770` |
+| **Difficulty Color 2** | ![#EBCB8B](https://via.placeholder.com/25/EBCB8B/FFFFFF?text=+) | `#EBCB8B` |
+| **Difficulty Color 3** | ![#00B48A](https://via.placeholder.com/25/00B48A/FFFFFF?text=+) | `#00B48A` |
+| **Background Color** | ![#2E3440](https://via.placeholder.com/25/2E3440/FFFFFF?text=+) | `#2E3440` |
+| **Card Color** | ![#3B4252](https://via.placeholder.com/25/3B4252/FFFFFF?text=+) | `#3B4252` |
+| **Title Color** | ![#ECEFF4](https://via.placeholder.com/25/ECEFF4/000000?text=+) | `#ECEFF4` |
+| **Subtitle Color** | ![#4F5D75](https://via.placeholder.com/25/4F5D75/FFFFFF?text=+) | `#4F5D75` |
+| **Description Color** | ![#D8DEE9](https://via.placeholder.com/25/D8DEE9/000000?text=+) | `#D8DEE9` |
+
+</div>
 
 
 <br>
