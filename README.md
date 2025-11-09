@@ -16,27 +16,26 @@ Belajar Pemrograman. Untuk Saat ini kami dari Tim FUZIAN Dev berusaha semaksimal
 - Support Android dan IOS
 - Optimal
 
-<br>
-<br>
 
-![Logo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png)
+<p align="center">
+  <img src="https://github.com/FoxHound-X/Sintaxia/blob/main/aplikasi/lib/aset/gambar/logoappsrmv.png" alt="Logo" width="500">
+</p>
 
-<br>
-<br>
+
 
 ## Color Reference
 
-| Color             | Hex                                                                |
-| ----------------- | ------------------------------------------------------------------ |
-| Dificulty Colors | ![#D08770](https://via.placeholder.com/10/0a192f?text=+) #D08770 |
-| Dificulty Colors | ![#EBCB8B](https://via.placeholder.com/10/f8f8f8?text=+) #EBCB8B |
-| Dificulty Colors | ![#00b48a](https://via.placeholder.com/10/00b48a?text=+) #00b48a |
-| Bacground Color | ![#2E3440](https://via.placeholder.com/10/00b48a?text=+) #2E3440 |
-| Card Color | ![#3B4252)](https://via.placeholder.com/10/00b48a?text=+) #3B4252 |
-| Card Color | ![#3B4252)](https://via.placeholder.com/10/00b48a?text=+) #3B4252 |
-| Title Color | ![#ECEFF4)](https://via.placeholder.com/10/00b48a?text=+) #ECEFF4 |
-| Title Color | ![#4f5d75)](https://via.placeholder.com/10/00b48a?text=+) #4f5d75 |
-| Description Color | ![#D8DEE9)](https://via.placeholder.com/10/00b48a?text=+) #D8DEE9 |
+| Name | Color |
+|------|-------|
+| Difficulty Color 1 | <img src="https://via.placeholder.com/15/D08770?text=+" width="15" height="15"> `#D08770` |
+| Difficulty Color 2 | <img src="https://via.placeholder.com/15/EBCB8B?text=+" width="15" height="15"> `#EBCB8B` |
+| Difficulty Color 3 | <img src="https://via.placeholder.com/15/00B48A?text=+" width="15" height="15"> `#00B48A` |
+| Background Color | <img src="https://via.placeholder.com/15/2E3440?text=+" width="15" height="15"> `#2E3440` |
+| Card Color | <img src="https://via.placeholder.com/15/3B4252?text=+" width="15" height="15"> `#3B4252` |
+| Title Color | <img src="https://via.placeholder.com/15/ECEFF4?text=+" width="15" height="15"> `#ECEFF4` |
+| Subtitle Color | <img src="https://via.placeholder.com/15/4F5D75?text=+" width="15" height="15"> `#4F5D75` |
+| Description Color | <img src="https://via.placeholder.com/15/D8DEE9?text=+" width="15" height="15"> `#D8DEE9` |
+
 
 <br>
 <br>
@@ -57,9 +56,15 @@ Kami Belum bisa menentukan, kami terkendala Biaya jika upload di Playstore, kemu
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+<p align="center">
+  <img src="https://github.com/FoxHound-X/Sintaxia/blob/main/aplikasi/lib/screnshoot/Screenshot_20251109_082045.jpg" alt="App Screenshot 1" width="45%" style="border-radius:10px; margin:5px;">
+  <img src="https://github.com/FoxHound-X/Sintaxia/blob/main/aplikasi/lib/screnshoot/Screenshot_20251109_082058.jpg" alt="App Screenshot 3" width="45%" style="border-radius:10px; margin:5px;">
+</p>
+
+<p align="center">
+  <img src="https://github.com/FoxHound-X/Sintaxia/blob/main/aplikasi/lib/screnshoot/Screenshot_20251109_082053.jpg" alt="App Screenshot 2" width="45%" style="border-radius:10px; margin:5px;">
+  <img src="https://github.com/FoxHound-X/Sintaxia/blob/main/aplikasi/lib/screnshoot/Screenshot_20251109_082137.jpg" alt="App Screenshot 4" width="45%" style="border-radius:10px; margin:5px;">
+</p>
 
 <br>
 <br>
