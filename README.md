@@ -32,8 +32,6 @@ Belajar Pemrograman. Untuk Saat ini kami dari Tim FUZIAN Dev berusaha semaksimal
 
 <div align="center">
 
-## 🎨 Color Palette
-
 | **Name** | **Preview** | **Hex Code** |
 |:--------------------------|:-------------:|:-------------:|
 | **Difficulty Color 1** | ![#D08770](https://via.placeholder.com/25/D08770/FFFFFF?text=+) | `#D08770` |
