@@ -31,11 +31,11 @@ flutter_native_splash:
   android: true
   ios: true
 
-  color: "#D64151"
+  color: "#0d1b2a"
   image: lib/aset/gambar/logoapps.png
 
   android_12:
-    color: "#D64151"
+    color: "#0d1b2a"
     image: lib/aset/gambar/logoapps.png
 
 dependencies:

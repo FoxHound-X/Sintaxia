@@ -70,7 +70,7 @@ class Cardkursus extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: 220,
       height: 250,
       child: Card(
@@ -408,7 +408,7 @@ class InfoGraphicCard extends StatelessWidget {
 
 
 
-class CourseDropdown extends StatelessWidget {
+class CourseDropdown extends StatefulWidget {
   final String namapelajaran;
   final String isipelajaran;
   final String gambar;
@@ -421,76 +421,96 @@ class CourseDropdown extends StatelessWidget {
   });
 
   @override
+  State<CourseDropdown> createState() => _CourseDropdownState();
+}
+
+class _CourseDropdownState extends State<CourseDropdown> {
+  @override
   Widget build(BuildContext context) {
     return RepaintBoundary(
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Container(
           decoration: BoxDecoration(
-            border: Border.all(color: Colors.white70, width: 2),
-            borderRadius: BorderRadius.circular(20),
+            color: paketwarna.nordicCard,
+            borderRadius: BorderRadius.circular(9),
           ),
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10),
-            child: ExpansionTile(
-              collapsedIconColor: Colors.white,
-              iconColor: Colors.white,
-              title: Text(
-                namapelajaran,
-                style: const TextStyle(color: Colors.white),
-              ),
+            padding: const EdgeInsets.symmetric(horizontal: 15),
+            child: Row(
               children: [
-                // 🟦 Bungkus gambar dengan GestureDetector biar bisa diklik
-                GestureDetector(
-                  onTap: () {
-                    showDialog(
-                      context: context,
-                      builder: (context) => Dialog(
-                        backgroundColor: Colors.black.withOpacity(0.8),
-                        insetPadding: const EdgeInsets.all(10),
-                        child: Stack(
-                          children: [
-                            InteractiveViewer(
-                              clipBehavior: Clip.none,
-                              minScale: 1,
-                              maxScale: 4,
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(12),
-                                child: Image.asset(gambar),
-                              ),
-                            ),
-                            // Tombol close di pojok kanan atas
-                            Positioned(
-                              right: 8,
-                              top: 8,
-                              child: IconButton(
-                                icon: const Icon(Icons.close,
-                                    color: Colors.white, size: 28),
-                                onPressed: () => Navigator.pop(context),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    );
-                  },
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(9),
-                    child: Image.asset(
-                      gambar,
-                      height: 200,
-                    ),
+                Container(
+                  width: 3,
+                  height: 34,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(6),
+                    color: Colors.green,
                   ),
                 ),
-                const SizedBox(height: 20),
-                Text(
-                  isipelajaran,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontFamily: 'Inter',
-                    fontWeight: FontWeight.w500,
+                Expanded(
+                  child: ExpansionTile(
+                    tilePadding: EdgeInsets.only(left: 8, right: 8),
+                    collapsedIconColor: Colors.white,
+                    iconColor: Colors.white,
+                    title: Text(
+                      widget.namapelajaran,
+                      style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w600 ),
+                    ),
+                    children: [
+                      
+                      GestureDetector(
+                        onTap: () {
+                          showDialog(
+                            context: context,
+                            builder: (context) => Dialog(
+                              backgroundColor: Colors.black.withOpacity(0.8),
+                              insetPadding: const EdgeInsets.all(10),
+                              child: Stack(
+                                children: [
+                                  InteractiveViewer(
+                                    clipBehavior: Clip.none,
+                                    minScale: 1,
+                                    maxScale: 4,
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(12),
+                                      child: Image.asset(widget.gambar),
+                                    ),
+                                  ),
+                                  // Tombol close di pojok kanan atas
+                                  Positioned(
+                                    right: 8,
+                                    top: 8,
+                                    child: IconButton(
+                                      icon: const Icon(Icons.close,
+                                          color: Colors.white, size: 28),
+                                      onPressed: () => Navigator.pop(context),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          );
+                        },
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(9),
+                          child: Image.asset(
+                            widget.gambar,
+                            height: 200,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 20),
+                      Text(
+                        widget.isipelajaran,
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontFamily: 'Inter',
+                          fontWeight: FontWeight.w500,
+                        ),
+                        textAlign: TextAlign.start,
+                      ),
+                    ],
                   ),
-                  textAlign: TextAlign.start,
                 ),
               ],
             ),
@@ -500,3 +520,4 @@ class CourseDropdown extends StatelessWidget {
     );
   }
 }
+

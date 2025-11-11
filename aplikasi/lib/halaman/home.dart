@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:aplikasi/aset/asetwidget.dart';
 
 
-
 class HalamanHome extends StatefulWidget {
   const HalamanHome({super.key});
 
@@ -19,15 +18,9 @@ class _HalamanHomeState extends State<HalamanHome> {
       child: Scaffold(
         backgroundColor: paketwarna.nordicBacground,
         appBar: AppBar(
+          iconTheme: IconThemeData(color: Colors.white),
           backgroundColor: paketwarna.nordicBacground,
-          leading: IconButton(
-            icon: const Icon(Icons.menu_rounded),
-            color: paketwarna.deepea0,
-            onPressed: () {
-              debugPrint("Aplikasi berhasil");
-            },
-          ),
-          actions: [
+          actions: [ 
             Padding(
               padding: const EdgeInsets.only(right: 3),
               child: TextButton(
@@ -45,6 +38,28 @@ class _HalamanHomeState extends State<HalamanHome> {
               ),
             )
           ],
+        ),
+
+        drawer: Drawer(
+          backgroundColor: paketwarna.deepea2,
+          child: ListView(
+            children: [
+              const DrawerHeader(child: Text("Aplikasi Edukasi")),
+              Padding(
+                padding: const EdgeInsets.only(top: 20),
+                child: ListTile(
+                  leading: Padding(
+                    padding: const EdgeInsets.only( left: 20, right: 20),
+                    child: Icon(Icons.addchart_rounded),
+                  ),
+                  iconColor: paketwarna.nordicTitle,
+                  textColor: paketwarna.nordicTitle,
+                  title: const Text("Pilihan 1"),
+                  onTap: () => debugPrint("Berjalan sukses"),
+                ),
+              )
+            ],
+          ),
         ),
       
         body: RepaintBoundary(
@@ -90,27 +105,29 @@ class _HalamanHomeState extends State<HalamanHome> {
                 ),
       
                 // === CATEGORY TITLE ===
-                const Padding(
-                  padding: EdgeInsets.only(left: 20, top: 20),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Categories",
-                        style: TextStyle(
-                          color: paketwarna.nordicTitle,
-                          fontSize: 14,
+                Center(
+                  child: const Padding(
+                    padding: EdgeInsets.only(left: 20, top: 20, right: 20),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Categories",
+                          style: TextStyle(
+                            color: paketwarna.nordicTitle,
+                            fontSize: 14,
+                          ),
                         ),
-                      ),
-                      Spacer(),
-                      Text(
-                        "See all",
-                        style: TextStyle(
-                          color: paketwarna.nordicTitle,
-                          fontSize: 14,
+                        Spacer(),
+                        Text(
+                          "See all",
+                          style: TextStyle(
+                            color: paketwarna.nordicTitle,
+                            fontSize: 14,
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
       
