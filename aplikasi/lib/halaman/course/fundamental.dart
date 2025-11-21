@@ -206,6 +206,14 @@ class Fundamental extends StatelessWidget {
 
               const SizedBox(height: 15,),
               CourseDropdown(
+                namapelajaran: 'Apa itu IDE?',
+                isipelajaran: 'IDE adalah Integrated Development Environment, sebuah perangkat lunak yang di desain khusus untuk di gunakan oleh bahasa pemrograman tertentu, misal IntellijIDE dari JetBrains di gunakan untuk mengembangkan bahasa pemrograman Java \n'
+                'Terus apa bedanya dengan Teks Editor biasa? kayak VSCode atau Sublime Text? \n'
+                'Bedanya adalah Teks Editor di buat untuk Menulis dan mengedit saja, dia kompatibel dengan semua bahasa tetapi tidak terkhusu. \n'
+                'VSCode contohnya, dia bisa menjadi IDE tetapi harus menggunakan Extensi tertentu.',
+                gambar: 'lib/aset/gambar/course/gbr1.webp'),
+              const SizedBox(height: 15,),
+              CourseDropdown(
                 namapelajaran: 'Variable dan Tipe Data', 
                 isipelajaran: 'Variable Adalah Tempat Penyimpanan suatu data da Tipe data adalah jenis data yang ingin di simpan, ada dua jenis tipe data yaitu Tipe Data Primitif dan Kompleks. perbedaannya adalah:\n'
                 '\n'
@@ -241,8 +249,13 @@ class Fundamental extends StatelessWidget {
               CourseDropdown(
                 namapelajaran:"Perulangan",
                 isipelajaran: 'Perulangan (Looping), adalah proses untuk menjalankan blok kode secara berulang selama kondisi tertentu terpenuhi, ini biasanya di gunakan jika kita membutuhkan kode yang berulang terus menerus atau beberapa kali tanpa menulis ulang \n\n'
-                'Berikut beberapa jenis perulangan atau Looping: \n'
-                '',
+                'Berikut beberapa jenis perulangan atau Looping: \n\n'
+                'Perulangan FOR \n'
+                'Perulangan For Di gunakan ketika kalian sudah tau secara pasti berapa kali perulangan harus dieksekusi \n\n'
+                '     // Menampilkan angka dari 1 sampai 5 \n'
+                '     for (i = 1; i <= 5; i++) { \n'
+                '     print("Angka ke- " + i);\n'
+                '     }',
                 gambar: 'lib/aset/gambar/course/gbr1.webp',
               ),
               const SizedBox(height: 15,),
