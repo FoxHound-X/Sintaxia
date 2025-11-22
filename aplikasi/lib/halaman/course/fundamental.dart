@@ -10,34 +10,50 @@ class Fundamental extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: paketwarna.nordicBacground,
-      appBar: AppBar(
-        backgroundColor: paketwarna.nordicBacground,
-        leading: IconButton(
-          icon: const Icon(Icons.menu_rounded),
-          color: paketwarna.deepea0,
-          onPressed: () {
-            debugPrint("Aplikasi berhasil");
-          },
-        ),
-        actions: [
-          Padding(
-            padding: const EdgeInsets.only(right: 3),
-            child: TextButton(
-              child: const Text(
-                "Course Detail",
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                  color: paketwarna.nordicTitle,
+        appBar: AppBar(
+          iconTheme: IconThemeData(color: Colors.white),
+          backgroundColor: paketwarna.nordicBacground,
+          actions: [ 
+            Padding(
+              padding: const EdgeInsets.only(right: 3),
+              child: TextButton(
+                child: const Text(
+                  "SINTAXIA",
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    color: paketwarna.nordicTitle,
+                  ),
                 ),
+                onPressed: () {
+                  debugPrint('Aplikasi');
+                },
               ),
-              onPressed: () {
-                debugPrint('Aplikasi');
-              },
-            ),
-          )
-        ],
-      ),
+            )
+          ],
+        ),
+
+        drawer: Drawer(
+          backgroundColor: paketwarna.deepea2,
+          child: ListView(
+            children: [
+              const DrawerHeader(child: Text("Aplikasi Edukasi")),
+              Padding(
+                padding: const EdgeInsets.only(top: 20),
+                child: ListTile(
+                  leading: Padding(
+                    padding: const EdgeInsets.only( left: 20, right: 20),
+                    child: Icon(Icons.addchart_rounded),
+                  ),
+                  iconColor: paketwarna.nordicTitle,
+                  textColor: paketwarna.nordicTitle,
+                  title: const Text("Home"),
+                  onTap: () => Navigator.pushNamed(context, '/homepage'),
+                ),
+              )
+            ],
+          ),
+        ),
 
       body: RepaintBoundary(
         child: SingleChildScrollView(
@@ -255,9 +271,21 @@ class Fundamental extends StatelessWidget {
                 '     // Menampilkan angka dari 1 sampai 5 \n'
                 '     for (i = 1; i <= 5; i++) { \n'
                 '     print("Angka ke- " + i);\n'
-                '     }',
+                '     }\n\n'
+                '',
                 gambar: 'lib/aset/gambar/course/gbr1.webp',
               ),
+              const SizedBox(height: 15,),
+              CourseDropdown(
+                namapelajaran: 'Percabangan (Conditional Statement)',
+                isipelajaran: 'Percabangan adalah fitur yang memungkinkan program mengambil keputusan berdasarkan kondisi tertentu (benar atau salah). Percabangan di gunakan saat ingin menentukan kondisi seperti mengecek password atau username\n\n'
+                'Contoh Percabangan: \n'
+                'if (nilai >= 75) {\n'
+                '    print("Lulus")\n'
+                '} else {\n'
+                '    print("Tidak lulus")\n'
+                '}\n', 
+                gambar: 'lib/aset/gambar/course/gbr1.webp'),
               const SizedBox(height: 15,),
 
 

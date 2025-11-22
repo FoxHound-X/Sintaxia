@@ -54,8 +54,8 @@ class _HalamanHomeState extends State<HalamanHome> {
                   ),
                   iconColor: paketwarna.nordicTitle,
                   textColor: paketwarna.nordicTitle,
-                  title: const Text("Pilihan 1"),
-                  onTap: () => debugPrint("Berjalan sukses"),
+                  title: const Text("Home"),
+                  onTap: () => Navigator.pushNamed(context, '/homepage'),
                 ),
               )
             ],
@@ -341,38 +341,13 @@ class _HalamanHomeState extends State<HalamanHome> {
                 ),
                 InfoGraphicCard(
                   haltujuan: () {
-                    Navigator.pushNamed(context, '/variabledasar');
+                    Navigator.pushNamed(context, '/komputer');
                   },
-                  judulmateri: 'Fundamental Tingkat II',
+                  judulmateri: 'Pengenalan Dasar Komputer',
                   deskripsi:
-                      'Di sini kalian akan di ajarkan tentang OOP dan cara menggunakan nya',
-                  gambar: 'lib/aset/gambar/course/fund_ico.webp',
-                ),
-                InfoGraphicCard(
-                  haltujuan: () {
-                    Navigator.pushNamed(context, '/variabledasar');
-                  },
-                  judulmateri: 'Tips Memahami Bahasa Pemrograman',
-                  deskripsi:
-                      'Kalian akan di berikan tips agar cepat dan tepat memilih bahasa pemrograman',
-                ),
-                InfoGraphicCard(
-                  haltujuan: () {
-                    Navigator.pushNamed(context, '/variabledasar');
-                  },
-                  judulmateri: 'Github dan Git',
-                  deskripsi:
-                      'Kalian akan diajarkan bagaimana cara menggunakan Github dan Git di Windows',
-                ),
-                InfoGraphicCard(
-                  haltujuan: () {
-                    Navigator.pushNamed(context, '/variabledasar');
-                  },
-                  judulmateri: 'Github dan Git',
-                  deskripsi:
-                      'Kalian akan diajarkan bagaimana cara menggunakan Github dan Git di Windows',
-                ),
-      
+                      'Kalian akan medapatkan pengenalan dasar mengenai komputer',
+                  gambar: 'lib/aset/gambar/course/pc.webp',
+                ),  
                 const SizedBox(height: 17),
               ],
             ),

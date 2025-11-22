@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'aset/paketwarna.dart';
 import 'halaman/home.dart';
 import 'halaman/course/fundamental.dart';
+import 'halaman/course/komputerdasar.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 
 void main() {
@@ -26,6 +27,7 @@ class _AplikasiState extends State<Aplikasi> {
         '/welcomepage': (context) => const welcome(),
         '/homepage': (context) => const HalamanHome(),
         '/Fundamental': (context) => const Fundamental(),
+        '/komputer': (context) => const komputerdasar(),
       },
     );
   }
