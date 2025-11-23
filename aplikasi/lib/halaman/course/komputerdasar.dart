@@ -218,11 +218,14 @@ class komputerdasar extends StatelessWidget {
               const SizedBox(height: 15,),
               CourseDropdown(
                 namapelajaran: 'Apa Itu Komputer', 
-                isipelajaran: 'Komputer adalah mesin elektronik yang sangat pintar dan cepat. Ibaratnya, komputer itu seperti otak super yang bisa menerima informasi, memprosesnya, dan memberikan hasil yang kita inginkan.', 
-                gambar: 'lib/aset/gambar/course/gbr1.webp'),
+                isipelajaran: 'Komputer adalah mesin elektronik yang sangat pintar dan cepat. Ibaratnya, komputer itu seperti otak super yang bisa menerima informasi, memprosesnya, dan memberikan hasil yang kita inginkan.\n', 
+                gambar: 'lib/aset/gambar/course/komputer.webp'),
               const SizedBox(height: 15,),
-
-
+              CourseDropdown(
+                namapelajaran: 'Input, Proces, Output', 
+                isipelajaran: 'pelajaran', 
+                gambar:'lib/aset/gambar/course/IPO.webp'
+              ),
               const SizedBox(height: 40,)
             
             ],
