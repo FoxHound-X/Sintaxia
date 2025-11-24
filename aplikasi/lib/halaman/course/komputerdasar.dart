@@ -223,7 +223,10 @@ class komputerdasar extends StatelessWidget {
               const SizedBox(height: 15,),
               CourseDropdown(
                 namapelajaran: 'Input, Proces, Output', 
-                isipelajaran: 'pelajaran', 
+                isipelajaran: 'Input, Process, dan Output (IPO) adalah tiga tahapan utama dalam cara kerja komputer untuk mengolah data menjadi informasi.\n\n'
+                'Input adalah tahap ketika komputer menerima data atau perintah dari pengguna atau perangkat lain, misalnya lewat keyboard, mouse, scanner, atau sensor. \n\n'
+                'Setelah data masuk, komputer melakukan Process, yaitu tahap pengolahan oleh CPU di mana data dihitung, dianalisis, diurutkan, atau diolah sesuai instruksi program.\n\n'
+                'Hasil dari proses ini kemudian diberikan pada tahap terakhir yaitu Output, yaitu informasi yang sudah siap disajikan kepada pengguna. Output bisa muncul dalam berbagai bentuk seperti tampilan di monitor, suara dari speaker, hasil cetakan printer, atau file yang tersimpan. Jadi, komputer bekerja secara berurutan: menerima input, mengolahnya, lalu menghasilkan output.\n\n', 
                 gambar:'lib/aset/gambar/course/IPO.webp'
               ),
               const SizedBox(height: 40,)
