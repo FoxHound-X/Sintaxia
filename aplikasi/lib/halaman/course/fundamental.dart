@@ -272,7 +272,13 @@ class Fundamental extends StatelessWidget {
                 '     for (i = 1; i <= 5; i++) { \n'
                 '     print("Angka ke- " + i);\n'
                 '     }\n\n'
-                '',
+                ''
+                'While Loop\n'
+                'While loop digunakan ketika jumlah iterasi tidak diketahui sebelumnya. Loop ini terus berjalan selama kondisi yang ditentukan bernilai true.\n'
+                'let i = ;\n'
+                'while (i <= 5) { \n'
+                '   console.log(i); \n'
+                '}\n',
                 gambar: 'lib/aset/gambar/course/gbr1.webp',
               ),
               const SizedBox(height: 15,),

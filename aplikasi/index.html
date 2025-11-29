@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PlutoPay — Landing Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f3f4f6; --card:#ffffff; --accent:#5b21b6; --muted:#6b7280; --pill:#eef2ff;
+    }
+    *{box-sizing:border-box}
+    body{font-family:'Inter',system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial; margin:0; background:var(--bg); color:#111}
+    a{color:inherit}
+    .container{max-width:1100px;margin:40px auto;padding:0 20px}
+
+    /* Header */
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .logo{display:flex;align-items:center;gap:10px}
+    .logo .mark{width:36px;height:36px;border-radius:8px;background:linear-gradient(180deg,#4f46e5,#7c3aed);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
+    nav{display:flex;gap:18px;align-items:center}
+    .btn{background:var(--accent);color:#fff;padding:10px 16px;border-radius:999px;border:0;cursor:pointer;font-weight:600}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:30px;align-items:center;margin-top:18px}
+    .hi{font-size:46px;line-height:1.05;margin:0 0 12px}
+    .hi b{font-weight:800}
+    .sub{color:var(--muted);max-width:520px;margin-bottom:18px}
+    .email-row{display:flex;gap:10px;max-width:520px}
+    .email-row input{flex:1;padding:12px;border-radius:999px;border:1px solid #e6e7ea}
+    .mockwrap{display:flex;align-items:center;justify-content:center}
+    .phone{width:300px;background:#fff;border-radius:28px;padding:22px;box-shadow:0 20px 50px rgba(16,24,40,0.08);border:12px solid #eef2ff}
+    .phone .balance{font-size:18px;font-weight:700}
+    .balance-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+    .pill{background:var(--pill);padding:8px 14px;border-radius:999px;font-weight:600}
+
+    /* Trust logos */
+    .trust{display:flex;gap:18px;align-items:center;color:var(--muted);margin:26px 0}
+
+    /* Black feature band */
+    .band{background:#0f1724;color:#fff;padding:32px;border-radius:16px;margin:30px 0}
+    .features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:20px}
+    .feature{background:#fff;color:#111;border-radius:12px;padding:18px;min-height:160px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+
+    /* Appstore section */
+    .store{display:flex;flex-direction:column;align-items:center;margin:36px 0}
+
+    footer{background:#fff;padding:26px;border-radius:16px;margin-bottom:40px}
+    .footer-grid{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    .col{min-width:160px}
+    .small{color:var(--muted);font-size:14px}
+
+    /* Responsive */
+    @media (max-width:1000px){
+      .hero{grid-template-columns:1fr 320px}
+      .hi{font-size:38px}
+    }
+    @media (max-width:820px){
+      .hero{grid-template-columns:1fr}
+      .mockwrap{order:-1;margin-bottom:12px}
+      .phone{width:260px}
+      .features-grid{grid-template-columns:1fr}
+      header{flex-direction:column;align-items:flex-start;gap:12px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <div class="mark">PP</div>
+        <div>
+          <div style="font-weight:700">PlutoPay</div>
+          <div style="font-size:12px;color:var(--muted)">Careers</div>
+        </div>
+      </div>
+      <nav>
+        <a class="small" href="#">Features</a>
+        <a class="small" href="#">Pricing</a>
+        <button class="btn">Get Early Access</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <h1 class="hi">Are you ready <br/><b>for a revolution</b> in<br/>fintech industry?</h1>
+          <p class="sub">Business owners, finance teams & CFO's — use our software & unlimited corporate cards to control online & offline business expenses, get real time insights & reduce petty cash leakages.</p>
+
+          <div class="email-row">
+            <input id="email" type="email" placeholder="Your email address" aria-label="email" />
+            <button id="getBtn" class="btn">Get Early Access</button>
+          </div>
+
+          <div class="trust">
+            <span>Forbes</span>
+            <span style="opacity:.8">Intel</span>
+            <span style="opacity:.8">VISA</span>
+            <span style="opacity:.8">Google</span>
+          </div>
+        </div>
+
+        <div class="mockwrap">
+          <!-- Use the uploaded image as background mockup -->
+          <div class="phone" role="img" aria-label="phone mockup">
+            <div class="balance-row"><div class="balance">Balance</div><div style="font-size:20px;font-weight:700">$15,786</div></div>
+            <div style="display:flex;gap:10px;margin-bottom:14px">
+              <div class="pill">Deposit</div>
+              <div class="pill">Withdraw</div>
+            </div>
+
+            <img src="/mnt/data/Finance App Landing Page.jpg" alt="mockup" style="width:100%;border-radius:12px;object-fit:cover;display:block;margin-top:8px"/>
+          </div>
+        </div>
+      </section>
+
+      <section class="band">
+        <h3 style="margin:0;text-align:center">We Made Banking <span style="color:#a78bfa">Easier!</span></h3>
+        <div class="features-grid">
+          <div class="feature">
+            <h4 style="margin:0 0 8px">QR transfer</h4>
+            <p class="small">Send & receive quickly using QR codes.</p>
+          </div>
+          <div class="feature">
+            <h4 style="margin:0 0 8px">Transaction detail</h4>
+            <p class="small">Access transaction detail in a second.</p>
+          </div>
+          <div class="feature">
+            <h4 style="margin:0 0 8px">Control cards</h4>
+            <p class="small">Control card spend before it happens.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="store">
+        <p class="small">To be released on AppStore soon...</p>
+        <div style="width:360px;margin-top:18px">
+          <img src="/mnt/data/Finance App Landing Page.jpg" alt="phone store" style="width:100%;border-radius:14px;box-shadow:0 20px 40px rgba(16,24,40,0.06)"/>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-grid">
+        <div class="col">
+          <div style="font-weight:700">PlutoPay</div>
+          <div class="small">© Pluto Card is a Pluto Financial Services Inc. company 2022</div>
+        </div>
+        <div class="col">
+          <div style="font-weight:600">About Product</div>
+          <div class="small">Patch · Updates · Careers</div>
+        </div>
+        <div class="col">
+          <div style="font-weight:600">Company</div>
+          <div class="small">Patch · Updated · Beta Test</div>
+        </div>
+        <div class="col">
+          <div style="font-weight:600">Support</div>
+          <div class="small">Help Center · Account Info</div>
+        </div>
+      </div>
+
+      <div style="margin-top:18px;display:flex;gap:10px;align-items:center">
+        <input id="email2" type="email" placeholder="Your email address" style="padding:10px;border-radius:999px;border:1px solid #e6e7ea;flex:1;max-width:360px" />
+        <button id="getBtn2" class="btn">Get Early Access</button>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    function validateAndNotify(inputId){
+      const el = document.getElementById(inputId);
+      const val = el.value.trim();
+      if(!val || !/^\S+@\S+\.\S+$/.test(val)){
+        alert('Masukkan email yang valid.');
+        return false;
+      }
+      alert('Thanks! We will notify you — ' + val);
+      el.value = '';
+      return true;
+    }
+    document.getElementById('getBtn').addEventListener('click', ()=>validateAndNotify('email'));
+    document.getElementById('getBtn2').addEventListener('click', ()=>validateAndNotify('email2'));
+  </script>
+</body>
+</html>
