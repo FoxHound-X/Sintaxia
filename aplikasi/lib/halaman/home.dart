@@ -41,18 +41,26 @@ class _HalamanHomeState extends State<HalamanHome> {
         ),
 
         drawer: Drawer(
+          shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.only(
+              topRight: Radius.circular(10),
+              bottomRight: Radius.circular(10)
+            )
+          ),
           backgroundColor: paketwarna.darkslate1,
           child: ListView(
             children: [
               const DrawerHeader(
                  decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage("lib/aset/gambar/course/pemandangan.webp"),
+                    image: AssetImage("lib/aset/gambar/course/ddpemandangan.webp"),
                     fit: BoxFit.cover
                   ),
                  ),
                  child: null,
               ),
+
+              SizedBox(height: 40,),
 
               ListTile(
                 autofocus: true,
@@ -68,6 +76,8 @@ class _HalamanHomeState extends State<HalamanHome> {
                 ),
               onTap: () => Navigator.pushNamed(context, '/homepage'),
               ),
+
+              SizedBox(height: 10,),
 
               ListTile(
                 leading: const Padding(
