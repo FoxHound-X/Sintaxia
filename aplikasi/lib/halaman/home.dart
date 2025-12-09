@@ -45,7 +45,13 @@ class _HalamanHomeState extends State<HalamanHome> {
           child: ListView(
             children: [
               const DrawerHeader(
-                child: Text("Aplikasi Edukais SINTAXIA")
+                 decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage("lib/aset/gambar/course/pemandangan.webp"),
+                    fit: BoxFit.cover
+                  ),
+                 ),
+                 child: null,
               ),
 
               ListTile(
@@ -61,6 +67,14 @@ class _HalamanHomeState extends State<HalamanHome> {
                   ),
                 ),
               onTap: () => Navigator.pushNamed(context, '/homepage'),
+              ),
+
+              ListTile(
+                leading: const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 20),
+                  child: Icon(Icons.volunteer_activism,color: Colors.white,),
+                ),
+                title: Text("Support Developer", style: TextStyle(color: Colors.white),),
               )
             ],
           ),
