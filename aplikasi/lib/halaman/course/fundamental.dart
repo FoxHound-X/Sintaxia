@@ -219,83 +219,114 @@ class Fundamental extends StatelessWidget {
               ),
 
               const SizedBox(height: 20,),
+ CourseDropdown(
+            namapelajaran: 'Apa itu IDE?',
+            gambar: 'lib/aset/gambar/course/gbr1.webp',
+            isipelajaran:
+            'IDE adalah Integrated Development Environment, sebuah perangkat lunak yang dirancang khusus untuk membantu proses pengembangan program dengan menyediakan fitur lengkap seperti compiler, debugger, code completion, dan project management.\n\n'
+            'Contoh IDE: IntelliJ IDEA, Android Studio, Visual Studio, NetBeans.\n\n'
+            'Terus apa bedanya dengan Text Editor biasa seperti VSCode atau Sublime Text?\n'
+            'Bedanya adalah Text Editor dibuat untuk menulis dan mengedit kode saja, kompatibel dengan banyak bahasa tetapi tidak memiliki fitur komplit seperti IDE.\n\n'
+            'VSCode contohnya, dia bisa menjadi IDE tetapi harus menggunakan extension tertentu.',
+          ),
+          SizedBox(height: 15),
 
-              const SizedBox(height: 15,),
-              CourseDropdown(
-                namapelajaran: 'Apa itu IDE?',
-                isipelajaran: 'IDE adalah Integrated Development Environment, sebuah perangkat lunak yang di desain khusus untuk di gunakan oleh bahasa pemrograman tertentu, misal IntellijIDE dari JetBrains di gunakan untuk mengembangkan bahasa pemrograman Java \n'
-                'Terus apa bedanya dengan Teks Editor biasa? kayak VSCode atau Sublime Text? \n'
-                'Bedanya adalah Teks Editor di buat untuk Menulis dan mengedit saja, dia kompatibel dengan semua bahasa tetapi tidak terkhusu. \n'
-                'VSCode contohnya, dia bisa menjadi IDE tetapi harus menggunakan Extensi tertentu.',
-                gambar: 'lib/aset/gambar/course/gbr1.webp'),
-              const SizedBox(height: 15,),
-              CourseDropdown(
-                namapelajaran: 'Variable dan Tipe Data', 
-                isipelajaran: 'Variable Adalah Tempat Penyimpanan suatu data da Tipe data adalah jenis data yang ingin di simpan, ada dua jenis tipe data yaitu Tipe Data Primitif dan Kompleks. perbedaannya adalah:\n'
-                '\n'
-                '• Tipe data primitif: ini adalah tipe data dasar pemrograman.. Lebih sederhana dan hanya menyimpan satu nilai saja, dan lebih cepat. Contoh penggunaan nya [ int A = 7 ] \n'
-                '• Tipe Data Kompleks: adalah tipe dasar pemrograman yang lebih cangih, bisa menyimpan lebih dari satu nilai dalam satu struktur. Contoh penggunaan nya [ int angka[5] = {1,2,3,4,5} ]\n'
-                '\n'
+          CourseDropdown(
+            namapelajaran: 'Variable dan Tipe Data',
+            gambar: 'lib/aset/gambar/course/gbr1.webp',
+            isipelajaran:
+            'Variable adalah tempat untuk menyimpan suatu data. Tipe data adalah jenis data yang ingin disimpan. Ada dua jenis tipe data, yaitu Tipe Data Primitif dan Tipe Data Kompleks.\n\n'
+            '• Tipe Data Primitif: tipe data dasar yang hanya menyimpan satu nilai.\n'
+            '  Contoh: int angka = 7;\n\n'
+            '• Tipe Data Kompleks: tipe data yang dapat menyimpan banyak nilai dalam satu struktur.\n'
+            '  Contoh: int angka[5] = {1,2,3,4,5};\n\n'
+            'Jenis-jenis tipe data:\n'
+            '📍 Tipe Data Primitif:\n'
+            '• Float/Double → angka desimal (3.14)\n'
+            '• Integer/int → angka bulat\n'
+            '• String → teks\n'
+            '• Character/char → satu huruf (A)\n'
+            '• Boolean/bool → True / False\n\n'
+            '📍 Tipe Data Kompleks:\n'
+            '• Array/List → menyimpan banyak data sekaligus.',
+          ),
+          SizedBox(height: 15),
 
-                'Jenis Jenis Tipe data: \n'
-                'Tipe Data Primitif: \n'
-                '• Float/Double: Untuk menyimpan Angka Desimal\n' 
-                '• Integer/int: untuk menyimpan angka bulat \n' 
-                '• String: Jenis Tipe data untuk menyimpan Teks, untuk nama, alamat dan lain\n' 
-                '• Character/char\n' 
-                '• Bolean: Jenis Tipe data untuk menentukan True dan False\n'
-                '\n'
-                
-                'Jenis Tipe data Kompleks: \n'
-                '• Array/List: Menyimpan banyak nilai sekaligus \n', 
-                gambar: 'lib/aset/gambar/course/gbr1.webp'),
-              const SizedBox(height: 15,),
-              CourseDropdown(
-                namapelajaran: 'Operator', 
-                isipelajaran: 'Operator adalah simbol atau tanda khusu untuk meemberi intruksi kepada komputer agar melakukan suatu operasi, misla menjumlahkan, perkalian, pengurangan \n\n'
-                'Contoh Operator:\n'
-                'Penjumlahan: +\n' 
-                'Pengurangan: -\n' 
-                'Perkalian: *\n' 
-                'Pembaguan: /\n' 
-                'Menetapkan Nilai: =\n' 
-                'Perbandingan: > <\n', 
-                gambar: 'lib/aset/gambar/course/gbr1.webp'),
-              const SizedBox(height: 15,),
-              CourseDropdown(
-                namapelajaran:"Perulangan",
-                isipelajaran: 'Perulangan (Looping), adalah proses untuk menjalankan blok kode secara berulang selama kondisi tertentu terpenuhi, ini biasanya di gunakan jika kita membutuhkan kode yang berulang terus menerus atau beberapa kali tanpa menulis ulang \n\n'
-                'Berikut beberapa jenis perulangan atau Looping: \n\n'
-                'Perulangan FOR \n'
-                'Perulangan For Di gunakan ketika kalian sudah tau secara pasti berapa kali perulangan harus dieksekusi \n\n'
-                '     // Menampilkan angka dari 1 sampai 5 \n'
-                '     for (i = 1; i <= 5; i++) { \n'
-                '     print("Angka ke- " + i);\n'
-                '     }\n\n'
-                ''
-                'While Loop\n'
-                'While loop digunakan ketika jumlah iterasi tidak diketahui sebelumnya. Loop ini terus berjalan selama kondisi yang ditentukan bernilai true.\n'
-                'let i = ;\n'
-                'while (i <= 5) { \n'
-                '   console.log(i); \n'
-                '}\n',
-                gambar: 'lib/aset/gambar/course/gbr1.webp',
-              ),
-              const SizedBox(height: 15,),
-              CourseDropdown(
-                namapelajaran: 'Percabangan (Conditional Statement)',
-                isipelajaran: 'Percabangan adalah fitur yang memungkinkan program mengambil keputusan berdasarkan kondisi tertentu (benar atau salah). Percabangan di gunakan saat ingin menentukan kondisi seperti mengecek password atau username\n\n'
-                'Contoh Percabangan: \n'
-                'if (nilai >= 75) {\n'
-                '    print("Lulus")\n'
-                '} else {\n'
-                '    print("Tidak lulus")\n'
-                '}\n', 
-                gambar: 'lib/aset/gambar/course/gbr1.webp'),
-              const SizedBox(height: 15,),
+          CourseDropdown(
+            namapelajaran: 'Operator',
+            gambar: 'lib/aset/gambar/course/gbr1.webp',
+            isipelajaran:
+            'Operator adalah simbol untuk memberikan instruksi kepada komputer agar melakukan suatu operasi seperti perhitungan atau pembandingan.\n\n'
+            'Contoh operator:\n'
+            '• Penjumlahan: +\n'
+            '• Pengurangan: -\n'
+            '• Perkalian: *\n'
+            '• Pembagian: /\n'
+            '• Modulus: %\n'
+            '• Menetapkan nilai: =\n'
+            '• Perbandingan: >  <  >=  <=  ==  !=\n'
+            '• Logika: && (dan), || (atau), ! (not)',
+          ),
+          SizedBox(height: 15),
 
+          CourseDropdown(
+            namapelajaran: "Perulangan (Looping)",
+            gambar: 'lib/aset/gambar/course/gbr1.webp',
+            isipelajaran:
+            'Perulangan (Looping) adalah proses menjalankan blok kode secara berulang selama kondisi tertentu terpenuhi. Berguna untuk menghindari penulisan kode berulang.\n\n'
+            '📍 Perulangan FOR\n'
+            'Digunakan ketika jumlah perulangan sudah diketahui.\n'
+            'Contoh:\n'
+            'for (int i = 1; i <= 5; i++) {\n'
+            '  print("Angka ke- i");\n'
+            '}\n\n'
+            '📍 WHILE Loop\n'
+            'Digunakan ketika jumlah perulangan belum pasti.\n'
+            'Contoh:\n'
+            'int i = 1;\n'
+            'while (i <= 5) {\n'
+            '  print(i);\n'
+            '  i++;\n'
+            '}\n\n'
+            '📍 DO-WHILE Loop\n'
+            'Menjalankan kode minimal satu kali.\n'
+            'do {\n'
+            '  print(i);\n'
+            '  i++;\n'
+            '} while (i <= 5);',
+          ),
+          SizedBox(height: 15),
 
-              const SizedBox(height: 40,)
+          CourseDropdown(
+            namapelajaran: 'Percabangan (Conditional Statement)',
+            gambar: 'lib/aset/gambar/course/gbr1.webp',
+            isipelajaran:
+            'Percabangan adalah fitur yang memungkinkan program mengambil keputusan berdasarkan kondisi True atau False. Biasanya digunakan untuk validasi.\n\n'
+            'Contoh:\n'
+            'int nilai = 80;\n'
+            'if (nilai >= 75) {\n'
+            '  print("Lulus");\n'
+            '} else {\n'
+            '  print("Tidak lulus");\n'
+            '}',
+          ),
+          SizedBox(height: 15),
+
+          CourseDropdown(
+            namapelajaran: 'Fungsi (Function)',
+            gambar: 'lib/aset/gambar/course/gbr1.webp',
+            isipelajaran:
+            'Function adalah blok kode yang digunakan untuk menjalankan tugas tertentu dan dapat dipanggil kembali.\n\n'
+            'Contoh:\n'
+            'int jumlah(int a, int b) {\n'
+            '  return a + b;\n'
+            '}\n\n'
+            'void main() {\n'
+            '  print(jumlah(5, 3)); // Output: 8\n'
+            '}',
+          ),
+
+          SizedBox(height: 40),
             
             ],
           ),

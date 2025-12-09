@@ -41,22 +41,26 @@ class _HalamanHomeState extends State<HalamanHome> {
         ),
 
         drawer: Drawer(
-          backgroundColor: paketwarna.deepea2,
+          backgroundColor: paketwarna.darkslate1,
           child: ListView(
             children: [
-              const DrawerHeader(child: Text("Aplikasi Edukasi")),
-              Padding(
-                padding: const EdgeInsets.only(top: 20),
-                child: ListTile(
-                  leading: Padding(
-                    padding: const EdgeInsets.only( left: 20, right: 20),
-                    child: Icon(Icons.addchart_rounded),
-                  ),
-                  iconColor: paketwarna.nordicTitle,
-                  textColor: paketwarna.nordicTitle,
-                  title: const Text("Home"),
-                  onTap: () => Navigator.pushNamed(context, '/homepage'),
+              const DrawerHeader(
+                child: Text("Aplikasi Edukais SINTAXIA")
+              ),
+
+              ListTile(
+                autofocus: true,
+                leading: const Padding(
+                  padding:EdgeInsets.symmetric(horizontal: 20),
+                  child: Icon(Icons.arrow_back, color: Colors.white,),
                 ),
+                title: Text(
+                  "Home Page",
+                  style: TextStyle(
+                    color: paketwarna.deepea0
+                  ),
+                ),
+              onTap: () => Navigator.pushNamed(context, '/homepage'),
               )
             ],
           ),
