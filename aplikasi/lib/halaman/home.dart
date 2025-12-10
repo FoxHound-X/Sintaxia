@@ -53,7 +53,7 @@ class _HalamanHomeState extends State<HalamanHome> {
               const DrawerHeader(
                  decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage("lib/aset/gambar/course/ddpemandangan.webp"),
+                    image: AssetImage("lib/aset/gambar/anjay.webp"),
                     fit: BoxFit.cover
                   ),
                  ),
@@ -365,7 +365,7 @@ class _HalamanHomeState extends State<HalamanHome> {
                   judulmateri: 'Fundamental Tingkat I',
                   deskripsi:
                       'Kalian akan di ajarka tentang Varable, Looping dan Pengkondisian secara cepat, ringkas dan efisien',
-                  gambar: 'lib/aset/gambar/course/gbr1.webp',
+                  gambar: 'lib/aset/gambar/bejir.webp',
                 ),
                 InfoGraphicCard(
                   haltujuan: () {
