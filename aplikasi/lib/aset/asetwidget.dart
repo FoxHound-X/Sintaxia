@@ -71,7 +71,7 @@ class Cardkursus extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 220,
+      width: 230,
       height: 250,
       child: Card(
         shape: RoundedRectangleBorder(
@@ -125,15 +125,15 @@ class Cardkursus extends StatelessWidget {
                   ),
 
                   //Pemilik Kursus
-                  Text(
-                    pemilikkursus,
-                    style: TextStyle(
-                      fontFamily: 'Poppins',
-                      fontWeight: FontWeight.w400,
-                      color: paketwarna.nordicTitle,
-                      fontSize: 9
-                    ),
-                  ),
+                  // Text(
+                  //   pemilikkursus,
+                  //   style: TextStyle(
+                  //     fontFamily: 'Poppins',
+                  //     fontWeight: FontWeight.w400,
+                  //     color: paketwarna.nordicTitle,
+                  //     fontSize: 9
+                  //   ),
+                  // ),
                 ],
               ),
 

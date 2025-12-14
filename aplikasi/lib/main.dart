@@ -196,7 +196,7 @@ class _welcomeState extends State<welcome> {
                       ),
                     ),
 
-                    const SizedBox(height: 65),
+                    const SizedBox(height: 10),
                     const Text("© 2025 Lumora Apps. All rights reserved.", style: TextStyle(fontSize: 10, color: paketwarna.nordicTitle)),
                   ],
                 ),

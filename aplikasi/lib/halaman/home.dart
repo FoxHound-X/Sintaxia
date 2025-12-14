@@ -53,7 +53,7 @@ class _HalamanHomeState extends State<HalamanHome> {
               const DrawerHeader(
                  decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage("lib/aset/gambar/anjay.webp"),
+                    image: AssetImage("lib/aset/gambar/logoappsrmv.png"),
                     fit: BoxFit.cover
                   ),
                  ),
