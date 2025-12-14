@@ -33,28 +33,7 @@ class komputerdasar extends StatelessWidget {
           ],
         ),
 
-        drawer: Drawer(
-          backgroundColor: paketwarna.deepea2,
-          child: ListView(
-            children: [
-              const DrawerHeader(child: Text("Aplikasi Edukasi")),
-              Padding(
-                padding: const EdgeInsets.only(top: 20),
-                child: ListTile(
-                  leading: Padding(
-                    padding: const EdgeInsets.only( left: 20, right: 20),
-                    child: Icon(Icons.addchart_rounded),
-                  ),
-                  iconColor: paketwarna.nordicTitle,
-                  textColor: paketwarna.nordicTitle,
-                  title: const Text("Home"),
-                  onTap: () => Navigator.pushNamed(context, '/homepage'),
-                ),
-              )
-            ],
-          ),
-        ),
-
+        drawer: Sidebar(),
 
       body: RepaintBoundary(
         child: SingleChildScrollView(

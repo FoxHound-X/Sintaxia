@@ -40,55 +40,7 @@ class _HalamanHomeState extends State<HalamanHome> {
           ],
         ),
 
-        drawer: Drawer(
-          shape: const RoundedRectangleBorder(
-            borderRadius: BorderRadius.only(
-              topRight: Radius.circular(10),
-              bottomRight: Radius.circular(10)
-            )
-          ),
-          backgroundColor: paketwarna.darkslate1,
-          child: ListView(
-            children: [
-              const DrawerHeader(
-                 decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage("lib/aset/gambar/logoappsrmv.png"),
-                    fit: BoxFit.cover
-                  ),
-                 ),
-                 child: null,
-              ),
-
-              SizedBox(height: 40,),
-
-              ListTile(
-                autofocus: true,
-                leading: const Padding(
-                  padding:EdgeInsets.symmetric(horizontal: 20),
-                  child: Icon(Icons.arrow_back, color: Colors.white,),
-                ),
-                title: Text(
-                  "Home Page",
-                  style: TextStyle(
-                    color: paketwarna.deepea0
-                  ),
-                ),
-              onTap: () => Navigator.pushNamed(context, '/homepage'),
-              ),
-
-              SizedBox(height: 10,),
-
-              ListTile(
-                leading: const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 20),
-                  child: Icon(Icons.volunteer_activism,color: Colors.white,),
-                ),
-                title: Text("Support Developer", style: TextStyle(color: Colors.white),),
-              )
-            ],
-          ),
-        ),
+        drawer: Sidebar(),
       
         body: RepaintBoundary(
           child: SingleChildScrollView( 
