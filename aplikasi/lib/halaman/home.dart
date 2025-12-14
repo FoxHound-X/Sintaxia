@@ -121,53 +121,29 @@ class _HalamanHomeState extends State<HalamanHome> {
                       children: [
                         const SizedBox(width: 5),
                         Tombol(
-                          nama: "HTML",
+                          nama: "WEB Dasar",
                           onPressed: () {
                             Navigator.pushNamed(context, '/Fundamental');
                           },
                         ),
                         Tombol(
-                          nama: "CSS",
+                          nama: "Game Dev",
                           onPressed: () {
                             Navigator.pushNamed(context, '/welcomepage');
                           },
                         ),
                         Tombol(
-                          nama: "CSS",
+                          nama: "Mobile Dev",
                           onPressed: () {
                             Navigator.pushNamed(context, '/welcomepage');
                           },
                         ),
                         Tombol(
-                          nama: "CSS",
+                          nama: "Komputer",
                           onPressed: () {
                             Navigator.pushNamed(context, '/welcomepage');
                           },
                         ),
-                        Tombol(
-                          nama: "CSS",
-                          onPressed: () {
-                            Navigator.pushNamed(context, '/welcomepage');
-                          },
-                        ),
-                        Tombol(
-                          nama: "CSS",
-                          onPressed: () {
-                            Navigator.pushNamed(context, '/welcomepage');
-                          },
-                        ),
-                        Tombol(
-                          nama: "CSS",
-                          onPressed: () {
-                            Navigator.pushNamed(context, '/welcomepage');
-                          },
-                        ),
-                          Tombol(
-                            nama: "CSS",
-                            onPressed: () {
-                              Navigator.pushNamed(context, '/welcomepage');
-                            },
-                          ),
                         const SizedBox(width: 20),
                       ],
                     ),
@@ -184,6 +160,7 @@ class _HalamanHomeState extends State<HalamanHome> {
                       children: [
                         const SizedBox(width: 10),
                         Cardkursus(
+                          iconcard: "lib/aset/gambar/course/html.png",
                           icondificulty: Icons.signal_cellular_alt_1_bar,
                           colorsific: paketwarna.dificultybeginer,
                           judulkursus: 'HTML Dasar',
@@ -205,7 +182,7 @@ class _HalamanHomeState extends State<HalamanHome> {
                               backgroundColor: paketwarna.nordicCard,
                             ),
                           );
-                              // Navigator.pushNamed(context, '/variabledasar'),
+                              Navigator.pushNamed(context, '/htmldasar');
                           },
                         ),
                         const SizedBox(width: 10),
