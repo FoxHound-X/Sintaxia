@@ -1,6 +1,6 @@
 <br>
 <p align="center">
-  <img src="https://github.com/FoxHound-X/Sintaxia/blob/main/aplikasi/lib/screnshoot/logocompany.png" alt="App Screenshot 1" width="45%" style="border-radius:10px; margin:5px;">
+  <img src="https://github.com/FoxHound-X/Sintaxia/blob/main/aplikasi/lib/screnshoot/logodawg.png" alt="App Screenshot 1" width="45%" style="border-radius:10px; margin:5px;">
 </p>
 <br>
 
