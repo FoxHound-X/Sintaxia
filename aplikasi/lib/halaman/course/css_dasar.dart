@@ -199,110 +199,107 @@ class Htmldasar extends StatelessWidget {
               ),
 
               const SizedBox(height: 20,),
-                CourseDropdown(
-                  namapelajaran: 'Apa itu HTML?',
-                  gambar: 'lib/aset/gambar/course/gbr1.webp',
-                  isipelajaran:
-                  'HTML (HyperText Markup Language) adalah bahasa standar yang digunakan untuk membuat struktur halaman web.\n\n'
-                  'HTML tidak digunakan untuk logika atau perhitungan, melainkan untuk menyusun elemen seperti teks, gambar, link, dan tombol.\n\n'
-                  'HTML bekerja bersama CSS untuk tampilan dan JavaScript untuk interaksi.\n\n'
-                  'File HTML biasanya memiliki ekstensi .html atau .htm.',
-                ),
-                SizedBox(height: 15),
+              CourseDropdown(
+                namapelajaran: 'Apa itu CSS?',
+                gambar: 'lib/aset/gambar/course/gbr1.webp',
+                isipelajaran:
+                'CSS (Cascading Style Sheets) adalah bahasa yang digunakan untuk mengatur tampilan dan gaya halaman web.\n\n'
+                'CSS digunakan untuk mengatur warna, ukuran teks, layout, jarak, dan tampilan visual lainnya.\n\n'
+                'CSS bekerja bersama HTML. HTML mengatur struktur, sedangkan CSS mengatur tampilan.\n\n'
+                'File CSS biasanya memiliki ekstensi .css.',
+              ),
+              SizedBox(height: 15),
 
-                CourseDropdown(
-                  namapelajaran: 'Struktur Dasar HTML',
-                  gambar: 'lib/aset/gambar/course/gbr1.webp',
-                  isipelajaran:
-                  'Setiap dokumen HTML memiliki struktur dasar agar dapat dikenali oleh browser.\n\n'
-                  'Contoh struktur HTML dasar:\n\n'
-                  '<!DOCTYPE html>\n'
-                  '<html>\n'
-                  '  <head>\n'
-                  '    <title>Judul Halaman</title>\n'
-                  '  </head>\n'
-                  '  <body>\n'
-                  '    Konten halaman ditulis di sini\n'
-                  '  </body>\n'
-                  '</html>\n\n'
-                  'Penjelasan singkat:\n'
-                  'DOCTYPE memberi tahu browser bahwa dokumen menggunakan HTML.\n'
-                  'html adalah pembungkus seluruh elemen.\n'
-                  'head berisi informasi halaman.\n'
-                  'body berisi konten yang tampil di layar.',
-                ),
-                SizedBox(height: 15),
+              CourseDropdown(
+                namapelajaran: 'Cara Menggunakan CSS',
+                gambar: 'lib/aset/gambar/course/gbr1.webp',
+                isipelajaran:
+                'CSS dapat digunakan dengan tiga cara utama.\n\n'
+                '1. Inline CSS (langsung di tag HTML)\n'
+                'Contoh:\n'
+                '<p style=\"color: red;\">Teks merah</p>\n\n'
+                '2. Internal CSS (di dalam tag <style>)\n'
+                'Contoh:\n'
+                '<style>\n'
+                '  p { color: blue; }\n'
+                '</style>\n\n'
+                '3. External CSS (file terpisah)\n'
+                'Contoh:\n'
+                '<link rel=\"stylesheet\" href=\"style.css\">',
+              ),
+              SizedBox(height: 15),
 
-                CourseDropdown(
-                  namapelajaran: 'Tag dan Elemen HTML',
-                  gambar: 'lib/aset/gambar/course/gbr1.webp',
-                  isipelajaran:
-                  'HTML menggunakan tag untuk menandai elemen.\n\n'
-                  'Tag biasanya ditulis dengan tanda < > dan berpasangan.\n\n'
-                  'Contoh:\n'
-                  '<p>Ini adalah paragraf</p>\n\n'
-                  'Tag pembuka: <p>\n'
-                  'Isi elemen: Ini adalah paragraf\n'
-                  'Tag penutup: </p>\n\n'
-                  'Beberapa tag umum:\n'
-                  'h1 sampai h6 untuk judul\n'
-                  'p untuk paragraf\n'
-                  'br untuk pindah baris\n'
-                  'hr untuk garis horizontal',
-                ),
-                SizedBox(height: 15),
+              CourseDropdown(
+                namapelajaran: 'Selector CSS',
+                gambar: 'lib/aset/gambar/course/gbr1.webp',
+                isipelajaran:
+                'Selector digunakan untuk memilih elemen HTML yang akan diberi gaya.\n\n'
+                'Beberapa selector dasar:\n\n'
+                'Selector elemen:\n'
+                'p { color: black; }\n\n'
+                'Selector class:\n'
+                '.judul { font-size: 20px; }\n\n'
+                'Selector id:\n'
+                '#header { background-color: gray; }\n\n'
+                'Class dapat digunakan berkali-kali, sedangkan id bersifat unik.',
+              ),
+              SizedBox(height: 15),
 
-                CourseDropdown(
-                  namapelajaran: 'Teks dan Heading',
-                  gambar: 'lib/aset/gambar/course/gbr1.webp',
-                  isipelajaran:
-                  'HTML menyediakan tag khusus untuk menampilkan teks dan judul.\n\n'
-                  'Heading digunakan untuk judul dan memiliki tingkat kepentingan.\n\n'
-                  'Contoh:\n'
-                  '<h1>Judul Utama</h1>\n'
-                  '<h2>Sub Judul</h2>\n'
-                  '<p>Ini adalah paragraf teks.</p>\n\n'
-                  'h1 adalah judul paling penting.\n'
-                  'Semakin besar angka heading, semakin kecil prioritasnya.',
-                ),
-                SizedBox(height: 15),
+              CourseDropdown(
+                namapelajaran: 'Properti dan Nilai CSS',
+                gambar: 'lib/aset/gambar/course/gbr1.webp',
+                isipelajaran:
+                'CSS bekerja dengan konsep properti dan nilai.\n\n'
+                'Format dasar:\n'
+                'selector {\n'
+                '  properti: nilai;\n'
+                '}\n\n'
+                'Contoh:\n'
+                'p {\n'
+                '  color: red;\n'
+                '  font-size: 16px;\n'
+                '}\n\n'
+                'Properti mengatur apa yang diubah, nilai menentukan hasilnya.',
+              ),
+              SizedBox(height: 15),
 
-                CourseDropdown(
-                  namapelajaran: 'Link dan Gambar',
-                  gambar: 'lib/aset/gambar/course/gbr1.webp',
-                  isipelajaran:
-                  'HTML dapat menampilkan link dan gambar.\n\n'
-                  'Link digunakan untuk berpindah ke halaman lain.\n\n'
-                  'Contoh link:\n'
-                  '<a href=\"https://www.google.com\">Kunjungi Google</a>\n\n'
-                  'Gambar digunakan untuk menampilkan visual.\n\n'
-                  'Contoh gambar:\n'
-                  '<img src=\"gambar.jpg\" alt=\"Deskripsi gambar\">\n\n'
-                  'Atribut src menunjukkan lokasi file.\n'
-                  'Atribut alt berisi teks pengganti jika gambar gagal dimuat.',
-                ),
-                SizedBox(height: 15),
+              CourseDropdown(
+                namapelajaran: 'Warna dan Teks',
+                gambar: 'lib/aset/gambar/course/gbr1.webp',
+                isipelajaran:
+                'CSS menyediakan berbagai properti untuk mengatur teks dan warna.\n\n'
+                'Contoh pengaturan teks:\n'
+                'p {\n'
+                '  color: blue;\n'
+                '  font-size: 18px;\n'
+                '  text-align: center;\n'
+                '}\n\n'
+                'Color dapat ditulis dalam bentuk:\n'
+                'Nama warna (red, blue)\n'
+                'HEX (#ff0000)\n'
+                'RGB (rgb(255,0,0))',
+              ),
+              SizedBox(height: 15),
 
-                CourseDropdown(
-                  namapelajaran: 'List (Daftar)',
-                  gambar: 'lib/aset/gambar/course/gbr1.webp',
-                  isipelajaran:
-                  'HTML memiliki dua jenis list utama.\n\n'
-                  'Ordered List digunakan untuk daftar berurutan.\n'
-                  'Contoh:\n'
-                  '<ol>\n'
-                  '  <li>HTML</li>\n'
-                  '  <li>CSS</li>\n'
-                  '  <li>JavaScript</li>\n'
-                  '</ol>\n\n'
-                  'Unordered List digunakan untuk daftar tanpa urutan.\n'
-                  'Contoh:\n'
-                  '<ul>\n'
-                  '  <li>Header</li>\n'
-                  '  <li>Content</li>\n'
-                  '  <li>Footer</li>\n'
-                  '</ul>',
-                ),
+              CourseDropdown(
+                namapelajaran: 'Box Model CSS',
+                gambar: 'lib/aset/gambar/course/gbr1.webp',
+                isipelajaran:
+                'Setiap elemen di CSS dianggap sebagai sebuah kotak (box).\n\n'
+                'Box Model terdiri dari:\n'
+                'Content (isi)\n'
+                'Padding (jarak dalam)\n'
+                'Border (garis tepi)\n'
+                'Margin (jarak luar)\n\n'
+                'Contoh:\n'
+                'div {\n'
+                '  margin: 10px;\n'
+                '  padding: 15px;\n'
+                '  border: 1px solid black;\n'
+                '}\n\n'
+                'Memahami box model sangat penting untuk mengatur layout.',
+              ),
+
 
           SizedBox(height: 40),
             
