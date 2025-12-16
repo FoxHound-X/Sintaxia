@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:aplikasi/aset/paketwarna.dart';
 import 'package:aplikasi/aset/asetwidgetminor.dart';
 
-class Htmldasar extends StatelessWidget {
-  const Htmldasar({super.key});
+class Cssdasar extends StatelessWidget {
+  const Cssdasar({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -103,9 +103,9 @@ class Htmldasar extends StatelessWidget {
               const SizedBox(height: 10,),
               //Judul Kursus
               Padding(
-                padding: const EdgeInsets.only(top: 39, right: 91),
+                padding: const EdgeInsets.only(top: 39, ),
                 child: const Text(
-                  'Fundamental Pemrograman',
+                  'CSS Dasar',
                   style: TextStyle(
                     color: paketwarna.nordicTitle,
                     fontSize: 20,fontWeight: FontWeight.bold,
@@ -158,7 +158,7 @@ class Htmldasar extends StatelessWidget {
                       ),
                       const SizedBox(height: 10,),
                       Text(
-                        "Kursus Ini akan mengajari kalian Konsep Pemrograman dasar seperti variable, tipe data dan lainnya. kalian di ajarkan sangat dasar hinggi memahami konsep dasar nyaa",
+                        "Kursus ini akan mengajarkan kalian mengenai CSS dasar dan mempraktekan nya langsung",
                         style: TextStyle(
                           fontSize: 13,
                           color: paketwarna.nordicTitle.withOpacity(0.8),

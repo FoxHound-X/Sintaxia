@@ -187,25 +187,15 @@ class _HalamanHomeState extends State<HalamanHome> {
                         ),
                         const SizedBox(width: 10),
                         Cardkursus(
-                          icondificulty: Icons.signal_cellular_alt,
-                          colorsific: paketwarna.dificultyadvance,
-                          judulkursus: 'HTML Pemula',
-                          pemilikkursus: 'By Lumrora Corp',
+                          iconcard: "lib/aset/gambar/course/CSS3png.png",
+                          icondificulty: Icons.signal_cellular_alt_1_bar,
+                          colorsific: paketwarna.dificultybeginer,
+                          judulkursus: 'CSS Dasar',
+                          pemilikkursus: '',
                           deskripsi:
-                              'Belajar dasar HTML untuk membuat halaman web pertama kamu.',
+                              'Anda akan di ajarkan CSS dasar dan pemahaman',
                           targethalaman: () =>
-                              Navigator.pushNamed(context, '/welcomepage'),
-                        ),
-                        const SizedBox(width: 10),
-                        Cardkursus(
-                          icondificulty: Icons.signal_cellular_alt,
-                          colorsific: paketwarna.dificultyadvance,
-                          judulkursus: 'HTML Pemula',
-                          pemilikkursus: 'By Lumrora Corp',
-                          deskripsi:
-                              'Belajar dasar HTML untuk membuat halaman web pertama kamu.',
-                          targethalaman: () =>
-                              Navigator.pushNamed(context, '/welcomepage'),
+                              Navigator.pushNamed(context, '/cssdasar'),
                         ),
                         const SizedBox(width: 10),
                         Cardkursus(

@@ -4,6 +4,7 @@ import 'halaman/home.dart';
 import 'halaman/course/fundamental.dart';
 import 'halaman/course/komputerdasar.dart';
 import 'halaman/course/html_dasar.dart';
+import 'halaman/course/css_dasar.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 
 void main() {
@@ -30,6 +31,7 @@ class _AplikasiState extends State<Aplikasi> {
         '/Fundamental': (context) => const Fundamental(),
         '/komputer': (context) => const komputerdasar(),
         '/htmldasar': (context) => const Htmldasar(),
+        '/cssdasar': (context) => const Cssdasar(),
       },
     );
   }
@@ -128,9 +130,9 @@ class _welcomeState extends State<welcome> {
                     const Text("SINTAXIA APPS", style: TextStyle(color: paketwarna.nordicTitle, fontSize: 25, fontWeight: FontWeight.bold)),
                     const SizedBox(height: 33),
                     Image.asset("lib/aset/gambar/logoappsrmv.png"),
-                    const SizedBox(height: 33),
+                    const SizedBox(height: 23),
                     SizedBox(
-                      height: 40,
+                      height: 10,
                       child: DefaultTextStyle(
                         style: const TextStyle(fontFamily: 'Poppins', fontWeight: FontWeight.normal, fontSize: 21, color: paketwarna.nordicTitle),
                         child: AnimatedTextKit(
