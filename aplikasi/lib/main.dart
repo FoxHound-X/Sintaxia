@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'aset/paketwarna.dart';
 import 'halaman/home.dart';
-import 'halaman/course/fundamental.dart';
-import 'halaman/course/komputerdasar.dart';
-import 'halaman/course/html_dasar.dart';
-import 'halaman/course/css_dasar.dart';
+import 'halaman/course/courepage.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 
 void main() {
@@ -200,7 +197,7 @@ class _welcomeState extends State<welcome> {
                       ),
                     ),
 
-                    const SizedBox(height: 10),
+                    const SizedBox(height: 20),
                     const Text("© 2025 Lumora Apps. All rights reserved.", style: TextStyle(fontSize: 10, color: paketwarna.nordicTitle)),
                   ],
                 ),

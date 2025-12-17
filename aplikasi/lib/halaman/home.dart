@@ -121,7 +121,7 @@ class _HalamanHomeState extends State<HalamanHome> {
                       children: [
                         const SizedBox(width: 5),
                         Tombol(
-                          nama: "WEB Dasar",
+                          nama: "WEB",
                           onPressed: () {
                             Navigator.pushNamed(context, '/Fundamental');
                           },
@@ -220,39 +220,6 @@ class _HalamanHomeState extends State<HalamanHome> {
                               Navigator.pushNamed(context, '/welcomepage'),
                         ),
                         const SizedBox(width: 10),
-                        Cardkursus(
-                          icondificulty: Icons.signal_cellular_alt,
-                          colorsific: paketwarna.dificultyadvance,
-                          judulkursus: 'HTML Pemula',
-                          pemilikkursus: 'By Lumrora Corp',
-                          deskripsi:
-                              'Belajar dasar HTML untuk membuat halaman web pertama kamu.',
-                          targethalaman: () =>
-                              Navigator.pushNamed(context, '/welcomepage'),
-                        ),
-                        const SizedBox(width: 10),
-                        Cardkursus(
-                          icondificulty: Icons.signal_cellular_alt,
-                          colorsific: paketwarna.dificultyadvance,
-                          judulkursus: 'HTML Pemula',
-                          pemilikkursus: 'By Lumrora Corp',
-                          deskripsi:
-                              'Belajar dasar HTML untuk membuat halaman web pertama kamu.',
-                          targethalaman: () =>
-                              Navigator.pushNamed(context, '/welcomepage'),
-                        ),
-                        const SizedBox(width: 10),
-                        Cardkursus(
-                          icondificulty: Icons.signal_cellular_alt,
-                          colorsific: paketwarna.dificultyadvance,
-                          judulkursus: 'HTML Pemula',
-                          pemilikkursus: 'By Lumrora Corp',
-                          deskripsi:
-                              'Belajar dasar HTML untuk membuat halaman web pertama kamu.',
-                          targethalaman: () =>
-                              Navigator.pushNamed(context, '/welcomepage'),
-                        ),
-                        const SizedBox(width: 10),
                       ],
                     ),
                   ),
@@ -284,7 +251,7 @@ class _HalamanHomeState extends State<HalamanHome> {
                   judulmateri: 'Fundamental Tingkat I',
                   deskripsi:
                       'Kalian akan di ajarka tentang Varable, Looping dan Pengkondisian secara cepat, ringkas dan efisien',
-                  gambar: 'lib/aset/gambar/bejir.webp',
+                  gambar: 'lib/aset/gambar/course/fundamental.webp',
                 ),
                 InfoGraphicCard(
                   haltujuan: () {
