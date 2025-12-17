@@ -32,6 +32,12 @@
       "languageVersion": "3.4"
     },
     {
+      "name": "awesome_snackbar_content",
+      "rootUri": "file:///C:/Users/kadek/AppData/Local/Pub/Cache/hosted/pub.dev/awesome_snackbar_content-0.1.8",
+      "packageUri": "lib/",
+      "languageVersion": "3.9"
+    },
+    {
       "name": "boolean_selector",
       "rootUri": "file:///C:/Users/kadek/AppData/Local/Pub/Cache/hosted/pub.dev/boolean_selector-2.1.2",
       "packageUri": "lib/",
@@ -122,6 +128,12 @@
       "languageVersion": "3.5"
     },
     {
+      "name": "flutter_localizations",
+      "rootUri": "file:///C:/src/flutter/packages/flutter_localizations",
+      "packageUri": "lib/",
+      "languageVersion": "3.8"
+    },
+    {
       "name": "flutter_native_splash",
       "rootUri": "file:///C:/Users/kadek/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_native_splash-2.4.4",
       "packageUri": "lib/",
@@ -174,6 +186,12 @@
       "rootUri": "file:///C:/Users/kadek/AppData/Local/Pub/Cache/hosted/pub.dev/image-4.3.0",
       "packageUri": "lib/",
       "languageVersion": "2.15"
+    },
+    {
+      "name": "intl",
+      "rootUri": "file:///C:/Users/kadek/AppData/Local/Pub/Cache/hosted/pub.dev/intl-0.20.2",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
     },
     {
       "name": "json_annotation",

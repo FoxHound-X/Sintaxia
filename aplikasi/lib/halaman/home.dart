@@ -1,5 +1,6 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:aplikasi/aset/paketwarna.dart';
+import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 import 'package:flutter/material.dart';
 import 'package:aplikasi/aset/asetwidget.dart';
 
@@ -129,7 +130,18 @@ class _HalamanHomeState extends State<HalamanHome> {
                         Tombol(
                           nama: "Game Dev",
                           onPressed: () {
-                            Navigator.pushNamed(context, '/welcomepage');
+                            // Navigator.pushNamed(context, '/welcomepage');
+                            var snackbar=SnackBar(
+                              elevation: 0,
+                              behavior: SnackBarBehavior.floating,
+                              backgroundColor: Colors.transparent,
+                              content: AwesomeSnackbarContent(
+                                title: 'Error Load Page', 
+                                message: 'Sorry, this page is still under development. Stay tuned for updates', 
+                                contentType: ContentType.failure
+                              )
+                            );
+                            ScaffoldMessenger.of(context).showSnackBar(snackbar);
                           },
                         ),
                         Tombol(

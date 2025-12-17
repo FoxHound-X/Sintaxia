@@ -8,6 +8,7 @@
       "version": "1.0.0+1",
       "dependencies": [
         "animated_text_kit",
+        "awesome_snackbar_content",
         "cool_alert",
         "cupertino_icons",
         "flutter",
@@ -44,6 +45,15 @@
         "stream_channel",
         "test_api",
         "vector_math"
+      ]
+    },
+    {
+      "name": "awesome_snackbar_content",
+      "version": "0.1.8",
+      "dependencies": [
+        "flutter",
+        "flutter_localizations",
+        "flutter_svg"
       ]
     },
     {
@@ -220,6 +230,15 @@
         "stream_channel",
         "string_scanner",
         "term_glyph"
+      ]
+    },
+    {
+      "name": "flutter_localizations",
+      "version": "0.0.0",
+      "dependencies": [
+        "flutter",
+        "intl",
+        "path"
       ]
     },
     {
@@ -439,6 +458,15 @@
       "dependencies": [
         "source_span",
         "string_scanner"
+      ]
+    },
+    {
+      "name": "intl",
+      "version": "0.20.2",
+      "dependencies": [
+        "clock",
+        "meta",
+        "path"
       ]
     },
     {
