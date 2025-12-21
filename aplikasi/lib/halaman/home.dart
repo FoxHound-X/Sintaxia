@@ -147,13 +147,35 @@ class _HalamanHomeState extends State<HalamanHome> {
                         Tombol(
                           nama: "Mobile Dev",
                           onPressed: () {
-                            Navigator.pushNamed(context, '/welcomepage');
+                            // Navigator.pushNamed(context, '/welcomepage');
+                                                        var snackbar=SnackBar(
+                              elevation: 0,
+                              behavior: SnackBarBehavior.floating,
+                              backgroundColor: Colors.transparent,
+                              content: AwesomeSnackbarContent(
+                                title: 'Error Load Page', 
+                                message: 'Sorry, this page is still under development. Stay tuned for updates', 
+                                contentType: ContentType.failure
+                              )
+                            );
+                            ScaffoldMessenger.of(context).showSnackBar(snackbar);
                           },
                         ),
                         Tombol(
-                          nama: "Komputer",
+                          nama: "Computer",
                           onPressed: () {
-                            Navigator.pushNamed(context, '/welcomepage');
+                            // Navigator.pushNamed(context, '/welcomepage');
+                                                        var snackbar=SnackBar(
+                              elevation: 0,
+                              behavior: SnackBarBehavior.floating,
+                              backgroundColor: Colors.transparent,
+                              content: AwesomeSnackbarContent(
+                                title: 'Error Load Page', 
+                                message: 'Sorry, this page is still under development. Stay tuned for updates', 
+                                contentType: ContentType.failure
+                              )
+                            );
+                            ScaffoldMessenger.of(context).showSnackBar(snackbar);
                           },
                         ),
                         const SizedBox(width: 20),
@@ -208,28 +230,6 @@ class _HalamanHomeState extends State<HalamanHome> {
                               'Anda akan di ajarkan CSS dasar dan pemahaman',
                           targethalaman: () =>
                               Navigator.pushNamed(context, '/cssdasar'),
-                        ),
-                        const SizedBox(width: 10),
-                        Cardkursus(
-                          icondificulty: Icons.signal_cellular_alt,
-                          colorsific: paketwarna.dificultyadvance,
-                          judulkursus: 'HTML Pemula',
-                          pemilikkursus: 'By Lumrora Corp',
-                          deskripsi:
-                              'Belajar dasar HTML untuk membuat halaman web pertama kamu.',
-                          targethalaman: () =>
-                              Navigator.pushNamed(context, '/welcomepage'),
-                        ),
-                        const SizedBox(width: 10),
-                        Cardkursus(
-                          icondificulty: Icons.signal_cellular_alt,
-                          colorsific: paketwarna.dificultyadvance,
-                          judulkursus: 'HTML Pemula',
-                          pemilikkursus: 'By Lumrora Corp',
-                          deskripsi:
-                              'Belajar dasar HTML untuk membuat halaman web pertama kamu.',
-                          targethalaman: () =>
-                              Navigator.pushNamed(context, '/welcomepage'),
                         ),
                         const SizedBox(width: 10),
                       ],

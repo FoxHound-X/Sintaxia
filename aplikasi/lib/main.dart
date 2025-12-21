@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'aset/paketwarna.dart';
 import 'halaman/home.dart';
-import 'halaman/course/courepage.dart';
+import 'Systemroute.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 
 void main() {
@@ -129,7 +129,7 @@ class _welcomeState extends State<welcome> {
                     Image.asset("lib/aset/gambar/logoappsrmv.png"),
                     const SizedBox(height: 23),
                     SizedBox(
-                      height: 10,
+                      height: 34,
                       child: DefaultTextStyle(
                         style: const TextStyle(fontFamily: 'Poppins', fontWeight: FontWeight.normal, fontSize: 21, color: paketwarna.nordicTitle),
                         child: AnimatedTextKit(
