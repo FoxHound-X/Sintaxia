@@ -103,9 +103,9 @@ class Htmldasar extends StatelessWidget {
               const SizedBox(height: 10,),
               //Judul Kursus
               Padding(
-                padding: const EdgeInsets.only(top: 39, right: 91),
+                padding: const EdgeInsets.all(16),
                 child: const Text(
-                  'Fundamental Pemrograman',
+                  'HTML Dasar',
                   style: TextStyle(
                     color: paketwarna.nordicTitle,
                     fontSize: 20,fontWeight: FontWeight.bold,
@@ -130,7 +130,7 @@ class Htmldasar extends StatelessWidget {
 
                     const SizedBox(width: 10,),
                     Text(
-                      'Kadek Setia Dharma',
+                      'Sintaxia Developer Group',
                       style: TextStyle(
                         fontSize: 15,
                         color: paketwarna.nordicTitle

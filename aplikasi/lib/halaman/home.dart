@@ -165,7 +165,7 @@ class _HalamanHomeState extends State<HalamanHome> {
                           nama: "Computer",
                           onPressed: () {
                             // Navigator.pushNamed(context, '/welcomepage');
-                                                        var snackbar=SnackBar(
+                              var snackbar=SnackBar(
                               elevation: 0,
                               behavior: SnackBarBehavior.floating,
                               backgroundColor: Colors.transparent,

@@ -99,7 +99,7 @@ class komputerdasar extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(top: 39, right: 30),
                 child: Text(
-                  'Fundamental Pemrograman',
+                  'Pengenala Komputer Dasar',
                   style: TextStyle(
                     color: paketwarna.nordicTitle,
                     fontSize: 20,fontWeight: FontWeight.bold
@@ -124,7 +124,7 @@ class komputerdasar extends StatelessWidget {
 
                     const SizedBox(width: 10,),
                     Text(
-                      'Kadek Setia Dharma',
+                      'Sintaxia Developer Group',
                       style: TextStyle(
                         fontSize: 15,
                         color: paketwarna.nordicTitle
