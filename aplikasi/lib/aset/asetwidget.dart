@@ -22,7 +22,7 @@ class Tombol extends StatelessWidget {
       child: TextButton(
         onPressed: onPressed,
         style: TextButton.styleFrom(
-          backgroundColor: paketwarna.nordicPrimButton,
+          backgroundColor: paketwarna.pewter,
           padding: EdgeInsets.zero,
           minimumSize: Size.zero,
           fixedSize: const Size(80, 35),
@@ -55,7 +55,7 @@ class Sidebar extends StatelessWidget {
             bottomRight: Radius.circular(10)
           )
         ),
-        backgroundColor: paketwarna.darkslate1,
+        backgroundColor: paketwarna.graphite,
         child: ListView(
           children: [
             const DrawerHeader(
@@ -93,6 +93,17 @@ class Sidebar extends StatelessWidget {
                 child: Icon(Icons.volunteer_activism,color: Colors.white,),
               ),
               title: Text("Support Developer", style: TextStyle(color: Colors.white),),
+            ),
+
+            SizedBox(height: 10,),
+            ListTile(
+              leading: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20),
+                child: Icon(Icons.home_outlined, color: Colors.white,),
+              ),
+              title: Text("Logout", style: TextStyle(color: Colors.white),
+              ),
+              onTap: () => Navigator.pushNamed(context, '/welcomepage'),
             )
           ],
         ),
@@ -133,7 +144,7 @@ class Cardkursus extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12)
         ),
-        color: paketwarna.nordicCard,
+        color: paketwarna.card,
         child: Padding(
           padding: const EdgeInsets.all(12.0),
           child: Column(
@@ -296,7 +307,7 @@ class Cardkursus extends StatelessWidget {
                     height: 30,
                     child: TextButton(
                       style: TextButton.styleFrom(
-                        backgroundColor: paketwarna.nordicButton1,
+                        backgroundColor: paketwarna.pewter,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(9)
                         )
@@ -352,7 +363,7 @@ class InfoGraphicCard extends StatelessWidget {
           margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
           clipBehavior: Clip.antiAlias,
           decoration: BoxDecoration(
-            color: paketwarna.nordicCard,
+            color: paketwarna.card,
             borderRadius: BorderRadius.circular(12)
           ),
           child: Padding(

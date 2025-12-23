@@ -16,10 +16,10 @@ class paketwarna{
   static const deepea4 = Color(0xff0d1b2a);
 
   //Warna Aplikasi
-  static const nordicBacground = Color(0xff2E3440);
-  static const nordicCard = Color(0xff3B4252);
-  static const nordicPrimButton = Color(0xff434c5e);
-  static const nordicTitle = Color(0xffECEFF4);
+  static const nordicBacground = Color(0xFF212121);
+  static const nordicCard = Color(0xFF181818);
+  static const nordicPrimButton = Color(0xFF171717);
+  static const nordicTitle = Color(0xfffcfcfc);
   static const nordicDescription = Color(0xffD8DEE9);
   static const nordicActiveIcon = Color(0xff8FBCBB);
   static const nordicNonactiveIcon = Color(0xff6B7280);
@@ -29,6 +29,11 @@ class paketwarna{
   static const dificultybeginer = Color(0xFF8FBCBB);
   static const dificultyintermediet = Color(0xFFEBCB8B);
   static const dificultyadvance = Color(0xFFD08770);
+
+  //
+  static const graphite = Color(0xFF212121);
+  static const pewter = Color(0xFF171717);
+  static const card = Color(0xFF181818);
 
 
 }

@@ -17,10 +17,10 @@ class _HalamanHomeState extends State<HalamanHome> {
   Widget build(BuildContext context) {
     return RepaintBoundary(
       child: Scaffold(
-        backgroundColor: paketwarna.nordicBacground,
+        backgroundColor: paketwarna.graphite,
         appBar: AppBar(
           iconTheme: IconThemeData(color: Colors.white),
-          backgroundColor: paketwarna.nordicBacground,
+          backgroundColor: paketwarna.graphite,
           actions: [ 
             Padding(
               padding: const EdgeInsets.only(right: 3),
