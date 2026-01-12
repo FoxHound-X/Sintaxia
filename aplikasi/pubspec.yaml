@@ -52,6 +52,8 @@ dependencies:
   animated_text_kit: ^4.3.0
   flutter_native_splash: ^2.4.4
   awesome_snackbar_content: ^0.1.8
+  youtube_player_iframe: ^5.1.0
+  shared_preferences: ^2.5.4
 
 flutter_launcher_icons:
   android: "launcher_icon"

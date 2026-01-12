@@ -88,6 +88,23 @@ class Sidebar extends StatelessWidget {
             SizedBox(height: 10,),
 
             ListTile(
+              autofocus: true,
+              leading: const Padding(
+                padding:EdgeInsets.symmetric(horizontal: 20),
+                child: Icon(Icons.book, color: Colors.white,),
+              ),
+              title: Text(
+                "Quiz",
+                style: TextStyle(
+                  color: paketwarna.deepea0
+                ),
+              ),
+            onTap: () => Navigator.pushNamed(context, '/homepage'),
+            ),
+
+            SizedBox(height: 10,),
+
+            ListTile(
               leading: const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20),
                 child: Icon(Icons.volunteer_activism,color: Colors.white,),
