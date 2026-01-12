@@ -1,0 +1,1 @@
+ C:\\Users\\kadek\\OneDrive\\Documents\\Tugas_Flutter\\Sintaxia\\aplikasi\\.dart_tool\\flutter_build\\df395dd0d381e37ee13f9ef60d25ace3\\native_assets.json: 

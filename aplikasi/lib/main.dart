@@ -3,13 +3,20 @@ import 'aset/paketwarna.dart';
 import 'halaman/home.dart';
 import 'Systemroute.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-void main() {
-  runApp(Aplikasi());
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  final prefs = await SharedPreferences.getInstance();
+  final isFirstTime = prefs.getBool('isFirstTime') ?? true;
+
+  runApp(Aplikasi(isFirstTime: isFirstTime));
 }
 
 class Aplikasi extends StatefulWidget{
-  const Aplikasi({super.key});
+  final bool isFirstTime;
+  const Aplikasi({super.key, required this.isFirstTime});
 
   @override
   State<Aplikasi> createState() => _AplikasiState();
@@ -24,6 +31,7 @@ class _AplikasiState extends State<Aplikasi> {
       initialRoute: '/welcomepage',
       routes: {
         '/welcomepage': (context) => const welcome(),
+        '/firstTime': (context) => const FirstTime(),
         '/homepage': (context) => const HalamanHome(),
         '/Fundamental': (context) => const Fundamental(),
         '/komputer': (context) => const komputerdasar(),
@@ -165,7 +173,7 @@ class _welcomeState extends State<welcome> {
                                   context,
                                   PageRouteBuilder(
                                     transitionDuration: const Duration(milliseconds: 600),
-                                    pageBuilder: (context, animation, secondaryAnimation) => const HalamanHome(),
+                                    pageBuilder: (context, animation, secondaryAnimation) => const FirstTime(),
                                     transitionsBuilder: (context, animation, secondaryAnimation, child) {
                                       final offsetAnimation = Tween<Offset>(
                                         begin: const Offset(0, 0.2),
