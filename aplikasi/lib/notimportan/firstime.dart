@@ -1,6 +1,8 @@
 import 'package:aplikasi/aset/asetwidget.dart';
 import 'package:flutter/material.dart';
 import 'package:aplikasi/aset/paketwarna.dart';
+import '../Systemroute.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 
 class FirstTime extends StatefulWidget {
@@ -11,7 +13,23 @@ class FirstTime extends StatefulWidget {
 }
 
 class _FirstTimeState extends State<FirstTime> {
+  final TextEditingController _namaControler = TextEditingController();
+
+  Future<void> _simpanNama() async {
+    final prefs  = await SharedPreferences.getInstance();
+    final nama = _namaControler.text.trim();
+
+    if (nama.isEmpty) return;
+
+    await prefs.setString('nama', nama);
+    await prefs.setBool('isFirstTime', false);
+  }
+
   @override
+  void dispose(){
+    _namaControler.dispose();
+    super.dispose();
+  }
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: paketwarna.nordicBacground,
@@ -37,16 +55,63 @@ class _FirstTimeState extends State<FirstTime> {
                     ),
                   ),
 
+                  const SizedBox(height: 10,),
+
                   TextField(
-                    style: TextStyle(
-                      color: Colors.white
-                    ),
+                    controller: _namaControler,
+                    style: const TextStyle(color: Colors.white),
                     decoration: InputDecoration(
-                      labelText: 'Name',
-                      hintText: 'Insert you Name Buddy',
-                      border: OutlineInputBorder()
+                      labelText: 'Nama',
+                      hintText: 'Masukkan nama kamu',
+
+                      labelStyle: const TextStyle(color: Colors.white),
+                      hintStyle: TextStyle(color: Colors.white.withOpacity(0.5)),
+
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.white),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.white),
+                      ),
                     ),
-                  )
+                  ),
+
+                  const SizedBox(height: 50,),
+                  SizedBox(
+                    width: double.infinity,
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: paketwarna.nordicPrimButton,
+                        elevation: 3,
+                        padding: const EdgeInsets.symmetric(vertical: 16),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                      ),
+                      onPressed: () async {
+                        await _simpanNama();
+                        Navigator.pushNamed(context, '/homepage');
+                      },
+                      child: const Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            'Start Apps',
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.white,
+                              letterSpacing: 0.5,
+                            ),
+                          ),
+                          SizedBox(width: 10),
+                          Icon(Icons.arrow_forward_rounded, size: 20, color: Colors.white),
+                        ],
+                      ),
+                    ),
+                  ),
+
+
                 ],
               ),
             ),

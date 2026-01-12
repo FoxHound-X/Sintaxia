@@ -1,6 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:aplikasi/aset/paketwarna.dart';
 import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter/material.dart';
 import 'package:aplikasi/aset/asetwidget.dart';
 
@@ -13,6 +14,23 @@ class HalamanHome extends StatefulWidget {
 }
 
 class _HalamanHomeState extends State<HalamanHome> {
+
+String nama = '';
+
+@override
+void initState() {
+  super.initState();
+  _ambilNama(); // ✅ panggil saat halaman dibuka
+}
+
+Future<void> _ambilNama() async {
+  final prefs = await SharedPreferences.getInstance();
+  setState(() {
+    nama = prefs.getString('nama') ?? '';
+  });
+}
+
+
   @override
   Widget build(BuildContext context) {
     return RepaintBoundary(
@@ -25,8 +43,8 @@ class _HalamanHomeState extends State<HalamanHome> {
             Padding(
               padding: const EdgeInsets.only(right: 3),
               child: TextButton(
-                child: const Text(
-                  "SINTAXIA",
+                child: Text(
+                  "$nama",
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,

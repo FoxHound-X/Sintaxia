@@ -168,12 +168,18 @@ class _welcomeState extends State<welcome> {
                           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(9)),
                         ),
                         onPressed: _isHomePreloaded
-                            ? () {
+                            ? () async {
+                              final perfs = await SharedPreferences.getInstance();
+                              final isFirsstTime = perfs.getBool('isFirstTime') ?? true;
+
+                              if (!mounted) return;
+
+
                                 Navigator.pushReplacement(
                                   context,
                                   PageRouteBuilder(
                                     transitionDuration: const Duration(milliseconds: 600),
-                                    pageBuilder: (context, animation, secondaryAnimation) => const FirstTime(),
+                                    pageBuilder: (context, animation, secondaryAnimation) => isFirsstTime ? const FirstTime(): const HalamanHome(),
                                     transitionsBuilder: (context, animation, secondaryAnimation, child) {
                                       final offsetAnimation = Tween<Offset>(
                                         begin: const Offset(0, 0.2),
