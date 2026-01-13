@@ -165,18 +165,18 @@ Future<void> _ambilNama() async {
                         Tombol(
                           nama: "Mobile Dev",
                           onPressed: () {
-                            // Navigator.pushNamed(context, '/welcomepage');
-                                                        var snackbar=SnackBar(
-                              elevation: 0,
-                              behavior: SnackBarBehavior.floating,
-                              backgroundColor: Colors.transparent,
-                              content: AwesomeSnackbarContent(
-                                title: 'Error Load Page', 
-                                message: 'Sorry, this page is still under development. Stay tuned for updates', 
-                                contentType: ContentType.failure
-                              )
-                            );
-                            ScaffoldMessenger.of(context).showSnackBar(snackbar);
+                            Navigator.pushNamed(context, '/firstTime');
+                            //                             var snackbar=SnackBar(
+                            //   elevation: 0,
+                            //   behavior: SnackBarBehavior.floating,
+                            //   backgroundColor: Colors.transparent,
+                            //   content: AwesomeSnackbarContent(
+                            //     title: 'Error Load Page', 
+                            //     message: 'Sorry, this page is still under development. Stay tuned for updates', 
+                            //     contentType: ContentType.failure
+                            //   )
+                            // );
+                            // ScaffoldMessenger.of(context).showSnackBar(snackbar);
                           },
                         ),
                         Tombol(
